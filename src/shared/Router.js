@@ -11,7 +11,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/test" element={<Test />} />
-        <Route path="/test/:id" element={<Result />} />
+        {/* <Route path="/test/:id" element={<Result />} /> */}
         <Route path="/board" element={<Board />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="*" element={<h1>없는 페이지 입니다.</h1>} />

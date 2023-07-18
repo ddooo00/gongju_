@@ -1,15 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import TestQnA from "../components/test/TestQnA";
 
 function Test() {
-  const navigate = useNavigate();
-
-  const clickToResultPage = () => navigate(`/test/1`);
-
   return (
-    <div>
-      <button onClick={clickToResultPage}>결과보기</button>
-    </div>
+    <>
+      <TestQnA />
+    </>
   );
 }
 
