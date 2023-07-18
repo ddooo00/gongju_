@@ -5,7 +5,7 @@ const KakaoMap = ({ latitude, longitude }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
-    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=67e650846d198d753b8b983a63b09606`;
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_MAP_API_KEY}`;
     document.head.appendChild(script);
 
     script.onload = () => {

@@ -8,6 +8,7 @@ import {
   getMountains,
 } from "../api/api";
 import { useNavigate, useParams } from "react-router-dom";
+import TestResult from "../components/result/TestResult";
 
 function Result() {
   const [dataToShow, setDataToShow] = useState([]);
@@ -87,6 +88,7 @@ function Result() {
 
   return (
     <>
+      <TestResult />
       <h1>당신에게 어울리는 공주는 ?</h1>
       <div>
         {dataToShow?.map((dataItem) => {
