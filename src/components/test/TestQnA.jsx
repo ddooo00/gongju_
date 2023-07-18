@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Result from "../../pages/Result";
+import TestResult from "../result/TestResult";
 
 function TestQnA() {
   const [page, setPage] = useState(0);
@@ -175,10 +175,11 @@ function TestQnA() {
       console.log("결과보기");
     }
   };
-  // 가장 많이 선택된 유형을 찾는 함수
+
+  // 가장 많이 선택된 유형 찾기
   const getMostSelectedType = () => {
-    let maxCount = 0;
-    let mostSelectedType = "";
+    let maxCount = 0; //가장 큰 값
+    let mostSelectedType = ""; //가장 선택 많이 된 값
 
     gongjuList.forEach((item) => {
       if (item.count > maxCount) {
@@ -234,7 +235,7 @@ function TestQnA() {
       ) : (
         <div>
           결과페이지
-          <Result result={getMostSelectedType()} />
+          <TestResult result={getMostSelectedType()} />
         </div>
       )}
     </>
