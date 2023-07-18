@@ -147,5 +147,38 @@
       "q": ["테스트가 끝났습니다! 결과를 보러 갈까요?"],
       "a": [{ "type": "", "text": "결과 보러 가기▶▶" }]
     }
+  ],
+
+  "gongjuTypeData": [
+    {
+      "type": "A",
+      "text": "파티 is my Life⭐",
+      "name": "셀럽",
+      "imageURL": "https://i.postimg.cc/9XGQB11s/imagenn-4-removebg-preview.png"
+    },
+    {
+      "type": "B",
+      "text": "#오운완🔥",
+      "name": "근육",
+      "imageURL": "https://i.postimg.cc/9XGQB11s/imagenn-4-removebg-preview.png"
+    },
+    {
+      "type": "C",
+      "text": "누워서 A+먹기✏️",
+      "name": "똑똑",
+      "imageURL": "https://i.postimg.cc/9XGQB11s/imagenn-4-removebg-preview.png"
+    },
+    {
+      "type": "D",
+      "text": "공주 배고파서 힘 없져😭",
+      "name": "먹방",
+      "imageURL": "https://i.postimg.cc/9XGQB11s/imagenn-4-removebg-preview.png"
+    },
+    {
+      "type": "E",
+      "text": "카메라는 나와 한몸📸",
+      "name": "감성",
+      "imageURL": "https://i.postimg.cc/9XGQB11s/imagenn-4-removebg-preview.png"
+    }
   ]
 }

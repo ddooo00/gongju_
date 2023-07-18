@@ -17,7 +17,7 @@ function TestQnA() {
   //유형 테스트 QnA
   //테스트 리스트 db 조회(가져오기)
   const { isLoading, isError, data } = useQuery("gongjuList", getList);
-  console.log("data💙💙💙", data);
+  // console.log("data💙💙💙", data);
   if (isLoading) {
     return <div>목록을 가져오는 중..!</div>;
   }
@@ -51,6 +51,7 @@ function TestQnA() {
   const getMostSelectedType = () => {
     let maxCount = 0; // 가장 큰 값
     let mostSelectedTypes = []; // 가장 선택 많이 된 값들을 담는 배열
+
     gongjuList.forEach((item) => {
       if (item.count > maxCount) {
         maxCount = item.count;
@@ -85,7 +86,7 @@ function TestQnA() {
               key={idx}
               style={{ display: page === idx + 1 ? "flex" : "none" }}
             >
-              {console.log(gongjuList)}
+              {/* {console.log(gongjuList)} */}
               {/* 질문 */}
               <div>
                 {val.q.map((qval, qidx) => (

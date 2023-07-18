@@ -1,55 +1,36 @@
 import React from "react";
-import aPrincess from "../../assets/img/aPrincess.png";
-import bPrincess from "../../assets/img/bPrincess.png";
-import cPrincess from "../../assets/img/cPrincess.png";
-import dPrincess from "../../assets/img/dPrincess.png";
-import ePrincess from "../../assets/img/ePrincess.png";
+import { getResult } from "../../api/testList";
+import { useQuery } from "react-query";
 
 function TestResult({ results }) {
-  // 결과 값에 따라 해당하는 유형 표시하기
-  // console.log("결과타입>>", results);
+  //결과 db 조회(가져오기)
+  const { isLoading, isError, data } = useQuery("gongjuTypeData", getResult);
+  // console.log("data💛💛", data);
+  if (isLoading) {
+    return <div>결과를 가져오는 중..!</div>;
+  }
+  if (isError) {
+    return <div>에러입니다..!</div>;
+  }
+
+  const gongjuTypeResult = data;
+  console.log("공주 타입 결과`!~!!~~!~", gongjuTypeResult);
+
   return (
     <div>
-      {results.includes("A") && (
-        <div>
-          파티 is my Life⭐ <br />
-          '셀럽 공주' <br />
-          <img src={aPrincess} alt="셀럽" />
-        </div>
-      )}
-      {results.includes("B") && (
-        <div>
-          #오운완🔥 <br />
-          '근육 공주'
-          <br />
-          <img src={bPrincess} alt="근육" />
-        </div>
-      )}
-      {results.includes("C") && (
-        <div>
-          누워서 A+먹기✏️ <br />
-          '똑똑 공주'
-          <br />
-          <img src={cPrincess} alt="똑똑" />
-        </div>
-      )}
-      {results.includes("D") && (
-        <div>
-          공주 배고파서 힘 없져😭
-          <br />
-          '먹방 공주'
-          <br />
-          <img src={dPrincess} alt="먹방" />
-        </div>
-      )}
-      {results.includes("E") && (
-        <div>
-          카메라는 나와 한몸📸 <br />
-          '감성 공주'
-          <br />
-          <img src={ePrincess} alt="감성" />
-        </div>
-      )}
+      {gongjuTypeResult.map((princess) => {
+        if (results.includes(princess.type)) {
+          return (
+            <div key={princess.type}>
+              {princess.text} <br />'{princess.name} 공주' <br />
+              <img src={princess.imageURL} alt="사진을 가져오지 못했습니다." />
+            </div>
+          );
+        }
+        // else {
+        //   return <div>결과값이 없습니다..!</div>;
+        // }
+      })}
     </div>
   );
 }
