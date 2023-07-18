@@ -4,7 +4,7 @@ function TestQnA() {
   const [page, setPage] = useState(0);
 
   //유형 테스트 QnA
-  //TODO:db.json으로 넘겨서 관리할 수 있는지 확인해보기
+  //TODO:db.json으로 넘겨서 관리할 수 있는지 해보기
   const questionList = [
     {
       q: ["친구 생일 파티에 잘생긴 사람을 봤다."],
@@ -161,7 +161,7 @@ function TestQnA() {
       a: [{ type: "", text: "결과 보러 가기▶▶" }],
     },
   ];
-  console.log("💛💛💛", questionList);
+  // console.log("💛💛💛", questionList);
 
   //유형 리스트 관리
   const [gongjuList, setGongjuList] = useState([
@@ -172,13 +172,19 @@ function TestQnA() {
     { name: "E", count: 0 },
   ]);
 
-  const handleAnswerCount = (type, idx) => {
-    let ls = gongjuList;
-    for (let i = 0; i < ls.length; i++) {
-      if (ls[i].name === type) {
-        ls[i].count = ls[i].count + 1;
+  const handleAnswerCount = (typeStr, idx) => {
+    console.log("typeStr>>>", typeStr);
+    const types = typeStr.split(",");
+
+    // type이 여러 개인 경우 콤마(,)로 구분된 배열로 분리
+
+    let ls = gongjuList.map((item) => ({ ...item }));
+    types.forEach((type) => {
+      const gongjuItem = ls.find((item) => item.name === type);
+      if (gongjuItem) {
+        gongjuItem.count += 1;
       }
-    }
+    });
 
     setGongjuList(ls);
     setPage(page + 1);
