@@ -22,7 +22,7 @@ function TestResult({ result }) {
           #오운완🔥 <br />
           '근육 공주'
           <br />
-          <img src={bPrincess} alt="셀럽" />
+          <img src={bPrincess} alt="근육" />
         </div>
       )}
       {result === "C" && (
@@ -30,7 +30,7 @@ function TestResult({ result }) {
           누워서 A+먹기✏️ <br />
           '똑똑 공주'
           <br />
-          <img src={cPrincess} alt="셀럽" />
+          <img src={cPrincess} alt="똑똑" />
         </div>
       )}
       {result === "D" && (
@@ -39,7 +39,7 @@ function TestResult({ result }) {
           <br />
           '먹방 공주'
           <br />
-          <img src={dPrincess} alt="셀럽" />
+          <img src={dPrincess} alt="먹방" />
         </div>
       )}
       {result === "E" && (
@@ -47,7 +47,7 @@ function TestResult({ result }) {
           카메라는 나와 한몸📸 <br />
           '감성 공주'
           <br />
-          <img src={ePrincess} alt="셀럽" />
+          <img src={ePrincess} alt="감성" />
         </div>
       )}
     </div>
