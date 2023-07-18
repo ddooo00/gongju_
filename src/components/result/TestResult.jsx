@@ -28,7 +28,7 @@ function TestResult({ results }) {
       <button onClick={clickShowComments}>전체 결과 보러가기</button>
       {isOpen && <Board />}
       {gongjuTypeResult.map((princess) => {
-        if (results.includes(princess.type)) {
+        if (results?.includes(princess.type)) {
           return (
             <div key={princess.type}>
               {princess.text} <br />'{princess.name} 공주' <br />

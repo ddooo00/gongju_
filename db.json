@@ -1,4 +1,179 @@
 {
+  "campsites": [
+    {
+      "id": "campsite1",
+      "title": "캠프달링",
+      "description": "프라이빗한 럭셔리 캠핑공간! 캠프달링",
+      "address": "충남 공주시 정안면 개티길 20 캠프달링",
+      "call": "0507-1304-7806",
+      "website": "https://www.instagram.com/_camp_darling/",
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221212_43%2F1670808967817pnj7m_JPEG%2FFM7A6505.jpg",
+      "latitude": 33.450701,
+      "longitude": 126.570667
+    },
+    {
+      "id": "campsite2",
+      "title": "녹수원 글램핑",
+      "description": "개울가 바로 앞 글램핑장, 무한바베큐",
+      "address": "충남 공주시 유구읍 덕곡리 15-2",
+      "call": "010-7212-7670",
+      "website": "http://녹수원.com",
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220608_222%2F1654647871297kiWbp_JPEG%2F%25BE%25DF%25B0%25E6_220608_small-1.jpg",
+      "latitude": 36.63269332341412,
+      "longitude": 126.9637905566952
+    },
+    {
+      "id": "campsite3",
+      "title": "북캠프",
+      "description": "대전/세종 근처 공주글램핑 공주북캠프",
+      "address": "충남 공주시 신풍면 영정길 155-3",
+      "call": "0507-1416-3005",
+      "website": "http://gongjubookcamp.co.kr/",
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191126_275%2F1574761049930bluUc_JPEG%2F%25B0%25F8%25C1%25D62.jpg",
+      "latitude": 36.51461670198541,
+      "longitude": 126.9914149443142
+    }
+  ],
+  "heritages": [
+    {
+      "id": "heritage1",
+      "title": "공산성",
+      "description": "백제는 기원전 18년 ~ 기원후 660년까지 존재했던 고대국가입니다. 2015년 7월 공주의 공산성과 공주 무령왕릉과 왕릉원을 비롯한 부여·익산의 백제유적 8곳이 ‘백제역사 유적지구’로 유네스코 세계유산에 등재되었습니다. 중국과의 교류를 기초로 백제의 독창적인 문화를 이룩하고, 이를 일본 등 주변국가에 전하여 고대 동아시아 문화번영에 기여한 점이 높게 평가되어 세계인의 유산이 된 것입니다. 특히 공주 공산성은 백제 웅진도읍기(475~538년)의 왕성으로서 그 가치를 인정 받았습니다. 성벽 축조에 사용된 판축기법(고운흙과 모래흙을 번갈아 다져서 쌓는 방법)과 벽주건물지 (도랑을 파 기둥을 촘촘하게 세운 후 고운흙으로 벽을 발라 만든 건물지)는 고대 중국 및 일본과의 문화교류를 통한 백제 토목건축 기술의 발전과 전파를 살필 수 있는 중요한 자료가 되고 있습니다.",
+      "address": "충남 공주시 금성동 53-51",
+      "call": "041-856-7700",
+      "website": "http://www.gongju.go.kr/prog/tursmCn/tour/sub02_01_04/view.do?cntno=14",
+      "img": "https://www.gongju.go.kr/images/tour/sub01/sub010102_img01.jpg",
+      "latitude": 36.51461670198541,
+      "longitude": 126.9914149443142
+    },
+    {
+      "id": "heritage2",
+      "title": "공주 무령왕릉과 왕릉원",
+      "description": "백제는 기원전 18년 ~ 기원후 660년까지 존재했던 고대국가입니다. 2015년 7월 공주의 공산성과 공주 무령왕릉과 왕릉원을 비롯한 부여·익산의 백제유적 8곳이 ‘백제역사 유적지구’로 유네스코 세계유산에 등재되었습니다. 중국과의 교류를 기초로 백제의 독창적인 문화를 이룩하고, 이를 일본 등 주변국가에 전하여 고대 동아시아 문화번영에 기여한 점이 높게 평가되어 세계인의 유산이 된 것입니다. 특히 공주 공주 무령왕릉과 왕릉원은 백제 웅진시기(475~538년)의 왕릉군으로서 무덤의 구조와 유물이 백제문화의 우수성과 고대 동아시아의 밀접한 문화교류를 증명합니다는 점에서 그 가치를 인정받았습니다.",
+      "address": "충남 공주시 신풍면 영정길 155-3",
+      "call": "041-856-7700",
+      "website": "http://www.gongju.go.kr/prog/tursmCn/tour/sub02_01_04/view.do?cntno=14",
+      "img": "https://www.gongju.go.kr/images/tour/sub01/sub010103_img01.jpg",
+      "latitude": 36.46252153534256,
+      "longitude": 127.11299249105818
+    },
+    {
+      "id": "heritage3",
+      "title": "마곡사",
+      "description": "세계유산 산사, 한국의 산지 승원 마곡사. 산사는 공주 마곡사, 보은 법주사, 양산 통도사, 영주 부석사, 안동 봉정사, 순천 선암사, 해남 대흥사 등 총 7곳 사찰로 구성된 연속유산입니다. 7~9세기에 창건되어 고대 한국불교와 종교적 의례의 지속적인 중심지가 되어 왔으며, 각각의 불교사상을 기반으로 다른 종파와 역사적인 관계를 맺으며 많은 역사적 건축물, 유물 등을 갖추고 있습니다. 역사적 단절없이 오늘날까지 신앙, 수행, 생활의 복합적 종교 공간이 온전하게 유지되어 왔다는 점에서 그 가치가 큽니다.",
+      "address": "주소",
+      "call": "041-856-7700",
+      "website": "http://www.gongju.go.kr/prog/tursmCn/tour/sub02_01_04/view.do?cntno=14",
+      "img": "https://www.gongju.go.kr/images/tour/sub01/sub010105_img01.jpg",
+      "latitude": 36.55940599237131,
+      "longitude": 127.01155573930463
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "restaurant1",
+      "title": "곰선생동태씨",
+      "description": "동태탕",
+      "address": "충남 공주시 무령로 466-3",
+      "call": "041-855-0959",
+      "website": null,
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220517_31%2F1652734778428p7LXR_JPEG%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5.jpeg.jpg",
+      "latitude": 36.55940599237131,
+      "longitude": 127.01155573930463
+    },
+    {
+      "id": "restaurant2",
+      "title": "베이커리 밤마을",
+      "description": "공주 밤파이",
+      "address": "충남 공주시 백미고을길 5-9 베이커리밤마을",
+      "call": "0507-1428-3489",
+      "website": "http://www.marron.edenstore.co.kr",
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221208_260%2F1670467900457mi2X1_JPEG%2FKakaoTalk_20221208_115058073_02.jpg",
+      "latitude": 36.55940599237131,
+      "longitude": 127.01155573930463
+    },
+    {
+      "id": "restaurant3",
+      "title": "밥꽃하나피었네",
+      "description": "한식 코스요리에서 맛볼 수 있는 정갈한 향토음식",
+      "address": "충남 공주시 계룡면 신원사로 502",
+      "call": "041-855-0696",
+      "website": "http://cityfood.co.kr/file2/h_0081/40070/",
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160221_297%2F1456025028094sjOqQ_JPEG%2F176171525359376_18.jpeg",
+      "latitude": 36.55940599237131,
+      "longitude": 127.01155573930463
+    }
+  ],
+  "festivals": [
+    {
+      "id": "festival1",
+      "title": "2023 대백제전",
+      "description": "개막식(공주), 폐막식(부여), 제례, 퍼레이드, 공연, 전시.체험 프로그램 등",
+      "address": "충청남도 공주시 금벽로 551",
+      "call": "041-840-8112",
+      "website": "http://www.baekje.org/kor/",
+      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202305221105485291.jpg",
+      "latitude": 1,
+      "longitude": 1
+    },
+    {
+      "id": "festival2",
+      "title": "겨울공주 군밤축제",
+      "description": "대형화로군밤굽기, 군밤그릴존, 알밤 및 가공식품판매, 알밤간식만들기, 추억의레트로 감성존, 프린지 공연 등",
+      "address": "충청남도 공주시 관광단지길 12",
+      "call": "041-840-2056",
+      "website": "https://www.gongju.go.kr/prog/tursmCn/tour/sub03_01_09/view.do?cntno=68",
+      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202212050845154781.jpg",
+      "latitude": 1,
+      "longitude": 1
+    },
+    {
+      "id": "festival3",
+      "title": "공주 문화재야행",
+      "description": " 문화재가 집적·밀집된 지역을 거점으로 지역의 특색 있는 역사문화자원을 활용한 문화재 야간관람(개방), 체험, 공연, 전시 등 문화재 야간문화 향유 프로그램",
+      "address": "공주 제민천 일원 근대 문화재(구 공주읍사무소, 제일교회 등)",
+      "call": "041-840-8204",
+      "website": "https://gongju-culturenight.com/",
+      "img": "https://www.gongju.go.kr/images/tour/sub04/sub04_01_01_img02.jpg",
+      "latitude": 1,
+      "longitude": 1
+    }
+  ],
+  "mountains": [
+    {
+      "id": "mountain1",
+      "title": "연미산",
+      "description": "산이야? 공원이야? 공주의 숨은 비경을 품은, 연미산. 산봉우리가 제비의 고리처럼 뾰족하다 하여 붙여진 이름 연미산(219m). 이산에 오르면 공주시의 시가지 전경과 공주시의 중심부를 흐르며 서해를 향해 곡류하는 금강의 장관을 한눈에 바라 볼 수 있다. 연미산은 자연미술공원이 있어 등산로 주변에 전시된 작품 감상도 하면서 공주의 비경 또한 감상 할 수 있다. 공주시 쌍신동에 위치하며 해마다 연미산과 인근 공원에서 금강자연미술비엔날레 행사가 열리고 있다.",
+      "address": "충청남도 공주시 우성면 연미산고개길 98",
+      "call": "041-856-7700",
+      "website": null,
+      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202004220927456770.JPG",
+      "latitude": 1,
+      "longitude": 1
+    },
+    {
+      "id": "mountain2",
+      "title": "태화산",
+      "description": "적송림 무성한 걷기 좋은 산 천년고찰 품은, 태화산. 공주시 사곡면에 위치한 태화산은 이산 중턱에 자리한 천년고찰 마곡사로 인해 잘 알려진 곳이다. 가벼운 산행 후 절집의 아름다움을 느낄 수 있어 태화산의 울창한 적송림을 찾는 등산객들의 발길이 끊이지 않는다. 전 구간이 송림으로 우거져 있어 자연스럽게 산림욕을 할 수 있다. 유구 마곡 골짜기는 예로부터 전란을 피할 수 있는 십승지로 택리지나 정감록과 같은 지리서에 기록되어 있다.",
+      "address": "충청남도 공주시 사곡면 생골길 32-87",
+      "call": "041-841-6221",
+      "website": "https://www.gongju.go.kr/prog/tursmCn/tour/sub03_01_09/view.do?cntno=68",
+      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202004140529447650.JPG",
+      "latitude": 1,
+      "longitude": 1
+    },
+    {
+      "id": "mountain3",
+      "title": "계룡산",
+      "description": "민족의 영산, 계룡산. 산 이름은 주봉인 천황봉(天皇峯, 845m)에서 연천봉(連天峯, 739m)·삼불봉(三佛峯, 775m)으로 이어지는 능선이 마치 닭 볏을 쓴 용의 모양을 닮았다고 하여 붙여진 것이라고 한다. 차령산맥 중에서도 비교적 험난한 이 산은 유연히 흐르는 금강의 풍치와 어울려 독특한 산악 경관을 이루고 있다. 계룡산은 풍수지리에서도 우리나라 4대 명산으로 꼽힐 뿐 아니라 특히, 계룡팔경은 경치가 아름다워 많은 관광객이 찾아든다.",
+      "address": "공주 제민천 일원 근대 문화재(구 공주읍사무소, 제일교회 등)",
+      "call": "041-840-8204",
+      "website": "https://gongju-culturenight.com/",
+      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202004270524550521.jpg",
+      "latitude": 1,
+      "longitude": 1
+    }
+  ],
   "comments": [
     {
       "id": "e9VGL8x0T",
