@@ -216,6 +216,7 @@ function TestQnA() {
                   <div key={qidx}>{qval}</div>
                 ))}
               </div>
+
               <div>
                 {/* 선택지 */}
                 <div>
@@ -223,6 +224,13 @@ function TestQnA() {
                     <div
                       key={aidx}
                       onClick={() => handleAnswerCount(aval.type, aidx)}
+                      style={{
+                        cursor: "pointer",
+                        border: "1px solid #ccc", // Add a border to the options
+                        borderRadius: "5px", // Optional: Add rounded corners
+                        padding: "5px",
+                        margin: "5px",
+                      }}
                     >
                       {aval.text}
                     </div>
