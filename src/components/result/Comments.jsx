@@ -8,8 +8,11 @@ import {
 } from "../../api/api";
 import useInput from "../../hooks/useInput";
 import shortid from "shortid";
+import { auth } from "../../service/firebase";
 
-const Comments = ({ user }) => {
+const Comments = () => {
+  const user = auth.currentUser;
+
   const { isLoading, isError, data } = useQuery("comments", getComments);
 
   const queryClient = useQueryClient();
@@ -139,7 +142,7 @@ const Comments = ({ user }) => {
             ) : (
               <p>내용 : {comment.body}</p>
             )}
-            {user.uid === comment.uid && (
+            {user?.uid === comment.uid && (
               <>
                 {isEdit ? (
                   <button onClick={() => clickUpdateComment(comment)}>
