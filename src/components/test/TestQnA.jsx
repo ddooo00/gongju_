@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TestResult from "../result/TestResult";
+import { StyleTypeDiv } from "../../styles/style.testQnA";
 
 function TestQnA() {
   const [page, setPage] = useState(0);
@@ -157,8 +158,9 @@ function TestQnA() {
     { name: "E", count: 0 },
   ]);
 
+  //타입별 카운트 올리기
   const handleAnswerCount = (typeStr, idx) => {
-    console.log("typeStr>>>", typeStr);
+    // console.log("typeStr>>>", typeStr);
     const types = typeStr.split(",");
 
     // type이 여러 개인 경우 콤마(,)로 구분된 배열로 분리
@@ -181,17 +183,25 @@ function TestQnA() {
 
   // 가장 많이 선택된 유형 찾기
   const getMostSelectedType = () => {
-    let maxCount = 0; //가장 큰 값
-    let mostSelectedType = ""; //가장 선택 많이 된 값
+    let maxCount = 0; //가장 큰 값(forEach 돌면서 카운트 값이 maxCount로 들어가지고 비교함)
+    let mostSelectedTypes = []; //가장 선택 많이 된 타입 배열로 담고
+
+    console.log("카운트된공주리스트!!", gongjuList);
 
     gongjuList.forEach((item) => {
       if (item.count > maxCount) {
         maxCount = item.count;
-        mostSelectedType = item.name;
+        mostSelectedTypes = [item.name];
+      } else if (item.count === maxCount) {
+        mostSelectedTypes.push(item.name); //같은 count를 가진 결과 타입이 배열 안에 담김
       }
     });
 
-    return mostSelectedType;
+    const randomType =
+      mostSelectedTypes[Math.floor(Math.random() * mostSelectedTypes.length)];
+
+    console.log("랜덤타입 보이기!!!!!", randomType);
+    return randomType;
   };
 
   return (
@@ -223,12 +233,12 @@ function TestQnA() {
                 {/* 선택지 */}
                 <div>
                   {val.a.map((aval, aidx) => (
-                    <div
+                    <StyleTypeDiv
                       key={aidx}
                       onClick={() => handleAnswerCount(aval.type, aidx)}
                     >
                       {aval.text}
-                    </div>
+                    </StyleTypeDiv>
                   ))}
                 </div>
               </div>
@@ -238,7 +248,7 @@ function TestQnA() {
       ) : (
         <div>
           결과페이지
-          <TestResult result={getMostSelectedType()} />
+          <TestResult results={getMostSelectedType()} />
         </div>
       )}
     </>
