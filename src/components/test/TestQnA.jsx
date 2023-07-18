@@ -156,7 +156,6 @@ function TestQnA() {
     { name: "D", count: 0 },
     { name: "E", count: 0 },
   ]);
-
   const handleAnswerCount = (typeStr, idx) => {
     const types = typeStr.split(","); // type이 여러 개인 경우 콤마(,)로 구분된 배열로 분리
 
@@ -178,17 +177,23 @@ function TestQnA() {
 
   // 가장 많이 선택된 유형 찾기
   const getMostSelectedType = () => {
-    let maxCount = 0; //가장 큰 값
-    let mostSelectedType = ""; //가장 선택 많이 된 값
+    let maxCount = 0; // 가장 큰 값
+    let mostSelectedTypes = []; // 가장 선택 많이 된 값들을 담는 배열
 
     gongjuList.forEach((item) => {
       if (item.count > maxCount) {
         maxCount = item.count;
-        mostSelectedType = item.name;
+        mostSelectedTypes = [item.name];
+      } else if (item.count === maxCount) {
+        mostSelectedTypes.push(item.name);
       }
     });
 
-    return mostSelectedType;
+    // count가 같은 유형들 중 랜덤으로 하나의 유형 선택
+    const randomType =
+      mostSelectedTypes[Math.floor(Math.random() * mostSelectedTypes.length)];
+
+    return randomType;
   };
 
   return (
@@ -243,7 +248,7 @@ function TestQnA() {
       ) : (
         <div>
           결과페이지
-          <TestResult result={getMostSelectedType()} />
+          <TestResult results={getMostSelectedType()} />
         </div>
       )}
     </>
