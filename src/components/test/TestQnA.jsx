@@ -177,9 +177,9 @@ function TestQnA() {
 
     let ls = gongjuList.map((item) => ({ ...item }));
     types.forEach((type) => {
-      const foundItem = ls.find((item) => item.name === type);
-      if (foundItem) {
-        foundItem.count += 1;
+      const gongjuItem = ls.find((item) => item.name === type);
+      if (gongjuItem) {
+        gongjuItem.count += 1;
       }
     });
 
