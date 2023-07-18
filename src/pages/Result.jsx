@@ -1,51 +1,41 @@
 import React from "react";
-import { Table } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
 
-const Result = () => {
-  const location = useLocation();
-  const { answers } = location.state;
-
-  const countAnswers = {};
-  answers.forEach((answer) => {
-    const options = answer.split(",");
-    options.forEach((option) => {
-      countAnswers[option] = (countAnswers[option] || 0) + 1;
-    });
-  });
-
-  const sortedAnswers = Object.entries(countAnswers).sort(
-    (a, b) => b[1] - a[1]
-  );
-
+function Result({ result }) {
+  // 결과 값에 따라 해당하는 유형 표시하기
   return (
     <div>
-      <h1>선택한 답변들의 결과</h1>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>답변</th>
-            <th>누적 횟수</th>
-            <th>백분율</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedAnswers.map((entry, index) => {
-            const option = entry[0];
-            const count = entry[1];
-            const percentage = ((count / answers.length) * 100).toFixed(2);
-            return (
-              <tr key={index}>
-                <td>{option}</td>
-                <td>{count}</td>
-                <td>{percentage}%</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+      {result === "A" && (
+        <div>
+          파티 is my Life <br />
+          '셀럽 공주'
+        </div>
+      )}
+      {result === "B" && (
+        <div>
+          #오운완 <br />
+          '근육 공주'
+        </div>
+      )}
+      {result === "C" && (
+        <div>
+          누워서 A+먹기 <br />
+          '똑똑 공주'
+        </div>
+      )}
+      {result === "D" && (
+        <div>
+          공주 배고파서 힘 없져 <br />
+          '먹방 공주'
+        </div>
+      )}
+      {result === "E" && (
+        <div>
+          카메라는 나와 한몸 <br />
+          '감성 공주'
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default Result;
