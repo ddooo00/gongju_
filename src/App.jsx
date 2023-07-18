@@ -1,7 +1,6 @@
-import { useEffect } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import "./App.css";
 import Router from "./shared/Router";
-import { QueryClientProvider, QueryClient } from "react-query";
 
 const queryClient = new QueryClient();
 

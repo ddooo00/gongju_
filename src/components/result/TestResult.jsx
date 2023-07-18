@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { getResult } from "../../api/testList";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
+import Board from "../../pages/Board";
 
 function TestResult({ results }) {
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const clickShowComments = () => navigate(`/board`);
+
   //결과 db 조회(가져오기)
   const { isLoading, isError, data } = useQuery("gongjuTypeData", getResult);
   // console.log("data💛💛", data);
@@ -18,6 +25,8 @@ function TestResult({ results }) {
 
   return (
     <div>
+      <button onClick={clickShowComments}>전체 결과 보러가기</button>
+      {isOpen && <Board />}
       {gongjuTypeResult.map((princess) => {
         if (results.includes(princess.type)) {
           return (
