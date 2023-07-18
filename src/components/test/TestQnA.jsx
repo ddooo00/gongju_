@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TestResult from "../result/TestResult";
 
 function TestQnA() {
   const [page, setPage] = useState(0);
@@ -68,23 +69,7 @@ function TestQnA() {
         { type: "C", text: "이제 놀만큼 놀았으니까 놀이공원을 나간다." },
       ],
     },
-    {
-      q: [
-        "친구와 같이 시험공부를 하기로 했는데 지각한 당신. 친구는 단단히 화가 난 상태다. 어떻게 친구의 화를 풀어주지?",
-      ],
-      a: [
-        {
-          type: "D,E",
-          text: "맛있는 거 먹으면 금방 풀리지! 공부하기 전, 인스타 맛집으로 데려간다.",
-        },
-        {
-          type: "C",
-          text: "그래도 공부는 해야지! 친구가 원하던 족보를 넘겨주고 같이하자!",
-        },
-        { type: "A", text: "지각했는데 공부는 무슨! 술이나 마시러가자." },
-        { type: "B", text: "난 줄게없다. 친구 집 앞까지 찾아가서 싹싹 빈다." },
-      ],
-    },
+
     {
       q: [
         "친구와 같이 시험공부를 하기로 했는데 지각한 당신. 친구는 단단히 화가 난 상태다. 어떻게 친구의 화를 풀어주지?",
@@ -194,6 +179,21 @@ function TestQnA() {
     }
   };
 
+  // 가장 많이 선택된 유형 찾기
+  const getMostSelectedType = () => {
+    let maxCount = 0; //가장 큰 값
+    let mostSelectedType = ""; //가장 선택 많이 된 값
+
+    gongjuList.forEach((item) => {
+      if (item.count > maxCount) {
+        maxCount = item.count;
+        mostSelectedType = item.name;
+      }
+    });
+
+    return mostSelectedType;
+  };
+
   return (
     <>
       {page === 0 ? (
@@ -236,7 +236,10 @@ function TestQnA() {
           ))}
         </div>
       ) : (
-        <div>결과페이지</div>
+        <div>
+          결과페이지
+          <TestResult result={getMostSelectedType()} />
+        </div>
       )}
     </>
   );
