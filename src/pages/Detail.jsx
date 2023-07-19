@@ -100,11 +100,7 @@ function Detail() {
               <li>{dataItem.address}</li>
               <li>{dataItem.call}</li>
               <img src={dataItem.img} style={{ width: "400px" }} />
-              <KakaoMap
-                latitude={dataItem.latitude}
-                longitude={dataItem.longitude}
-                address={dataItem.address}
-              />
+              <KakaoMap address={dataItem.address} />
               <button
                 onClick={() => {
                   navigate(-1); // 이전 페이지로 이동 (-1은 뒤로가기)
