@@ -30,7 +30,7 @@ const Comments = () => {
   // 현재 페이지의 시작 인덱스
   const [itemOffset, setItemOffset] = useState(0);
   //한 페이지에 표시될 항목 수
-  const itemsPerPage = 3;
+  const itemsPerPage = 7;
 
   useEffect(() => {
     // 그 배열의 마지막 인덱스
