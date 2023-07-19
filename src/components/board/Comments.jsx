@@ -4,6 +4,7 @@ import useInput from "../../hooks/useInput";
 import useComments from "../../hooks/useComments";
 import shortid from "shortid";
 import ReactPaginate from "react-paginate";
+import { styled } from "styled-components";
 
 const Comments = () => {
   const user = auth.currentUser;
@@ -21,21 +22,24 @@ const Comments = () => {
   const [editedBody, onChangeEditedBody, resetEditedBody] = useInput();
   const [isEdit, setIsEdit] = useState(null);
 
-  // =========================================================
-
+  // 댓글 페이지네이션
   // 현재 페이지의 데이터
-  const [currentItems, setCurrentItems] = useState([]);
+  const [currentComments, setCurrentComments] = useState([]);
   // 전체 페이지 수를 저장
   const [pageCount, setPageCount] = useState(0);
   // 현재 페이지의 시작 인덱스
   const [itemOffset, setItemOffset] = useState(0);
-  //한 페이지에 표시될 항목 수
-  const itemsPerPage = 7;
+  // 한 페이지에 표시될 항목 수
+  const itemsPerPage = 5;
 
   useEffect(() => {
-    // 그 배열의 마지막 인덱스
+    // 한 페이지 내 댓글 배열의 마지막 인덱스
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(comments?.slice(itemOffset, endOffset));
+    setCurrentComments(
+      comments
+        ?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+        .slice(itemOffset, endOffset)
+    );
     setPageCount(Math.ceil(comments?.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, comments]);
 
@@ -48,8 +52,7 @@ const Comments = () => {
     );
   };
 
-  // =========================================================
-
+  //  날짜 포맷팅
   const date = new Date();
   const year = date.getFullYear();
   const month = date.getMonth();
@@ -59,6 +62,7 @@ const Comments = () => {
 
   const dateFormat = `${year}.${month}.${day} ${hours}:${minutes}`;
 
+  // 댓글 추가
   const clickAddComment = (e) => {
     e.preventDefault();
 
@@ -79,14 +83,13 @@ const Comments = () => {
     resetBody("");
   };
 
+  // 댓글 삭제
   const clickDeleteComment = (id) => {
     if (window.confirm("정말 삭제하시겠습니까 ?")) {
-      alert("삭제되었습니다.");
       deleteMutation.mutate(id);
     } else {
-      alert("삭제가 취소되었습니다.");
+      return alert("삭제가 취소되었습니다.");
     }
-    console.log(id);
   };
 
   const clickEditMode = (comment) => {
@@ -94,12 +97,13 @@ const Comments = () => {
     onChangeEditedBody(comment.editedBody);
   };
 
+  // 댓글 수정
   const clickUpdateComment = (comment) => {
     const editedComment = {
       ...comment,
       userName: user.displayName,
       body: editedBody,
-      createdAt: dateFormat,
+      // createdAt: dateFormat,
     };
 
     updateMutation.mutate(editedComment);
@@ -132,7 +136,7 @@ const Comments = () => {
         />
         <button onClick={clickAddComment}>등록</button>
       </form>
-      {currentItems?.map((comment) => {
+      {currentComments?.map((comment) => {
         return (
           <div
             style={{
@@ -175,17 +179,45 @@ const Comments = () => {
           </div>
         );
       })}
-      <ReactPaginate
-        // breakLabel="..."
-        nextLabel="next >"
+      <StyledReactPaginate
+        breakLabel="..."
+        nextLabel="> "
+        previousLabel=" <"
         onPageChange={handlePageClick}
-        // pageRangeDisplayed={1}
         pageCount={pageCount}
-        previousLabel="< previous"
+        pageRangeDisplayed={3}
+        marginPagesDisplayed={1}
         renderOnZeroPageCount={null}
+        // containerClassName="pagination justify-content-center"
+        // pageClassName="page-item"
+        // pageLinkClassName="page-link"
+        // previousClassName="page-item"
+        // previousLinkClassName="page-link"
+        // nextClassName="page-item"
+        // nextLinkClassName="page-link"
+        activeClassName="active"
       />
     </div>
   );
 };
 
 export default Comments;
+
+const StyledReactPaginate = styled(ReactPaginate)`
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 30px;
+
+  li a {
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  li.active a {
+    color: #91cccd;
+    font-weight: 700;
+    min-width: 32px;
+  }
+`;

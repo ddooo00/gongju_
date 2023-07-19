@@ -24,6 +24,7 @@ const useComments = () => {
   const deleteMutation = useMutation(deleteComment, {
     onSuccess: () => {
       queryClient.invalidateQueries("comments");
+      alert("삭제가 완료되었습니다.");
     },
   });
 
