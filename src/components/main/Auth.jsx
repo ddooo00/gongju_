@@ -11,6 +11,7 @@ import d from "../../assets/img/스크린샷 2023-07-19 112651.png";
 import e from "../../assets/img/스크린샷 2023-07-19 112704.png";
 import f from "../../assets/img/스크린샷 2023-07-19 112720.png";
 import g from "../../assets/img/스크린샷 2023-07-19 112809.png";
+import YouTube from "react-youtube";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -92,6 +93,14 @@ const Auth = () => {
           </div>
         </>
       )}
+
+      {/* YouTube 비디오를 여기에 삽입합니다 */}
+      <div style={{ width: "50%" }}>
+        <YouTube
+          videoId="Vy9RqQPbxi0"
+          opts={{ width: "100%", height: "300px" }}
+        />
+      </div>
 
       <div className="carousel-container">
         <div className="carousel">

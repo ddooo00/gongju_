@@ -473,27 +473,27 @@
     {
       "id": "A",
       "name": "A",
-      "value": 3
+      "value": 12
     },
     {
       "id": "B",
       "name": "B",
-      "value": 2
+      "value": 7
     },
     {
       "id": "C",
       "name": "C",
-      "value": 0
+      "value": 4
     },
     {
       "id": "D",
       "name": "D",
-      "value": 0
+      "value": 5
     },
     {
       "id": "E",
       "name": "E",
-      "value": 0
+      "value": 2
     }
   ]
 }
