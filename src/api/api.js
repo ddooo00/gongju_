@@ -29,23 +29,6 @@ const getMountains = async () => {
   return response.data;
 };
 
-const getComments = async () => {
-  const response = await api.get(`/comments`);
-  return response.data;
-};
-
-const addComment = async (newComment) => {
-  await api.post(`/comments`, newComment);
-};
-
-const deleteComment = async (id) => {
-  await api.delete(`/comments/${id}`);
-};
-
-const updateComment = async (updatecomment) => {
-  await api.patch(`/comments/${updatecomment.id}`, updatecomment);
-};
-
 const getChart = async () => {
   const response = await api.get(`/chart`);
   return response.data;
@@ -56,10 +39,6 @@ const updateChart = async ({ id, updatedChart }) => {
 };
 
 export {
-  getComments,
-  addComment,
-  deleteComment,
-  updateComment,
   getFestivals,
   getCampsites,
   getRestaurants,

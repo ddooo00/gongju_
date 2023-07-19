@@ -146,60 +146,53 @@
   ],
   "comments": [
     {
-      "id": "e9VGL8x0T",
-      "uid": "tmRZACxrHZeFaFWxxereIJ8j3VI3",
-      "userName": "111",
-      "body": "설마",
-      "createdAt": "2023.6.18 19:38"
-    },
-    {
-      "id": "6lBXoYb3z",
+      "id": "-vGy2J5I4",
       "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
       "userName": "ㅌㅅㅌ",
-      "body": "테스트임",
-      "createdAt": "2023.6.18 19:48"
+      "body": "11",
+      "createdAt": "2023.6.19 15:25"
     },
     {
-      "id": "LqBJ-JviJ",
-      "uid": "5VF8FlcUm3Y2rNbevn1vSrg2EGV2",
-      "userName": "ᄒᄌ",
-      "body": "ㅎㅎㅎㅎㅎ",
-      "createdAt": "2023.6.18 20:41"
-    },
-    {
-      "id": "_9EfhDNNf",
-      "uid": "5VF8FlcUm3Y2rNbevn1vSrg2EGV2",
-      "userName": "ᄒᄌ",
-      "body": "gg",
-      "createdAt": "2023.6.18 21:17"
-    },
-    {
-      "id": "SGUpX6_SB",
+      "id": "hwWhXdlKO",
       "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
       "userName": "ㅌㅅㅌ",
-      "body": "gg",
-      "createdAt": "2023.6.18 22:1"
+      "body": "22",
+      "createdAt": "2023.6.19 15:25"
     },
     {
-      "id": "1_e_xyl2s",
+      "id": "q_4PgPOeUF",
       "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
       "userName": "ㅌㅅㅌ",
-      "body": "123",
-      "createdAt": "2023.6.18 22:1"
+      "body": "33",
+      "createdAt": "2023.6.19 15:25"
     },
     {
-      "id": "RtBtAleJT",
-      "uid": "tmRZACxrHZeFaFWxxereIJ8j3VI3",
-      "userName": "111",
-      "body": "dfs",
-      "createdAt": "2023.6.18 22:10"
+      "id": "5Xydq24LX",
+      "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
+      "userName": "ㅌㅅㅌ",
+      "body": "44",
+      "createdAt": "2023.6.19 15:25"
     },
     {
-      "id": "kjavXa6EK",
-      "uid": "tmRZACxrHZeFaFWxxereIJ8j3VI3",
-      "userName": "111",
-      "body": "123123",
-      "createdAt": "2023.6.18 22:10"
+      "id": "BUWzn9Apa",
+      "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
+      "userName": "ㅌㅅㅌ",
+      "body": "55",
+      "createdAt": "2023.6.19 15:25"
+    },
+    {
+      "id": "sFzUTNoZU",
+      "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
+      "userName": "ㅌㅅㅌ",
+      "body": "66",
+      "createdAt": "2023.6.19 15:25"
+    },
+    {
+      "id": "FW0gxNFcB",
+      "uid": "X1ipLt8sU5hcJynA0cBWOlUlMgL2",
+      "userName": "ㅌㅅㅌ",
+      "body": "77",
+      "createdAt": "2023.6.19 15:25"
     }
   ],
   "gongjuList": [
@@ -480,7 +473,7 @@
     {
       "id": "A",
       "name": "A",
-      "value": 2
+      "value": 3
     },
     {
       "id": "B",

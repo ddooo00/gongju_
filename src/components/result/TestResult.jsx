@@ -129,7 +129,6 @@ function TestResult() {
     <div ref={cardRef} id="result-container">
       <button onClick={onDownloadBtn}>저장</button>
       <button onClick={clickShowComments}>전체 결과 보러가기</button>
-      {isOpen && <Board />}
       {gongjuTypeResult.map((princess) => {
         if (id?.includes(princess.type)) {
           return (
