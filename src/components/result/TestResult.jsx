@@ -116,6 +116,8 @@ function TestResult({ results }) {
             <div key={princess.type}>
               {princess.text} <br />'{princess.name} 공주' <br />
               <img src={princess.imageURL} alt="사진을 가져오지 못했습니다." />
+              <pre>{princess.description}</pre>
+              <pre>{princess.recommend}</pre>
             </div>
           );
         }
