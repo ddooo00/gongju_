@@ -5,10 +5,11 @@ import {
   deleteComment,
   getComments,
   updateComment,
-} from "../../api/api";
+} from "../../api/comments";
 import useInput from "../../hooks/useInput";
 import shortid from "shortid";
 import { auth } from "../../service/firebase";
+import Paginate from "./Paginate";
 
 const Comments = () => {
   const user = auth.currentUser;
@@ -161,6 +162,7 @@ const Comments = () => {
           </div>
         );
       })}
+      <Paginate data={data} />
     </div>
   );
 };
