@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getResult } from "../../api/testList";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ import {
   getMountains,
 } from "../../api/api";
 import { useParams } from "react-router-dom";
+import html2canvas from "html2canvas";
 
 function TestResult() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ function TestResult() {
   const params = useParams();
   const { id } = params;
   // console.log("id타입값???", id);
+  const cardRef = useRef(); // useRef를 사용하여 결과지 컨테이너를 참조합니다.
 
   const { isLoading, isError, data } = useQuery("gongjuTypeData", getResult);
 
@@ -105,8 +107,26 @@ function TestResult() {
 
   const gongjuTypeResult = data;
 
+  // 이미지 캡쳐 및 저장 함수
+  const onDownloadBtn = () => {
+    const card = cardRef.current; // useRef로 참조한 결과지 컨테이너를 가져옵니다.
+    html2canvas(card)
+      .then((canvas) => {
+        // Canvas를 이미지로 변환
+        const dataUrl = canvas.toDataURL();
+        const link = document.createElement("a");
+        link.href = dataUrl;
+        link.download = "card.png"; // 다운로드할 이미지 파일명
+        link.click();
+      })
+      .catch((error) => {
+        console.error("이미지 캡쳐 오류:", error);
+      });
+  };
+
   return (
-    <div>
+    <div ref={cardRef} id="result-container">
+      <button onClick={onDownloadBtn}>저장</button>
       <button onClick={clickShowComments}>전체 결과 보러가기</button>
       {isOpen && <Board />}
       {gongjuTypeResult.map((princess) => {
