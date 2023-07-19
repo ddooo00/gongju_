@@ -29,10 +29,21 @@ const getMountains = async () => {
   return response.data;
 };
 
+const getChart = async () => {
+  const response = await api.get(`/chart`);
+  return response.data;
+};
+
+const updateChart = async ({ id, updatedChart }) => {
+  await api.patch(`/chart/${id}`, updatedChart);
+};
+
 export {
   getFestivals,
   getCampsites,
   getRestaurants,
   getHeritages,
   getMountains,
+  getChart,
+  updateChart,
 };
