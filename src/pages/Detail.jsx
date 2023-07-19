@@ -103,6 +103,7 @@ function Detail() {
               <KakaoMap
                 latitude={dataItem.latitude}
                 longitude={dataItem.longitude}
+                address={dataItem.address}
               />
               <button
                 onClick={() => {
