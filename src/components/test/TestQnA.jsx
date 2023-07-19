@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import { getList } from "../../api/testList";
 import Result from "../../pages/Result";
 import { useNavigate } from "react-router";
+import "../../styles/TestQnA.css";
 
 function TestQnA() {
   const navigate = useNavigate();
@@ -77,9 +78,20 @@ function TestQnA() {
         <div>
           <div>
             <div>나는 어떤 공주일까?</div>
+
+            {/* 진행 상황 바 */}
+            <div className="progress-bar-container">
+              <div
+                className="progress-bar"
+                style={{
+                  width: `${page * (100 / questionList.length)}%`,
+                }}
+              />
+            </div>
+            {/* ---- */}
+
             <div>{`${page} / ${questionList.length}`}</div>
           </div>
-
           {questionList.map((val, idx) => (
             <div
               key={idx}
