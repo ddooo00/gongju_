@@ -84,7 +84,7 @@ function TestQnA() {
               <div
                 className="progress-bar"
                 style={{
-                  width: `${(page - 1) * (100 / questionList.length)}%`,
+                  width: `${page * (100 / questionList.length)}%`,
                 }}
               />
             </div>
