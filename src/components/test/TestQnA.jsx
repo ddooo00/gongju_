@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import TestResult from "../result/TestResult";
 import { useQuery } from "react-query";
 import { getList } from "../../api/testList";
+import Result from "../../pages/Result";
+import { useNavigate } from "react-router";
 
 function TestQnA() {
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   //유형 리스트 관리
   const [gongjuList, setGongjuList] = useState([
@@ -115,8 +118,14 @@ function TestQnA() {
         </div>
       ) : (
         <div>
-          결과페이지
-          <TestResult results={getMostSelectedType()} />
+          <h1>테스트가 끝났습니다! 결과를 보러 갈까요?</h1>
+          <button
+            onClick={() => {
+              navigate(`/test/${getMostSelectedType()}`);
+            }}
+          >
+            결과 보러가기
+          </button>
         </div>
       )}
     </>
