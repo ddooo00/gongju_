@@ -1,41 +1,54 @@
-import React, { useState } from "react";
-import { useMutation, useQuery, useQueryClient } from "react-query";
-import {
-  addComment,
-  deleteComment,
-  getComments,
-  updateComment,
-} from "../../api/comments";
-import useInput from "../../hooks/useInput";
-import shortid from "shortid";
+import React, { useEffect, useState } from "react";
 import { auth } from "../../service/firebase";
-import Paginate from "./Paginate";
+import useInput from "../../hooks/useInput";
+import useComments from "../../hooks/useComments";
+import shortid from "shortid";
+import ReactPaginate from "react-paginate";
 
 const Comments = () => {
   const user = auth.currentUser;
 
-  const { isLoading, isError, data } = useQuery("comments", getComments);
-
-  const queryClient = useQueryClient();
-  const addMutation = useMutation(addComment, {
-    onSuccess: () => {
-      queryClient.invalidateQueries("comments");
-    },
-  });
-  const deleteMutation = useMutation(deleteComment, {
-    onSuccess: () => {
-      queryClient.invalidateQueries("comments");
-    },
-  });
-  const updateMutation = useMutation(updateComment, {
-    onSuccess: () => {
-      queryClient.invalidateQueries("comments");
-    },
-  });
+  const {
+    isLoading,
+    isError,
+    comments,
+    addMutation,
+    deleteMutation,
+    updateMutation,
+  } = useComments();
 
   const [body, onChangeBody, resetBody] = useInput();
   const [editedBody, onChangeEditedBody, resetEditedBody] = useInput();
   const [isEdit, setIsEdit] = useState(null);
+
+  // =========================================================
+
+  // 현재 페이지의 데이터
+  const [currentItems, setCurrentItems] = useState([]);
+  // 전체 페이지 수를 저장
+  const [pageCount, setPageCount] = useState(0);
+  // 현재 페이지의 시작 인덱스
+  const [itemOffset, setItemOffset] = useState(0);
+  //한 페이지에 표시될 항목 수
+  const itemsPerPage = 3;
+
+  useEffect(() => {
+    // 그 배열의 마지막 인덱스
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(comments?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(comments?.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, comments]);
+
+  const handlePageClick = (e) => {
+    const newOffset = (e.selected * itemsPerPage) % comments.length;
+    setItemOffset(newOffset);
+    // console.log("newOffset", newOffset);
+    console.log(
+      `User requested page number ${e.selected}, which is offset ${newOffset}`
+    );
+  };
+
+  // =========================================================
 
   const date = new Date();
   const year = date.getFullYear();
@@ -119,7 +132,7 @@ const Comments = () => {
         />
         <button onClick={clickAddComment}>등록</button>
       </form>
-      {data.map((comment) => {
+      {currentItems?.map((comment) => {
         return (
           <div
             style={{
@@ -162,7 +175,15 @@ const Comments = () => {
           </div>
         );
       })}
-      <Paginate data={data} />
+      <ReactPaginate
+        // breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        // pageRangeDisplayed={1}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      />
     </div>
   );
 };

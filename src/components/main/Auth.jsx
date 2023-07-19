@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../../service/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import SignIn from "./SignIn";
-import Comments from "../result/Comments";
 import { useNavigate } from "react-router-dom";
 
 const Auth = () => {

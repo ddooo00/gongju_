@@ -108,7 +108,6 @@ function TestResult({ results }) {
   return (
     <div>
       <button onClick={clickShowComments}>전체 결과 보러가기</button>
-      {isOpen && <Board />}
       {gongjuTypeResult.map((princess) => {
         if (results?.includes(princess.type)) {
           return (
