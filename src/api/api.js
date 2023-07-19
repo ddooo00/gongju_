@@ -46,4 +46,25 @@ const updateComment = async (updatecomment) => {
   await api.patch(`/comments/${updatecomment.id}`, updatecomment);
 };
 
-export { getComments, addComment, deleteComment, updateComment,  getFestivals, getCampsites, getRestaurants, getHeritages, getMountains};
+const getChart = async () => {
+  const response = await api.get(`/chart`);
+  return response.data;
+};
+
+const updateChart = async ({ id, updatedChart }) => {
+  await api.patch(`/chart/${id}`, updatedChart);
+};
+
+export {
+  getComments,
+  addComment,
+  deleteComment,
+  updateComment,
+  getFestivals,
+  getCampsites,
+  getRestaurants,
+  getHeritages,
+  getMountains,
+  getChart,
+  updateChart,
+};

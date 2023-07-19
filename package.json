@@ -23,6 +23,7 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "react-uuid": "^2.0.0",
+    "recharts": "^2.7.2",
     "redux": "^4.2.1",
     "shortid": "^2.2.16",
     "styled-components": "^6.0.4",

@@ -5,6 +5,8 @@ import { getList } from "../../api/testList";
 import Result from "../../pages/Result";
 import { useNavigate } from "react-router";
 import "../../styles/TestQnA.css";
+import { useMutation, useQueryClient } from "react-query";
+import { getChart, updateChart } from "../../api/api";
 
 function TestQnA() {
   const navigate = useNavigate();
@@ -17,6 +19,20 @@ function TestQnA() {
     { name: "D", count: 0 },
     { name: "E", count: 0 },
   ]);
+
+  const {
+    isLoading: chartIsLoading,
+    isError: chartIsError,
+    data: chartData,
+  } = useQuery("chart", getChart);
+
+  const updateMutation = useMutation(updateChart, {
+    onSuccess: () => {
+      queryClient.invalidateQueries("chart");
+    },
+  });
+
+  const queryClient = useQueryClient();
 
   //유형 테스트 QnA
   //테스트 리스트 db 조회(가져오기)
@@ -70,6 +86,18 @@ function TestQnA() {
       mostSelectedTypes[Math.floor(Math.random() * mostSelectedTypes.length)];
 
     return randomType;
+  };
+
+  // 차트 업데이트 함수
+
+  const updateChartHandler = (id) => {
+    const originalValue = chartData.find((data) => data.id == id).value;
+    const updatedChart = {
+      value: originalValue + 1,
+    };
+    updateMutation.mutate({ id, updatedChart });
+
+    console.log(originalValue);
   };
 
   return (
@@ -134,6 +162,7 @@ function TestQnA() {
           <button
             onClick={() => {
               navigate(`/test/${getMostSelectedType()}`);
+              updateChartHandler(getMostSelectedType());
             }}
           >
             결과 보러가기
