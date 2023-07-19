@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TestResult from "../result/TestResult";
 import { useQuery } from "react-query";
 import { getList } from "../../api/testList";
+import Result from "../../pages/Result";
 
 function TestQnA() {
   const [page, setPage] = useState(1);
@@ -116,7 +117,7 @@ function TestQnA() {
       ) : (
         <div>
           결과페이지
-          <TestResult results={getMostSelectedType()} />
+          <Result results={getMostSelectedType()} />
         </div>
       )}
     </>

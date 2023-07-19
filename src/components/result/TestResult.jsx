@@ -13,6 +13,8 @@ import {
 import { useParams } from "react-router-dom";
 
 function TestResult({ results }) {
+  console.log("results 타입 값", results);
+
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [dataToShow, setDataToShow] = useState([]);
@@ -103,7 +105,6 @@ function TestResult({ results }) {
   }
 
   const gongjuTypeResult = data;
-  console.log("공주 타입 결과`!~!!~~!~", results);
 
   return (
     <div>
