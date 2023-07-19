@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import { getList } from "../../api/testList";
 
 function TestQnA() {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   //유형 리스트 관리
   const [gongjuList, setGongjuList] = useState([
     { name: "A", count: 0 },
@@ -70,11 +70,7 @@ function TestQnA() {
 
   return (
     <>
-      {page === 0 ? (
-        <div>
-          <div onClick={() => setPage(1)}>테스트 시작하기</div>
-        </div>
-      ) : page <= questionList.length ? (
+      {page <= questionList.length ? (
         <div>
           <div>
             <div>나는 어떤 공주일까?</div>
