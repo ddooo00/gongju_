@@ -472,28 +472,28 @@
   "chart": [
     {
       "id": "A",
-      "name": "A",
-      "value": 3
+      "name": "셀럽공주",
+      "value": 4
     },
     {
       "id": "B",
-      "name": "B",
-      "value": 2
+      "name": "근육공주",
+      "value": 6
     },
     {
       "id": "C",
-      "name": "C",
-      "value": 0
+      "name": "똑똑공주",
+      "value": 1
     },
     {
       "id": "D",
-      "name": "D",
-      "value": 0
+      "name": "먹방공주",
+      "value": 3
     },
     {
       "id": "E",
-      "name": "E",
-      "value": 0
+      "name": "감성공주",
+      "value": 1
     }
   ]
 }

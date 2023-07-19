@@ -2,35 +2,9 @@ import React from "react";
 import { PieChart, Pie, Cell } from "recharts";
 import { useQuery } from "react-query";
 import { getChart } from "../../api/api";
+import { BarChart, Bar, XAxis, YAxis, LabelList } from "recharts";
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red"];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index,
-}) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text
-      x={x}
-      y={y}
-      fill="white"
-      textAnchor={x > cx ? "start" : "end"}
-      dominantBaseline="central"
-    >
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
+const COLORS = ["#f66a6a", "#59df7f", "#d382f8", "#f9f26c", "#77a9ff"];
 
 const Chart = () => {
   // 데이터를 불러옴
@@ -47,22 +21,35 @@ const Chart = () => {
   console.log(data);
 
   return (
-    <PieChart width={400} height={400}>
-      <Pie
+    <>
+      <BarChart
+        width={500}
+        height={270}
         data={data}
-        cx="50%"
-        cy="50%"
-        labelLine={false}
-        label={renderCustomizedLabel}
-        outerRadius={80}
-        fill="#8884d8"
-        dataKey="value"
+        layout="vertical"
+        style={{ marginLeft: "100px" }}
       >
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-        ))}
-      </Pie>
-    </PieChart>
+        <XAxis type="number" orientation="top" stroke="#000000" />
+        <YAxis
+          type="category"
+          dataKey="name"
+          axisLine={false}
+          dx={-1}
+          tickLine={false}
+          style={{ fill: "#000000" }}
+        />
+        <Bar background dataKey="value" barSize={{ height: 26 }}>
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+          <LabelList
+            dataKey="amountLabel"
+            position="insideRight"
+            style={{ fill: "white" }}
+          />
+        </Bar>
+      </BarChart>
+    </>
   );
 };
 
