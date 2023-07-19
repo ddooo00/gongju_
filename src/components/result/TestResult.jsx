@@ -12,14 +12,13 @@ import {
 } from "../../api/api";
 import { useParams } from "react-router-dom";
 
-function TestResult({ results }) {
-  console.log("results 타입 값", results);
-
+function TestResult() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [dataToShow, setDataToShow] = useState([]);
   const params = useParams();
   const { id } = params;
+  // console.log("id타입값???", id);
 
   const { isLoading, isError, data } = useQuery("gongjuTypeData", getResult);
 
@@ -53,15 +52,15 @@ function TestResult({ results }) {
   } = useQuery("mountains", getMountains);
 
   useEffect(() => {
-    if (results === "A") {
+    if (id === "A") {
       setDataToShow(dataFestivals);
-    } else if (results === "B") {
+    } else if (id === "B") {
       setDataToShow(dataCampsites);
-    } else if (results === "C") {
+    } else if (id === "C") {
       setDataToShow(dataHeritages);
-    } else if (results === "D") {
+    } else if (id === "D") {
       setDataToShow(dataRestaurants);
-    } else if (results === "E") {
+    } else if (id === "E") {
       setDataToShow(dataMountains);
     }
   }, [
@@ -111,7 +110,7 @@ function TestResult({ results }) {
       <button onClick={clickShowComments}>전체 결과 보러가기</button>
       {isOpen && <Board />}
       {gongjuTypeResult.map((princess) => {
-        if (results?.includes(princess.type)) {
+        if (id?.includes(princess.type)) {
           return (
             <div key={princess.type}>
               {princess.text} <br />'{princess.name} 공주' <br />
