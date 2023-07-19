@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { getResult } from "../../api/testList";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
+import { useMutation, useQueryClient } from "react-query";
 import Board from "../../pages/Board";
 import {
   getHeritages,
