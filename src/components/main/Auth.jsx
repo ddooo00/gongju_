@@ -4,6 +4,14 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import SignIn from "./SignIn";
 import Comments from "../result/Comments";
 import { useNavigate } from "react-router-dom";
+import "../../styles/disney.css";
+import a from "../../assets/img/스크린샷 2023-07-19 112531.png";
+import b from "../../assets/img/스크린샷 2023-07-19 112601.png";
+import c from "../../assets/img/스크린샷 2023-07-19 112622.png";
+import d from "../../assets/img/스크린샷 2023-07-19 112651.png";
+import e from "../../assets/img/스크린샷 2023-07-19 112704.png";
+import f from "../../assets/img/스크린샷 2023-07-19 112720.png";
+import g from "../../assets/img/스크린샷 2023-07-19 112809.png";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -85,6 +93,19 @@ const Auth = () => {
           </div>
         </>
       )}
+
+      <div className="carousel-container">
+        <div className="carousel">
+          {/* 여기에 디즈니 공주 이미지들을 추가해주세요. */}
+          <img src={a} alt="Princess 1" />
+          <img src={b} alt="Princess 2" />
+          <img src={c} alt="Princess 3" />
+          <img src={d} alt="Princess 3" />
+          <img src={e} alt="Princess 3" />
+          <img src={f} alt="Princess 3" />
+          <img src={g} alt="Princess 3" />
+        </div>
+      </div>
     </div>
   );
 };
