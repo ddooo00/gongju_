@@ -115,15 +115,17 @@ function TestResult() {
     html2canvas(card)
       .then((canvas) => {
         // Canvas를 이미지로 변환
-        const dataUrl = canvas.toDataURL();
+        const dataUrl = canvas.toDataURL("image/jpg");
         const link = document.createElement("a");
         link.href = dataUrl;
         link.download = "card.png"; // 다운로드할 이미지 파일명
         link.click();
       })
+
       .catch((error) => {
         console.error("이미지 캡쳐 오류:", error);
       });
+    console.log(card);
   };
 
   return (
