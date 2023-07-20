@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     font-family: 'Pretendard-Regular';
-    margin: 0 auto;
+    
 }
 `;
 
