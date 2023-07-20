@@ -8,6 +8,9 @@ import {
 } from "firebase/auth";
 import useInput from "../../hooks/useInput";
 import SignUp from "./SignUp";
+import * as S from "../../styles/style.main";
+import googleLogo from "../../assets/img/google.png";
+import githubLogo from "../../assets/img/github.png";
 
 const SignIn = ({ closeModal }) => {
   const [email, onChangeEmail, resetEmail] = useInput();
@@ -64,30 +67,40 @@ const SignIn = ({ closeModal }) => {
         />
       ) : (
         <>
-          <form>
-            <label htmlFor="email">email : </label>
-            <input
+          <S.SignInTitle>공주님, 로그인하실 시간입니다 !</S.SignInTitle>
+          <S.SignInForm>
+            <S.SignInInput
               type="text"
               value={email}
               onChange={(e) => onChangeEmail(e.target.value)}
+              placeholder="이메일을 입력해 주세요"
             />
-            <label htmlFor="password">password : </label>
-            <input
+            <S.SignInInput
               type="password"
               value={password}
               onChange={(e) => onChangePassword(e.target.value)}
+              placeholder="비밀번호를 입력해 주세요"
             />
-            <div>
-              <button onClick={signIn}>로그인</button>
-              <button name="google" onClick={socialSignIn}>
-                구글로그인
-              </button>
-              <button name="github" onClick={socialSignIn}>
-                깃허브로그인
-              </button>
-            </div>
-          </form>
-          <button onClick={clickChangeModal}>회원가입</button>
+            <S.SignInBtn onClick={signIn}>로그인</S.SignInBtn>
+            <S.SignInBtn onClick={clickChangeModal}>회원가입</S.SignInBtn>
+            <S.SignInSocialDesc>
+              공주님, 물론 소셜 로그인도 가능하답니다 !
+            </S.SignInSocialDesc>
+            <S.SignInSocialBox>
+              <S.SignInSocialLogo
+                src={googleLogo}
+                alt="google logo"
+                name="google"
+                onClick={socialSignIn}
+              />
+              <S.SignInSocialLogo
+                src={githubLogo}
+                alt="github logo"
+                name="github"
+                onClick={socialSignIn}
+              />
+            </S.SignInSocialBox>
+          </S.SignInForm>
         </>
       )}
     </div>
