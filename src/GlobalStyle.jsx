@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     font-family: 'Pretendard-Regular';
+<<<<<<< HEAD
+  
+=======
+>>>>>>> c3c959c552f6b63f37c473d10bce40524c00d258
     
 }
 `;
