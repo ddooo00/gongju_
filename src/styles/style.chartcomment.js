@@ -13,7 +13,7 @@ export const CommentWrapper = styled.div`
   min-width: 800px;
 `;
 
-export const button = styled.button`
+export const CommentboxButton = styled.button`
   width: 60px;
   height: 35px;
   font-size: 15px;
@@ -30,11 +30,6 @@ export const button = styled.button`
   }
 `;
 
-// export const buttonContainer = styled.button`
-//   border: none;
-//   background-color: white;
-//   align-items: right;
-// `;
 export const CommentTextarea = styled.input`
   border: none;
   border-radius: 10px;

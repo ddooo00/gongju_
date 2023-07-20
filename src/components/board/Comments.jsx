@@ -138,7 +138,7 @@ const Comments = () => {
               value={body}
               onChange={(e) => onChangeBody(e.target.value)}
             />
-            <S.button onClick={clickAddComment}>등록</S.button>
+            <button onClick={clickAddComment}>등록</button>
           </form>
           {currentComments?.map((comment) => {
             return (
@@ -168,14 +168,16 @@ const Comments = () => {
                       </button>
                     ) : (
                       <>
-                        <S.button
+                        <CommentboxButton
                           onClick={() => clickDeleteComment(comment.id)}
                         >
                           삭제
-                        </S.button>
-                        <S.button onClick={() => clickEditMode(comment)}>
-                          수정
-                        </S.button>
+                          <CommentboxButton
+                            onClick={() => clickEditMode(comment)}
+                          >
+                            수정
+                          </CommentboxButton>
+                        </CommentboxButton>
                       </>
                     )}
                   </>
