@@ -5,6 +5,7 @@ import SignIn from "./SignIn";
 import { useNavigate } from "react-router-dom";
 import * as S from "../../styles/style.main";
 import YouTube from "react-youtube";
+import mainImg from "../../assets/img/main.jpg";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -53,14 +54,17 @@ const Auth = () => {
         <S.LogoutBtnBox>
           {user && <S.LogoutBtn onClick={logOut}>로그아웃</S.LogoutBtn>}
         </S.LogoutBtnBox>
-        <S.MainTitle>나는 어떤 공주일까?</S.MainTitle>
+        <S.MainTitle>
+          {user
+            ? `${user.displayName}은(는) 어떤 공주일까 ?`
+            : `나는 어떤 공주일까 ?`}
+        </S.MainTitle>
         <S.MainDesc>공주로 알아보는 나의 성격</S.MainDesc>
-        <div style={{ width: "50%" }}>
-          <YouTube
+        {/* <YouTube
             videoId="Vy9RqQPbxi0"
-            opts={{ width: "100%", height: "300px" }}
-          />
-        </div>
+            opts={{ width: "100%", height: "500px" }}
+          /> */}
+        <S.MainImg src={mainImg} alt="main image" />
         <S.TestBtnBox>
           <S.TestBtn onClick={() => clickOpenHandler(user)}>
             테스트 하기
@@ -96,11 +100,15 @@ const Auth = () => {
             </div>
           </>
         )}
-        <S.MainFooterBox>
-          <S.FooterTeam>공주들</S.FooterTeam>
-          <S.FooterMember>이소영 이수진 이우정 장혜진 정송주</S.FooterMember>
-        </S.MainFooterBox>
       </S.MainWrapper>
+      <S.MainFooterBox>
+        <S.FooterTeam>공주들</S.FooterTeam>
+        <S.FooterMember>이소영</S.FooterMember>
+        <S.FooterMember>이수진</S.FooterMember>
+        <S.FooterMember>이우정</S.FooterMember>
+        <S.FooterMember>장혜진</S.FooterMember>
+        <S.FooterMember>정송주</S.FooterMember>
+      </S.MainFooterBox>
     </S.MainContainer>
   );
 };
