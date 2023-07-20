@@ -197,7 +197,9 @@ export const SignUpBtn = styled.button`
 
 export const MainFooterBox = styled.div`
   border-top: 1px solid #a6a6a6;
+  /* background-color: #ffffff; */
   padding: 7px 0;
+  box-shadow: 1px 1px 3px #a6a6a6;
 `;
 
 export const FooterTeam = styled.span`
