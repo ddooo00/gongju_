@@ -114,6 +114,7 @@ function TestResult() {
     const card = cardRef.current; // useRef로 참조한 결과지 컨테이너를 가져옵니다.
     html2canvas(card)
       .then((canvas) => {
+        console.log(canvas);
         // Canvas를 이미지로 변환
         const dataUrl = canvas.toDataURL();
         const link = document.createElement("a");
