@@ -48,23 +48,6 @@ const Auth = () => {
     }
   };
 
-  const clickToGithub = (e) => {
-    const name = e.target.name;
-    console.log(name);
-
-    if (name === "lsy") {
-      navigate(`https://github.com/ddooo00`);
-    } else if (name === "lsj") {
-      navigate(`https://github.com/leesoojinn`);
-    } else if (name === "lwj") {
-      navigate(`https://github.com/Passionhruit`);
-    } else if (name === "jhj") {
-      navigate(`https://github.com/huizhenz`);
-    } else if (name === "jsj") {
-      navigate(`https://github.com/songjuu`);
-    }
-  };
-
   const closeModal = () => setIsOpen(false);
 
   return (
@@ -100,15 +83,21 @@ const Auth = () => {
       </S.MainWrapper>
       <S.MainFooterBox>
         <S.FooterTeam>공주들</S.FooterTeam>
-        <S.FooterMember name="lsy" onClick={clickToGithub}>
-          이소영
-        </S.FooterMember>
-        <S.FooterMember name="lsj" onClick={clickToGithub}>
-          이수진
-        </S.FooterMember>
-        <S.FooterMember name="lwj">이우정</S.FooterMember>
-        <S.FooterMember name="jhj">장혜진</S.FooterMember>
-        <S.FooterMember name="jsj">정송주</S.FooterMember>
+        <Link to="https://github.com/ddooo00">
+          <S.FooterMember>이소영</S.FooterMember>
+        </Link>
+        <Link to="https://github.com/leesoojinn">
+          <S.FooterMember>이수진</S.FooterMember>
+        </Link>
+        <Link to="https://github.com/Passionhruit">
+          <S.FooterMember>이우정</S.FooterMember>
+        </Link>
+        <Link to="https://github.com/huizhenz">
+          <S.FooterMember>장혜진</S.FooterMember>
+        </Link>
+        <Link to="https://github.com/songjuu">
+          <S.FooterMember>정송주</S.FooterMember>
+        </Link>
       </S.MainFooterBox>
     </S.MainContainer>
   );

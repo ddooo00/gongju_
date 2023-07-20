@@ -201,12 +201,20 @@ export const MainFooterBox = styled.div`
 `;
 
 export const FooterTeam = styled.span`
+  color: #404040;
   font-weight: 600;
-  margin: 0 30px;
+  margin: 0 20px 0 30px;
 `;
 
-export const FooterMember = styled.span`
-  /* position: fixed; */
-  color: #a6a6a6;
-  margin-right: 15px;
+export const FooterMember = styled.button`
+  font-size: 14px;
+  color: #757575;
+  background-color: transparent;
+  border: none;
+  margin-right: 7px;
+  cursor: pointer;
+
+  &:hover {
+    color: #404040;
+  }
 `;
