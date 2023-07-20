@@ -9,12 +9,11 @@ const TestLayout = styled.div`
   max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
-  height: 1040px;
+  height: 833px;
 `;
 
 const progressBarLayout = styled.div`
-  padding: 70px;
-  margin-bottom: 30px;
+  padding: 50px;
 `;
 
 const PageContainer = styled.div`
@@ -22,14 +21,13 @@ const PageContainer = styled.div`
   background-color: #e5d3a9;
   font-size: 25px;
   font-weight: 600;
-  padding-top: 40px;
+  padding-top: 20px;
   color: #f0f0f0;
 `;
 
 const QuestionBox = styled.pre`
   background-color: #e5d3a9;
-  padding: 45px;
-  padding-bottom: 70px;
+  padding: 30px;
   text-align: center;
   font-size: 30px;
   font-weight: 600;
@@ -37,7 +35,7 @@ const QuestionBox = styled.pre`
 `;
 
 const AnswerContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 30px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -48,11 +46,11 @@ const AnswerBox = styled.div`
   cursor: pointer;
   border: 2px solid #102e54;
   border-radius: 30px;
-  padding: 30px;
+  padding: 25px;
   margin: 30px;
   background-color: #ffffff;
   font-size: 20px;
-  width: 800px;
+  width: 780px;
   text-align: center;
 
   &:hover {
@@ -79,7 +77,7 @@ const ResultBox = styled.div`
 
 const ResultLabel = styled.div`
   color: #503b3b;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
 `;
 
@@ -87,12 +85,12 @@ const ResultButton = styled.button`
   cursor: pointer;
   border: 2px solid #102e54;
   border-radius: 30px;
-  padding: 20px;
+  padding: 13px;
   margin: 30px;
   width: 280px;
   background-color: #102e54;
   color: #ffff;
-  font-size: 30px;
+  font-size: 28px;
 
   &:hover {
     background-color: #ffffff;

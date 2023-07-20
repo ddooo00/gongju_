@@ -128,22 +128,28 @@ function TestResult() {
 
   return (
     <S.Page ref={cardRef} id="result-container">
-      <S.Button onClick={onDownloadBtn}>저장</S.Button>
-      <S.Button onClick={clickShowComments}>전체 결과 보러가기</S.Button>
+      <S.ButtonContainer>
+        <S.Button onClick={onDownloadBtn}>저장</S.Button>
+        <S.Button onClick={clickShowComments}>결과 이야기 나누기</S.Button>
+      </S.ButtonContainer>
       {gongjuTypeResult.map((princess) => {
         if (id?.includes(princess.type)) {
           return (
             <S.BoxLocation key={princess.type}>
               <div>
-                <img
+                <S.TypeCharacter
                   src={princess.imageURL}
                   alt="사진을 가져오지 못했습니다."
                 />
               </div>
               <div>
-                <S.GongjuTypeName>
-                  {princess.text} <br /> '{princess.name} 공주'
-                </S.GongjuTypeName>
+                <S.GongjuExName>
+                  <S.GomgjuNickname> {princess.text} </S.GomgjuNickname>
+
+                  <S.GongjuTypeLabel>
+                    <label>{princess.name}</label> 공주
+                  </S.GongjuTypeLabel>
+                </S.GongjuExName>
                 <S.Description>{princess.description}</S.Description>
               </div>
             </S.BoxLocation>
@@ -153,24 +159,27 @@ function TestResult() {
         //   return <div>결과값이 없습니다..!</div>;
         // }
       })}
-      <h1>당신에게 어울리는 공주는 ?</h1>
       <S.Place>
         {dataToShow?.map((dataItem) => {
           return (
             <ul key={dataItem.id}>
-              <li>{dataItem.title}</li>
-              <img src={dataItem.img} style={{ width: "300px" }} />
-              <S.Button
+              <S.ImageTitle>{dataItem.title}</S.ImageTitle>
+              <S.ImageContainer>
+                <S.Image src={dataItem.img} style={{ width: "300px" }} />
+              </S.ImageContainer>
+
+              <S.DetailButton
                 onClick={() => {
                   navigate(`/detail/${dataItem.id}`);
                 }}
               >
                 상세보기
-              </S.Button>
+              </S.DetailButton>
             </ul>
           );
         })}
       </S.Place>
+      <S.FooterTitle> 친구들과 결과를 공유해봐요!</S.FooterTitle>
     </S.Page>
   );
 }
