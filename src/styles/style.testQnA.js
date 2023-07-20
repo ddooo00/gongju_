@@ -9,7 +9,7 @@ const TestLayout = styled.div`
   max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
-  height: 100%;
+  height: 1040px;
 `;
 
 const progressBarLayout = styled.div`
@@ -26,7 +26,7 @@ const PageContainer = styled.div`
   color: #f0f0f0;
 `;
 
-const QuestionBox = styled.div`
+const QuestionBox = styled.pre`
   background-color: #e5d3a9;
   padding: 45px;
   padding-bottom: 70px;
@@ -38,6 +38,10 @@ const QuestionBox = styled.div`
 
 const AnswerContainer = styled.div`
   margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const AnswerBox = styled.div`
@@ -47,9 +51,9 @@ const AnswerBox = styled.div`
   padding: 30px;
   margin: 30px;
   background-color: #ffffff;
-  text-align: center;
   font-size: 20px;
-  width: 500px;
+  width: 800px;
+  text-align: center;
 
   &:hover {
     background-color: #102e54;
@@ -89,6 +93,13 @@ const ResultButton = styled.button`
   background-color: #102e54;
   color: #ffff;
   font-size: 30px;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #102e54;
+    border: 2px solid #102e54;
+    transition-duration: 0.5s;
+  }
 `;
 
 export {
