@@ -12,9 +12,8 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     font-family: 'Pretendard-Regular';
-    max-width: 1200px;
-    min-width: 800px;
-    margin: 0 auto;
+  
+    
 }
 `;
 
