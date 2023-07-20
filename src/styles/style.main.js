@@ -102,17 +102,17 @@ export const ModalXBtn = styled.div`
   cursor: pointer;
 `;
 
-export const SignForm = styled.form`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
 export const SignInTitle = styled.div`
   font-size: 24px;
   text-align: center;
   margin: 50px 0 30px 0;
+`;
+
+export const SignInForm = styled.form`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const SignInInput = styled.input`
@@ -158,7 +158,42 @@ export const SignInSocialLogo = styled.img`
   cursor: pointer;
 `;
 
-export const SignUp = styled.div``;
+export const SignUpTitle = styled.div`
+  font-size: 24px;
+  text-align: center;
+  margin: 50px 0 30px 0;
+`;
+
+export const SignUpForm = styled.form`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const SignUpInput = styled.input`
+  width: 250px;
+  border: 2px solid #102e54;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+`;
+
+export const SignUpBtn = styled.button`
+  width: 150px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #102e54;
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #09192e;
+  }
+`;
 
 export const MainFooterBox = styled.div`
   border-top: 1px solid #a6a6a6;

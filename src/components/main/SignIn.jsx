@@ -68,7 +68,7 @@ const SignIn = ({ closeModal }) => {
       ) : (
         <>
           <S.SignInTitle>공주님, 로그인하실 시간입니다 !</S.SignInTitle>
-          <S.SignForm>
+          <S.SignInForm>
             <S.SignInInput
               type="text"
               value={email}
@@ -100,7 +100,7 @@ const SignIn = ({ closeModal }) => {
                 onClick={socialSignIn}
               />
             </S.SignInSocialBox>
-          </S.SignForm>
+          </S.SignInForm>
         </>
       )}
     </div>
