@@ -98,6 +98,7 @@ function Detail() {
               <li>{dataItem.title}</li>
               <li>{dataItem.description}</li>
               <li>{dataItem.address}</li>
+              <li>{dataItem.website}</li>
               <li>{dataItem.call}</li>
               <img src={dataItem.img} style={{ width: "400px" }} />
               <KakaoMap address={dataItem.address} />

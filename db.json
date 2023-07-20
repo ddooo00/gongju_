@@ -2,41 +2,41 @@
   "campsites": [
     {
       "id": "campsite1",
-      "title": "캠프달링",
-      "description": "프라이빗한 럭셔리 캠핑공간! 캠프달링",
-      "address": "충남 공주시 정안면 개티길 20",
-      "call": "0507-1304-7806",
-      "website": "https://www.instagram.com/_camp_darling/",
-      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221212_43%2F1670808967817pnj7m_JPEG%2FFM7A6505.jpg"
+      "title": "파크오브드림 파티룸 글램핑",
+      "description": "6월, 7월, 8월 시즌 여름 물놀이가 가능하고 깨끗한 계곡도 있습니다. 파티 플래닝 기획 소품으로 여러 모임이 가능한 파티룸 프라이빗 글램핑장입니다. 파크오브드림에서 좋은 추억을 만들어보는 건 어떨까요?",
+      "address": "충청남도 공주시 반포면 동학사1로 46",
+      "call": "0507-1362-1141",
+      "website": "http://www.parkofdream.com",
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230311_82%2F1678501263148SFjSc_JPEG%2F%25C1%25A6%25B8%25F1%25C0%25BB_%25C0%25D4%25B7%25C2%25C7%25CF%25BC%25BC%25BF%25E4_%252817%2529.jpg"
     },
     {
       "id": "campsite2",
-      "title": "녹수원 글램핑",
-      "description": "개울가 바로 앞 글램핑장, 무한바베큐",
-      "address": "충남 공주시 유구읍 덕곡리 15-2",
-      "call": "010-7212-7670",
-      "website": "http://녹수원.com",
-      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220608_222%2F1654647871297kiWbp_JPEG%2F%25BE%25DF%25B0%25E6_220608_small-1.jpg"
+      "title": "공주 경비행기 체험",
+      "description": "국토부지정 항공전문교육기관 공주경량비행교육원 입니다.비행교육, 비행체험 등 많은 경험을 할 수 있는 곳입니다. 공주를 온몸으로 느끼고 한눈에 담을 수 있는 곳! 체험을 위해선 전화예약 필수입니다. ",
+      "address": "충남 공주시 의당면 수촌리 943",
+      "call": "0507-1380-8226",
+      "website": "http://gongjuair.modoo.at/",
+      "img": "https://i.postimg.cc/tT7k8jk9/image.png"
     },
     {
       "id": "campsite3",
-      "title": "북캠프",
-      "description": "대전/세종 근처 공주글램핑 공주북캠프",
-      "address": "충남 공주시 신풍면 영정길 155-3",
-      "call": "0507-1416-3005",
-      "website": "http://gongjubookcamp.co.kr/",
-      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191126_275%2F1574761049930bluUc_JPEG%2F%25B0%25F8%25C1%25D62.jpg"
+      "title": "공주 공산성 나이트 트레킹",
+      "description": "낮보다 아름다운 공주의 밤! 공주를 색다르게 즐기고 싶다면 공산성 야간 트레킹에 참여해 보세요. 유네스코 세계유산이자 백주고도의 역사를 담은 공주의 상징, 공산성 성곽을 따라 걸으면 공주 시내의 야경도 한눈에 볼 수 있습니다.",
+      "address": "충남 공주시 금성동 66-6",
+      "call": null,
+      "website": "https://tst.pbp.co.kr/shop/PI_00000147",
+      "img": "https://i.postimg.cc/Ls5j8V1T/e1f90ffa-31d4-4f90-8a03-174401a4b771.jpg"
     }
   ],
   "heritages": [
     {
       "id": "heritage1",
-      "title": "공산성",
-      "description": "백제는 기원전 18년 ~ 기원후 660년까지 존재했던 고대국가입니다. 2015년 7월 공주의 공산성과 공주 무령왕릉과 왕릉원을 비롯한 부여·익산의 백제유적 8곳이 ‘백제역사 유적지구’로 유네스코 세계유산에 등재되었습니다. 중국과의 교류를 기초로 백제의 독창적인 문화를 이룩하고, 이를 일본 등 주변국가에 전하여 고대 동아시아 문화번영에 기여한 점이 높게 평가되어 세계인의 유산이 된 것입니다. 특히 공주 공산성은 백제 웅진도읍기(475~538년)의 왕성으로서 그 가치를 인정 받았습니다. 성벽 축조에 사용된 판축기법(고운흙과 모래흙을 번갈아 다져서 쌓는 방법)과 벽주건물지 (도랑을 파 기둥을 촘촘하게 세운 후 고운흙으로 벽을 발라 만든 건물지)는 고대 중국 및 일본과의 문화교류를 통한 백제 토목건축 기술의 발전과 전파를 살필 수 있는 중요한 자료가 되고 있습니다.",
-      "address": "충남 공주시 금성동 53-51",
-      "call": "041-856-7700",
-      "website": "http://www.gongju.go.kr/prog/tursmCn/tour/sub02_01_04/view.do?cntno=14",
-      "img": "https://www.gongju.go.kr/images/tour/sub01/sub010102_img01.jpg"
+      "title": "국립공주박물관",
+      "description": "백제의 비상을 꿈꾸었던 웅진에 자리한 국립공주박물관은 1946년 4월 1일 웅진 백제 문화를 중심으로 충청남도의 역사와 문화를 보존, 전시하기 위해 새롭게 태어났습니다.\n따라서 웅진백제를 주제로 하는 전시실과 충청남도의 역사문화를 주제로 한 전시실은 항상 여러분께 열려 있으며, 다양한 주제의 특별전시도 수시로 여러분을 찾아가고 있습니다.\n공주박물관은 이러한 전시 외에도 다채로운 문화행사와 교육 프로그램으로 찾아오시는 모든 분들이 행복한 시간을 보내실 수 있도록 항상 노력하고 있습니다. 많은 사랑과 관심을 부탁합니다.\n감사합니다.",
+      "address": "충남 공주시 관광단지길 34",
+      "call": "041-850-6300",
+      "website": "https://gongju.museum.go.kr/gongju/",
+      "img": "https://gongju.museum.go.kr/gongju/img/sub02/s020101_roll03.jpg"
     },
     {
       "id": "heritage2",
@@ -49,99 +49,99 @@
     },
     {
       "id": "heritage3",
-      "title": "마곡사",
-      "description": "세계유산 산사, 한국의 산지 승원 마곡사. 산사는 공주 마곡사, 보은 법주사, 양산 통도사, 영주 부석사, 안동 봉정사, 순천 선암사, 해남 대흥사 등 총 7곳 사찰로 구성된 연속유산입니다. 7~9세기에 창건되어 고대 한국불교와 종교적 의례의 지속적인 중심지가 되어 왔으며, 각각의 불교사상을 기반으로 다른 종파와 역사적인 관계를 맺으며 많은 역사적 건축물, 유물 등을 갖추고 있습니다. 역사적 단절없이 오늘날까지 신앙, 수행, 생활의 복합적 종교 공간이 온전하게 유지되어 왔다는 점에서 그 가치가 큽니다.",
-      "address": "충남 공주시 사곡면 마곡사로 966",
-      "call": "041-856-7700",
-      "website": "http://www.gongju.go.kr/prog/tursmCn/tour/sub02_01_04/view.do?cntno=14",
+      "title": "공주 한옥마을",
+      "description": "전통과 현대가 공존하는 어울림의 미학이 있는 공주한옥마을\n공주한옥마을은한국 전통난방으로 구들장 체험이 가능한 시설로 설계되었고, 친환경 건축양식인 소나무 · 삼나무 집성재 사용, 도시 · 현대인들이 머무는데 편리 하도록설계된 신 한옥으로, 가족여행, 수학여행, 기관 · 단체의 워크숍 등 관광과 휴양으로 아주 훌륭한 곳입니다.\n그리고 공주한옥마을에 오시면 백제문화를 체험으로 배울 수 있는 전통문화체험이 기다리고 있습니다. 한옥마을 곳곳에 휴식공간과 한옥마을 둘레길을 걸어도 좋고, 무인자전거를 빌려타고 작은도시 · 옛도시(古都) 문화유적을 만나셔도 좋습니다.",
+      "address": "공주시 관광단지길 12",
+      "call": "0507-1433-2828",
+      "website": "https://www.gongju.go.kr/hanok/",
       "img": "https://www.gongju.go.kr/images/tour/sub01/sub010105_img01.jpg"
     }
   ],
   "restaurants": [
     {
       "id": "restaurant1",
-      "title": "곰선생동태씨",
-      "description": "동태탕",
-      "address": "충남 공주시 무령로 466-3",
-      "call": "041-855-0959",
+      "title": "바베큐7892",
+      "description": "바베큐7892는 워터에이징 숙성고기 전문 철판 구이 전문점입니다. 바베큐7892에서는 특색있고 맛있는 고기를 드셔볼 수 있고 텐트자리를 이용하시면 캠핑 분위기까지 일석이조로 느낄 수 있습니다!",
+      "address": "충남 공주시 반포면 사봉길 78",
+      "call": "0507-1328-4078",
       "website": null,
-      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220517_31%2F1652734778428p7LXR_JPEG%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5.jpeg.jpg"
+      "img": "https://i.postimg.cc/Yq7D4tjC/IMG-6731.jpg"
     },
     {
       "id": "restaurant2",
       "title": "베이커리 밤마을",
-      "description": "공주 밤파이",
+      "description": "베이커리 밤마을은 밤파이 전문점입니다. 공주를 대표하는 특산물 중 하나인 밤이 듬뿍 들어간 맛있는 빵을 드셔보고 싶으시다면 공산성 근처에 위치한 베이커리 밤마을을 이용해보시기 바랍니다!",
       "address": "충남 공주시 백미고을길 5-9",
       "call": "0507-1428-3489",
       "website": "http://www.marron.edenstore.co.kr",
-      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221208_260%2F1670467900457mi2X1_JPEG%2FKakaoTalk_20221208_115058073_02.jpg"
+      "img": "https://i.postimg.cc/mDwz833q/image-1.png"
     },
     {
       "id": "restaurant3",
-      "title": "밥꽃하나피었네",
-      "description": "한식 코스요리에서 맛볼 수 있는 정갈한 향토음식",
-      "address": "충남 공주시 계룡면 신원사로 502",
-      "call": "041-855-0696",
-      "website": "http://cityfood.co.kr/file2/h_0081/40070/",
-      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160221_297%2F1456025028094sjOqQ_JPEG%2F176171525359376_18.jpeg"
+      "title": "전통궁중칼국수",
+      "description": "전통궁중칼국수는 칼국수와 수육 전문점입니다. 여러 방송에도 소개된 맛집으로 맛있고 진한 칼국수와 김치 그리고 수육의 조합을 느껴보고 싶으시다면 전통궁중칼국수를 이용해보시기 바랍니다! ",
+      "address": "충남 공주시 금벽로 679",
+      "call": "041-858-2397",
+      "website": null,
+      "img": "https://i.postimg.cc/0yGrndCs/3.jpg"
     }
   ],
   "festivals": [
     {
       "id": "festival1",
-      "title": "2023 대백제전",
-      "description": "개막식(공주), 폐막식(부여), 제례, 퍼레이드, 공연, 전시.체험 프로그램 등",
-      "address": "충청남도 공주시 금벽로 551",
-      "call": "041-840-8112",
-      "website": "http://www.baekje.org/kor/",
-      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202305221105485291.jpg"
+      "title": "공주 문화재야행",
+      "description": "문화재가 집적·밀집된 지역을 거점으로 지역의 특색 있는 역사문화자원을 활용한 문화재 야간관람(개방), 체험, 공연, 전시 등 문화재 야간문화 향유 프로그램입니다. 야행기간 공주기독교박물관, 역사영상관 등 문화재가 야간 개방되고, 스탬프투어, 해설사 동반 투어, 온라인 답사 프로그램 등 다양한 투어 프로그램을 통해 근대 공주로의 시간 여행을 떠날 수 있습니다. 무형문화재 공연 및 시연을 비롯해 100년전 공주의 모습과 현재의 모습을 교차 전시하는 기록전시, 음악회, 콘서트 등 관객참여형 연극 등도 풍성하게 마련되어 있습니다. 다들 오셔서 sns 피드 한번 채워보시는 거 어떤가요?!",
+      "address": "충청남도 공주시 제민1길 18",
+      "call": "041-840-8204",
+      "website": "https://gongju-culturenight.com/",
+      "img": "http://www.ccnnews.co.kr/news/photo/202209/267986_334056_3740.jpg"
     },
     {
       "id": "festival2",
-      "title": "겨울공주 군밤축제",
-      "description": "대형화로군밤굽기, 군밤그릴존, 알밤 및 가공식품판매, 알밤간식만들기, 추억의레트로 감성존, 프린지 공연 등",
-      "address": "충청남도 공주시 관광단지길 12",
-      "call": "041-840-2056",
-      "website": "https://www.gongju.go.kr/prog/tursmCn/tour/sub03_01_09/view.do?cntno=68",
-      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202212050845154781.jpg"
+      "title": "미르섬",
+      "description": "여러가지 꽃과 풍경을 배경으로 사진찍는 핫플레이스 입니다. 프리마켓은 주말 11:00~18:00에 운영하고 있습니다. 주차장이 따로 있고, 주차장 주변에 간이화장실이 있습니다. 미르섬 입구에는 자전거를 (1,2,4,6인 등)무료로 빌릴 수 있어 전체를 돌아볼 수도 있습니다. 미르섬에는 코끼리마늘꽃, 해바라기,수레국화, 주황색 양귀비 등 많은 종류의 꽃이 피어있어 사계절 사진찍으러 가기 좋은 포토 스팟입니다.!  ",
+      "address": "충남 공주시 금벽로 368",
+      "call": null,
+      "website": null,
+      "img": "https://gdimg.gmarket.co.kr/1752732536/still/400?ver=1677128288"
     },
     {
       "id": "festival3",
-      "title": "공주 문화재야행",
-      "description": " 문화재가 집적·밀집된 지역을 거점으로 지역의 특색 있는 역사문화자원을 활용한 문화재 야간관람(개방), 체험, 공연, 전시 등 문화재 야간문화 향유 프로그램",
-      "address": "공주 제민천 일원 근대 문화재(구 공주읍사무소, 제일교회 등)",
-      "call": "041-840-8204",
-      "website": "https://gongju-culturenight.com/",
-      "img": "https://www.gongju.go.kr/images/tour/sub04/sub04_01_01_img02.jpg"
+      "title": "오늘따라",
+      "address": "충남 공주시 매산동길 34",
+      "call": "041-881-4916",
+      "description": "셀럽들은 밤 시간도 빠질수 없지! 맛있는 음식과 술 한잔 어떠신가요? 이 곳은 공주 대학로에 위치하고 있습니다. 입구에는 셀럽에게는 빠질 수 없는 포토존도 마련되어 있고, 가게 조명도 led로 되어있어 힙한 분위기도 연출되어 있습니다. 그리고 여러가지 칵테일을 마셔볼 수 있습니다. ",
+      "website": null,
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200715_125%2F1594791771982LrjLc_JPEG%2FAYUToEPAI7mLPvSno0NBeyPk.jpg"
     }
   ],
   "mountains": [
     {
       "id": "mountain1",
-      "title": "연미산",
-      "description": "산이야? 공원이야? 공주의 숨은 비경을 품은, 연미산. 산봉우리가 제비의 고리처럼 뾰족하다 하여 붙여진 이름 연미산(219m). 이산에 오르면 공주시의 시가지 전경과 공주시의 중심부를 흐르며 서해를 향해 곡류하는 금강의 장관을 한눈에 바라 볼 수 있다. 연미산은 자연미술공원이 있어 등산로 주변에 전시된 작품 감상도 하면서 공주의 비경 또한 감상 할 수 있다. 공주시 쌍신동에 위치하며 해마다 연미산과 인근 공원에서 금강자연미술비엔날레 행사가 열리고 있다.",
-      "address": "충청남도 공주시 우성면 연미산고개길 98",
+      "title": "에어산",
+      "description": "AIR SANN은 2021년에 설립된 카페%베이커리로 스팅팩토리를 한 공간에 담은 자연복합문화공간입니다. 사람들은 누구나 지친 일상을 떠나 마음껏 휴식을 누릴 수 있는 공간을 꿈꿉니다. 푸른 자연속에 둘러싸인 AIR SANN에 모무는 동안 우리는 더 나은 행복을 누릴 권리가 있는 당신의 하루에 쉽표가 되어드릴 것입니다. 사랑하는 이들과 좋은 음식, 프라이빗한 문화를 누리세요. 당신의 행복을 응원합니다.",
+      "address": "충남 공주시 반포면 임금봉길 88-27",
       "call": "041-856-7700",
-      "website": null,
-      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202004220927456770.JPG"
+      "website": "http://www.airsann.com",
+      "img": "https://i.postimg.cc/bwx3Q7z6/image.png"
     },
     {
       "id": "mountain2",
-      "title": "태화산",
-      "description": "적송림 무성한 걷기 좋은 산 천년고찰 품은, 태화산. 공주시 사곡면에 위치한 태화산은 이산 중턱에 자리한 천년고찰 마곡사로 인해 잘 알려진 곳이다. 가벼운 산행 후 절집의 아름다움을 느낄 수 있어 태화산의 울창한 적송림을 찾는 등산객들의 발길이 끊이지 않는다. 전 구간이 송림으로 우거져 있어 자연스럽게 산림욕을 할 수 있다. 유구 마곡 골짜기는 예로부터 전란을 피할 수 있는 십승지로 택리지나 정감록과 같은 지리서에 기록되어 있다.",
-      "address": "충남 공주시 사곡면 운암리",
-      "call": "041-841-6221",
-      "website": "https://www.gongju.go.kr/prog/tursmCn/tour/sub03_01_09/view.do?cntno=68",
-      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202004140529447650.JPG"
+      "title": "공주 마곡사 템플스테이",
+      "description": "마곡사는 천 년 고찰 마곡사 주변은 이중환의 '택리지'에서 십승지로 꼽혔을 만큼 절경을 자랑합니다. 약 5km 구간의 울창한 소나무 숲길을 걷고 태화산의 맑은 숨결을 느끼는 '수리수리 숲소리' 템플스테이는 트래킹을 즐기는 활동가에게도, 봄볕을 사랑하는 몽상가에게도 안성맞춤입니다. 매 월 1회 개최되는 '수리수리 콘서트'는 마법 주문 만들기, 마왕 체험(군왕대 오르기) 등 특색 있는 프로그램으로 열정과 긍정의 콘서트로 각광받고 있습니다.",
+      "address": "충청남도 공주시 사곡면 마곡사로 966",
+      "call": "041-841-6226",
+      "website": "https://www.templestay.com/temple_info.asp?t_id=magoksa",
+      "img": "https://i.postimg.cc/q7g6kKZ8/image.png"
     },
     {
       "id": "mountain3",
-      "title": "계룡산",
-      "description": "민족의 영산, 계룡산. 산 이름은 주봉인 천황봉(天皇峯, 845m)에서 연천봉(連天峯, 739m)·삼불봉(三佛峯, 775m)으로 이어지는 능선이 마치 닭 볏을 쓴 용의 모양을 닮았다고 하여 붙여진 것이라고 한다. 차령산맥 중에서도 비교적 험난한 이 산은 유연히 흐르는 금강의 풍치와 어울려 독특한 산악 경관을 이루고 있다. 계룡산은 풍수지리에서도 우리나라 4대 명산으로 꼽힐 뿐 아니라 특히, 계룡팔경은 경치가 아름다워 많은 관광객이 찾아든다.",
-      "address": "충남 공주시 반포면 동학사1로 327-6",
-      "call": "041-840-8204",
-      "website": "https://gongju-culturenight.com/",
-      "img": "https://www.gongju.go.kr/thumbnail/tursmCn/920_TUCN_202004270524550521.jpg"
+      "title": "연미산 자연미술공원",
+      "description": "숲속에서 즐기는 자연미술 작품 탐험 + 힐링, 금강자연미술비엔날레는 1981년 창림한 이래 충남 공주를 중심으로 활동해온 (사)한국자연미술가혐회-야투가 주관하는 국제자연미술전시 행사입니다. 작가들의 작품은 연미산자연미술공원에 상설 전시되며 관람객들은 시간의 흐름에 따라 작품이 변해가는 모습을 볼 수 있습니다.",
+      "address": "충남 공주시 우성면 연미산고개길 98",
+      "call": "041-853-8828",
+      "website": "http://www.natureartbiennale.org/",
+      "img": "https://i.postimg.cc/Fz6nB3qD/image.png"
     }
   ],
   "comments": [
@@ -193,13 +193,18 @@
       "userName": "ㅌㅅㅌ",
       "body": "77",
       "createdAt": "2023.6.19 15:25"
+    },
+    {
+      "id": "E4M0fbcYV",
+      "uid": "FGbyFYTFr9caUHO1X39j4mYRtds2",
+      "userName": "ㅎㅎㅎㅎ",
+      "body": "ddd",
+      "createdAt": "2023.6.19 22:16"
     }
   ],
   "gongjuList": [
     {
-      "q": [
-        "친구 생일 파티에 잘생긴 사람을 봤다."
-      ],
+      "q": ["친구 생일 파티에 잘생긴 사람을 봤다."],
       "a": [
         {
           "type": "C",
@@ -220,9 +225,7 @@
       ]
     },
     {
-      "q": [
-        "산에 올라갔는데 산삼을 찾았다!"
-      ],
+      "q": ["산에 올라갔는데 산삼을 찾았다!"],
       "a": [
         {
           "type": "B",
@@ -243,9 +246,7 @@
       ]
     },
     {
-      "q": [
-        "길을 가다가 곰인형을 발견했다. 곰인형을 앞에서 보면?"
-      ],
+      "q": ["길을 가다가 곰인형을 발견했다. 곰인형을 앞에서 보면?"],
       "a": [
         {
           "type": "A",
@@ -266,9 +267,7 @@
       ]
     },
     {
-      "q": [
-        "씨앗을 심으려고 한다. 어떤 씨앗을 심을 것인가?"
-      ],
+      "q": ["씨앗을 심으려고 한다. 어떤 씨앗을 심을 것인가?"],
       "a": [
         {
           "type": "A,E",
@@ -312,9 +311,7 @@
       ]
     },
     {
-      "q": [
-        "놀이공원 폐장 30분 전이다. 이때 나는?"
-      ],
+      "q": ["놀이공원 폐장 30분 전이다. 이때 나는?"],
       "a": [
         {
           "type": "D",
@@ -358,9 +355,7 @@
       ]
     },
     {
-      "q": [
-        "5분뒤에 시내 한복판에 핵폭탄이 떨어진다고 한다. 당신의 행동은?"
-      ],
+      "q": ["5분뒤에 시내 한복판에 핵폭탄이 떨어진다고 한다. 당신의 행동은?"],
       "a": [
         {
           "type": "A",
@@ -381,9 +376,7 @@
       ]
     },
     {
-      "q": [
-        "갑자기 요정이 나타나서 원하는 것을 들어준다고 한다."
-      ],
+      "q": ["갑자기 요정이 나타나서 원하는 것을 들어준다고 한다."],
       "a": [
         {
           "type": "B,C",
@@ -404,9 +397,7 @@
       ]
     },
     {
-      "q": [
-        "마녀가 나타나서 사과대신 이것을 주었다. 이것이 뭘까?"
-      ],
+      "q": ["마녀가 나타나서 사과대신 이것을 주었다. 이것이 뭘까?"],
       "a": [
         {
           "type": "B",
