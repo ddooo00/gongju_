@@ -34,7 +34,7 @@ const Chart = () => {
           type="category"
           dataKey="name"
           axisLine={false}
-          dx={-1}
+          dx={6}
           tickLine={false}
           style={{ fill: "#000000" }}
         />
