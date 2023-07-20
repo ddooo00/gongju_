@@ -9,8 +9,9 @@ import mainImg from "../../assets/img/main.jpg";
 
 const Auth = () => {
   const navigate = useNavigate();
+
   const [user, setUser] = useState(null);
-  const [name, setName] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isOpenPage, setIsOpenPage] = useState(false);
@@ -26,11 +27,11 @@ const Auth = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        setName(user.displayName);
+        setDisplayName(user.displayName);
         console.log(user);
       } else {
         setUser(null);
-        setName("");
+        setDisplayName("");
         console.log(user);
       }
     });
@@ -43,6 +44,23 @@ const Auth = () => {
     } else {
       setIsOpenModal(true);
       setIsOpen(true);
+    }
+  };
+
+  const clickToGithub = (e) => {
+    const name = e.target.name;
+    console.log(name);
+
+    if (name === "lsy") {
+      navigate(`https://github.com/ddooo00`);
+    } else if (name === "lsj") {
+      navigate(`https://github.com/leesoojinn`);
+    } else if (name === "lwj") {
+      navigate(`https://github.com/Passionhruit`);
+    } else if (name === "jhj") {
+      navigate(`https://github.com/huizhenz`);
+    } else if (name === "jsj") {
+      navigate(`https://github.com/songjuu`);
     }
   };
 
@@ -81,11 +99,15 @@ const Auth = () => {
       </S.MainWrapper>
       <S.MainFooterBox>
         <S.FooterTeam>공주들</S.FooterTeam>
-        <S.FooterMember>이소영</S.FooterMember>
-        <S.FooterMember>이수진</S.FooterMember>
-        <S.FooterMember>이우정</S.FooterMember>
-        <S.FooterMember>장혜진</S.FooterMember>
-        <S.FooterMember>정송주</S.FooterMember>
+        <S.FooterMember name="lsy" onClick={clickToGithub}>
+          이소영
+        </S.FooterMember>
+        <S.FooterMember name="lsj" onClick={clickToGithub}>
+          이수진
+        </S.FooterMember>
+        <S.FooterMember name="lwj">이우정</S.FooterMember>
+        <S.FooterMember name="jhj">장혜진</S.FooterMember>
+        <S.FooterMember name="jsj">정송주</S.FooterMember>
       </S.MainFooterBox>
     </S.MainContainer>
   );
