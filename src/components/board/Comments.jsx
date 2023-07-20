@@ -45,9 +45,8 @@ const Comments = () => {
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % comments.length;
     setItemOffset(newOffset);
-    // console.log("newOffset", newOffset);
     console.log(
-      `User requested page number ${e.selected}, which is offset ${newOffset}`
+      `유저가 요청한 페이지는 ${e.selected}, 댓글 데이터 배열의 새로운 시작 인덱스는 ${newOffset}`
     );
   };
 
@@ -98,6 +97,11 @@ const Comments = () => {
 
   // 댓글 수정
   const clickUpdateComment = (comment) => {
+    if (!editedBody) {
+      alert("내용을 입력해 주세요.");
+      return;
+    }
+
     const editedComment = {
       ...comment,
       userName: user.displayName,
@@ -174,7 +178,6 @@ const Comments = () => {
               </S.CommentBox>
             );
           })}
-
           {/* 페이지네이트 */}
           <S.StyledReactPaginate
             breakLabel="..."
