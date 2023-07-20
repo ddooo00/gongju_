@@ -23,7 +23,7 @@
       "title": "공주 공산성 나이트 트레킹",
       "description": "낮보다 아름다운 공주의 밤! 공주를 색다르게 즐기고 싶다면 공산성 야간 트레킹에 참여해 보세요. 유네스코 세계유산이자 백주고도의 역사를 담은 공주의 상징, 공산성 성곽을 따라 걸으면 공주 시내의 야경도 한눈에 볼 수 있습니다.",
       "address": "충남 공주시 금성동 66-6",
-      "call": "체험 프로그램이므로 해당 사이트로 들어가 문의바랍니다.",
+      "call": null,
       "website": "https://tst.pbp.co.kr/shop/PI_00000147",
       "img": "https://i.postimg.cc/Ls5j8V1T/e1f90ffa-31d4-4f90-8a03-174401a4b771.jpg"
     }
@@ -83,7 +83,7 @@
       "address": "충남 공주시 금벽로 679",
       "call": "041-858-2397",
       "website": null,
-      "img": "https://i.postimg.cc/BvZBsvhd/image-2.png"
+      "img": "https://i.postimg.cc/0yGrndCs/3.jpg"
     }
   ],
   "festivals": [
@@ -101,7 +101,8 @@
       "title": "미르섬",
       "description": "여러가지 꽃과 풍경을 배경으로 사진찍는 핫플레이스 입니다. 프리마켓은 주말 11:00~18:00에 운영하고 있습니다. 주차장이 따로 있고, 주차장 주변에 간이화장실이 있습니다. 미르섬 입구에는 자전거를 (1,2,4,6인 등)무료로 빌릴 수 있어 전체를 돌아볼 수도 있습니다. 미르섬에는 코끼리마늘꽃, 해바라기,수레국화, 주황색 양귀비 등 많은 종류의 꽃이 피어있어 사계절 사진찍으러 가기 좋은 포토 스팟입니다.!  ",
       "address": "충남 공주시 금벽로 368",
-      "website": "",
+      "call": null,
+      "website": null,
       "img": "https://gdimg.gmarket.co.kr/1752732536/still/400?ver=1677128288"
     },
     {
@@ -110,7 +111,7 @@
       "address": "충남 공주시 매산동길 34",
       "call": "041-881-4916",
       "description": "셀럽들은 밤 시간도 빠질수 없지! 맛있는 음식과 술 한잔 어떠신가요? 이 곳은 공주 대학로에 위치하고 있습니다. 입구에는 셀럽에게는 빠질 수 없는 포토존도 마련되어 있고, 가게 조명도 led로 되어있어 힙한 분위기도 연출되어 있습니다. 그리고 여러가지 칵테일을 마셔볼 수 있습니다. ",
-      "website": "",
+      "website": null,
       "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200715_125%2F1594791771982LrjLc_JPEG%2FAYUToEPAI7mLPvSno0NBeyPk.jpg"
     }
   ],
