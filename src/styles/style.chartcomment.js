@@ -54,10 +54,11 @@ export const CommentBox = styled.div`
   border-radius: 10px;
   background: white;
   max-width: 1100px;
-  max-height: 300px;
+  max-height: 400px;
   overflow: hidden;
   white-space: pre-wrap;
 `;
+
 export const ChartContainer = styled.div`
   margin: 0 auto;
   padding: 0 auto;
