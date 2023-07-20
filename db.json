@@ -228,6 +228,13 @@
       "userName": "짱혜진",
       "body": "gggggggg",
       "createdAt": "2023.6.20 22:34"
+    },
+    {
+      "id": "SRaUg7oMV",
+      "uid": "5VF8FlcUm3Y2rNbevn1vSrg2EGV2",
+      "userName": "ᄒᄌ",
+      "body": "ㅎㅎ",
+      "createdAt": "2023.6.21 3:19"
     }
   ],
   "gongjuList": [
@@ -503,12 +510,12 @@
     {
       "id": "A",
       "name": "셀럽공주",
-      "value": 9
+      "value": 11
     },
     {
       "id": "B",
       "name": "근육공주",
-      "value": 17
+      "value": 18
     },
     {
       "id": "C",
