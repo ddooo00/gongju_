@@ -6,6 +6,8 @@ import "../../styles/TestQnA.css";
 import { useMutation, useQueryClient } from "react-query";
 import { getChart, updateChart } from "../../api/api";
 import * as S from "../../styles/style.testQnA";
+import Spinner from "../../assets/spinner/spinner.gif";
+import Background from "../../styles/style.spinner";
 
 function TestQnA() {
   const navigate = useNavigate();
@@ -38,10 +40,15 @@ function TestQnA() {
   const { isLoading, isError, data } = useQuery("gongjuList", getList);
   // console.log("data💙💙💙", data);
   if (isLoading) {
-    return <div>목록을 가져오는 중..!</div>;
+    return (
+      <Background>
+        잠시만 기다려주세요...
+        <img src={Spinner} alt="로딩중" width="5%" />
+      </Background>
+    );
   }
   if (isError) {
-    return <div>에러입니다..!</div>;
+    return <Background>테스트 목록을 가져오지 못했습니다😥</Background>;
   }
 
   const questionList = data;

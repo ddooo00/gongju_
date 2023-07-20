@@ -6,6 +6,8 @@ import { BarChart, Bar, XAxis, YAxis, LabelList } from "recharts";
 import * as S from "../../styles/style.chartcomment";
 import { useNavigate } from "react-router-dom";
 import back from "../../assets/img/back.png";
+import Spinner from "../../assets/spinner/spinner.gif";
+import Background from "../../styles/style.spinner";
 
 const COLORS = ["#f66a6a", "#59df7f", "#d382f8", "#f9f26c", "#77a9ff"];
 
@@ -15,11 +17,15 @@ const Chart = () => {
   const { isLoading, isError, data } = useQuery("chart", getChart);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <Background>
+        <img src={Spinner} alt="로딩중" width="5%" />
+      </Background>
+    );
   }
 
   if (isError) {
-    return <div>Error occurred while fetching data</div>;
+    return <Background>차트를 가져오지 못했습니다😥</Background>;
   }
 
   console.log(data);
