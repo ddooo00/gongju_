@@ -161,8 +161,9 @@ function TestQnA() {
           <h1>테스트가 끝났습니다! 결과를 보러 갈까요?</h1>
           <button
             onClick={() => {
-              navigate(`/test/${getMostSelectedType()}`);
-              updateChartHandler(getMostSelectedType());
+              const selectedType = getMostSelectedType();
+              navigate(`/test/${selectedType}`);
+              updateChartHandler(selectedType);
             }}
           >
             결과 보러가기
