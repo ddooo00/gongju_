@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import useInput from "../../hooks/useInput";
 import SignUp from "./SignUp";
+import * as S from "../../styles/style.main";
 
 const SignIn = ({ closeModal }) => {
   const [email, onChangeEmail, resetEmail] = useInput();

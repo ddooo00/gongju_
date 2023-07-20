@@ -71,34 +71,12 @@ const Auth = () => {
           </S.TestBtn>
         </S.TestBtnBox>
         {isOpen && (
-          <>
-            <div
-              style={{
-                position: "fixed",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
-                backgroundColor: "#dededeb6",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  width: "50%",
-                  height: "40%",
-                  backgroundColor: "#ffffff",
-                  borderRadius: "15px",
-                }}
-              >
-                <SignIn closeModal={closeModal} />
-                <button onClick={closeModal}>닫기</button>
-              </div>
-            </div>
-          </>
+          <S.ModalWrapper>
+            <S.ModalBox>
+              <S.ModalXBtn onClick={closeModal}>X</S.ModalXBtn>
+              <SignIn closeModal={closeModal} />
+            </S.ModalBox>
+          </S.ModalWrapper>
         )}
       </S.MainWrapper>
       <S.MainFooterBox>

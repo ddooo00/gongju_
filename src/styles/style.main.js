@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import modalImg from "../assets/img/modal.jpeg";
 
 export const MainContainer = styled.div`
   background-color: #dce6ef;
@@ -35,14 +36,14 @@ export const LogoutBtn = styled.button`
 export const MainTitle = styled.div`
   font-size: 42px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
 `;
 
 export const MainDesc = styled.div`
   font-size: 22px;
   color: #757575;
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 30px 0 40px 0;
 `;
 
 export const MainImg = styled.img`
@@ -72,17 +73,43 @@ export const TestBtn = styled.button`
   }
 `;
 
+export const ModalWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dededeb6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ModalBox = styled.div`
+  position: relative;
+  /* width: 100%; */
+  /* height: 40%; */
+  background-image: url(${modalImg});
+  background-size: cover;
+`;
+
+export const ModalXBtn = styled.div`
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+`;
+
 export const MainFooterBox = styled.div`
   border-top: 1px solid #a6a6a6;
   padding: 7px 0;
 `;
 
 export const FooterTeam = styled.span`
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 30px;
 `;
 
 export const FooterMember = styled.span`
-  color: #757575;
+  color: #a6a6a6;
   margin-right: 15px;
 `;
