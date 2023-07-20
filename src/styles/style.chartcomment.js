@@ -54,9 +54,9 @@ export const CommentBox = styled.div`
   border-radius: 10px;
   background: white;
   max-width: 1100px;
-  max-height: 400px;
+  max-height: 300px;
   overflow: hidden;
-  white-space: pre-wrap;
+  word-wrap: break-word;
 `;
 
 export const ChartContainer = styled.div`
