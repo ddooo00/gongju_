@@ -2,40 +2,55 @@ import { styled } from "styled-components";
 
 export const Page = styled.div`
   background-color: #f4f9dd;
+  min-height: 100vh;
 `;
 
 export const ButtonContainer = styled.div`
   float: right;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 15px;
+  margin-right: 20px;
 `;
 
 export const Button = styled.button`
   background-color: #102e54;
   color: white;
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 18px;
+  padding: 13px;
   margin-right: 5px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #09192e;
+  }
 `;
 
 export const DetailButton = styled.button`
+  cursor: pointer;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
   margin-left: 125px;
+  margin-top: 5px;
+
+  padding: 7px;
+  border: none;
+  &:hover {
+    background-color: #09192e;
+  }
 `;
 
 export const TypeCharacter = styled.img`
   width: 250px;
   height: auto;
-  margin-right: 30px;
+  margin-top: 115px;
 `;
 
 // 장소 추천
 export const Place = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 35px;
 `;
 
 export const Description = styled.pre`
@@ -45,6 +60,11 @@ export const Description = styled.pre`
   line-height: 22px;
   margin-bottom: 10px;
   line-height: 30px;
+  border-radius: 7px;
+`;
+
+export const GongjuTypeContainer = styled.div`
+  margin-top: 64px;
 `;
 
 export const GongjuExName = styled.div`
@@ -62,8 +82,9 @@ export const GongjuTypeLabel = styled.div`
 
 export const BoxLocation = styled.div`
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  margin-left: 200px;
 `;
 
 export const ImageTitle = styled.li`

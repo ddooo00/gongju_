@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { getResult } from "../../api/testList";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { useMutation, useQueryClient } from "react-query";
-import Board from "../../pages/Board";
 import {
   getHeritages,
   getRestaurants,
@@ -14,6 +12,8 @@ import {
 import { useParams } from "react-router-dom";
 import html2canvas from "html2canvas";
 import * as S from "../../styles/style.testResult";
+import Background from "../../styles/style.spinner";
+import Spinner from "../../assets/spinner/spinner.gif";
 
 function TestResult() {
   const navigate = useNavigate();
@@ -83,7 +83,12 @@ function TestResult() {
     isLoadingFestivals ||
     isLoadingMountains
   ) {
-    return <h1>로딩중...</h1>;
+    return (
+      <Background>
+        잠시만 기다려주세요...
+        <img src={Spinner} alt="로딩중" width="5%" />
+      </Background>
+    );
   }
 
   if (
@@ -93,7 +98,7 @@ function TestResult() {
     isErrorFestivals ||
     isErrorMountains
   ) {
-    return <h1>로딩 중 오류가 발생하였습니다.</h1>;
+    return <Background>결과를 가져오지 못했습니다😥</Background>;
   }
 
   const clickShowComments = () => navigate(`/board`);
@@ -101,10 +106,15 @@ function TestResult() {
   //결과 db 조회(가져오기)
   // console.log("data💛💛", data);
   if (isLoading) {
-    return <div>결과를 가져오는 중..!</div>;
+    return (
+      <Background>
+        잠시만 기다려주세요...
+        <img src={Spinner} alt="로딩중" width="5%" />
+      </Background>
+    );
   }
   if (isError) {
-    return <div>에러입니다..!</div>;
+    return <Background>결과를 가져오지 못했습니다😥</Background>;
   }
 
   const gongjuTypeResult = data;
@@ -116,15 +126,17 @@ function TestResult() {
       .then((canvas) => {
         console.log(canvas);
         // Canvas를 이미지로 변환
-        const dataUrl = canvas.toDataURL();
+        const dataUrl = canvas.toDataURL("image/jpg");
         const link = document.createElement("a");
         link.href = dataUrl;
         link.download = "card.png"; // 다운로드할 이미지 파일명
         link.click();
       })
+
       .catch((error) => {
         console.error("이미지 캡쳐 오류:", error);
       });
+    console.log(card);
   };
 
   return (
@@ -143,7 +155,7 @@ function TestResult() {
                   alt="사진을 가져오지 못했습니다."
                 />
               </div>
-              <div>
+              <S.GongjuTypeContainer>
                 <S.GongjuExName>
                   <S.GomgjuNickname> {princess.text} </S.GomgjuNickname>
 
@@ -152,7 +164,7 @@ function TestResult() {
                   </S.GongjuTypeLabel>
                 </S.GongjuExName>
                 <S.Description>{princess.description}</S.Description>
-              </div>
+              </S.GongjuTypeContainer>
             </S.BoxLocation>
           );
         }
@@ -181,6 +193,7 @@ function TestResult() {
         })}
       </S.Place>
       <S.FooterTitle> 친구들과 결과를 공유해봐요!</S.FooterTitle>
+      <div>{/* 결과 공유 sns 아이콘 */}</div>
     </S.Page>
   );
 }
