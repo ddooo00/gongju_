@@ -5,6 +5,7 @@ import useComments from "../../hooks/useComments";
 import shortid from "shortid";
 import ReactPaginate from "react-paginate";
 import { styled } from "styled-components";
+import * as S from "../../styles/style.chartcomment";
 
 const Comments = () => {
   const user = auth.currentUser;
@@ -120,84 +121,91 @@ const Comments = () => {
   }
 
   return (
-    <div
-      style={{
-        border: "1px solid #000000",
-        margin: "10px",
-        padding: "10px",
-      }}
-    >
-      <form>
-        <label htmlFor="comments">댓글 : </label>
-        <textarea
-          type="text"
-          value={body}
-          onChange={(e) => onChangeBody(e.target.value)}
-        />
-        <button onClick={clickAddComment}>등록</button>
-      </form>
-      {currentComments?.map((comment) => {
-        return (
-          <div
-            style={{
-              border: "1px solid #000000",
-              borderRadius: "10px",
-              margin: "10px",
-              padding: "10px",
-            }}
-            key={comment.id}
-          >
-            <p>작성자 : {comment.userName}</p>
-            <p>날짜 : {comment.createdAt}</p>
-            {isEdit === comment.id ? (
-              <>
-                <label htmlFor="editedBody">내용 : </label>
-                <textarea
-                  value={editedBody}
-                  onChange={(e) => onChangeEditedBody(e.target.value)}
-                />
-              </>
-            ) : (
-              <p>내용 : {comment.body}</p>
-            )}
-            {user?.uid === comment.uid && (
-              <>
-                {isEdit ? (
-                  <button onClick={() => clickUpdateComment(comment)}>
-                    저장
-                  </button>
-                ) : (
+    <S.CommentContainer>
+      <S.CommentWrapper>
+        <div
+          style={{
+            margin: "10px",
+            padding: "20px",
+            background: "#E5D3A9",
+            borderRadius: "20px",
+          }}
+        >
+          <form>
+            <label htmlFor="comments"> </label>
+            <S.CommentTextarea
+              type="text"
+              value={body}
+              onChange={(e) => onChangeBody(e.target.value)}
+            />
+            <S.button onClick={clickAddComment}>등록</S.button>
+          </form>
+          {currentComments?.map((comment) => {
+            return (
+              <S.CommentBox key={comment.id}>
+                <span style={{ marginRight: "10px" }}>{comment.userName}</span>
+                <span style={{ paddingBottom: "20px" }}>
+                  {comment.createdAt}
+                </span>
+                {isEdit === comment.id ? (
                   <>
-                    <button onClick={() => clickDeleteComment(comment.id)}>
-                      삭제
-                    </button>
-                    <button onClick={() => clickEditMode(comment)}>수정</button>
+                    <p style={{ fontSize: "18px" }}>
+                      <label htmlFor="editedBody"></label>
+                    </p>
+                    <textarea
+                      value={editedBody}
+                      onChange={(e) => onChangeEditedBody(e.target.value)}
+                    />
+                  </>
+                ) : (
+                  <p>{comment.body}</p>
+                )}
+                {user?.uid === comment.uid && (
+                  <>
+                    {isEdit ? (
+                      <button onClick={() => clickUpdateComment(comment)}>
+                        저장
+                      </button>
+                    ) : (
+                      <>
+                        <S.button
+                          onClick={() => clickDeleteComment(comment.id)}
+                        >
+                          삭제
+                        </S.button>
+                        <S.button onClick={() => clickEditMode(comment)}>
+                          수정
+                        </S.button>
+                      </>
+                    )}
                   </>
                 )}
-              </>
-            )}
-          </div>
-        );
-      })}
-      <StyledReactPaginate
-        breakLabel="..."
-        nextLabel="> "
-        previousLabel=" <"
-        onPageChange={handlePageClick}
-        pageCount={pageCount}
-        pageRangeDisplayed={3}
-        marginPagesDisplayed={1}
-        renderOnZeroPageCount={null}
-        // containerClassName="pagination justify-content-center"
-        // pageClassName="page-item"
-        // pageLinkClassName="page-link"
-        // previousClassName="page-item"
-        // previousLinkClassName="page-link"
-        // nextClassName="page-item"
-        // nextLinkClassName="page-link"
-        activeClassName="active"
-      />
-    </div>
+              </S.CommentBox>
+            );
+          })}
+
+          {/* 페이지네이트 */}
+          <StyledReactPaginate
+            breakLabel="..."
+            nextLabel="> "
+            previousLabel=" <"
+            onPageChange={handlePageClick}
+            pageCount={pageCount}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={1}
+            renderOnZeroPageCount={null}
+            // containerClassName="pagination justify-content-center"
+            // pageClassName="page-item"
+            // pageLinkClassName="page-link"
+            // previousClassName="page-item"
+            // previousLinkClassName="page-link"
+            // nextClassName="page-item"
+            // nextLinkClassName="page-link"
+            activeClassName="active"
+          />
+        </div>
+      </S.CommentWrapper>
+    </S.CommentContainer>
   );
 };
 

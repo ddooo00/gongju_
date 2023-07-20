@@ -193,6 +193,34 @@
       "userName": "ㅌㅅㅌ",
       "body": "77",
       "createdAt": "2023.6.19 15:25"
+    },
+    {
+      "id": "9r9zrWvQM",
+      "uid": "tmRZACxrHZeFaFWxxereIJ8j3VI3",
+      "userName": "111",
+      "body": "ㄴㄴㄴㄴ",
+      "createdAt": "2023.6.20 15:19"
+    },
+    {
+      "id": "aoMrPUPR2",
+      "uid": "tmRZACxrHZeFaFWxxereIJ8j3VI3",
+      "userName": "111",
+      "body": "ㄴㄴㄴㄴㄴㄴ",
+      "createdAt": "2023.6.20 15:40"
+    },
+    {
+      "id": "ipGGRRKGN",
+      "uid": "FGbyFYTFr9caUHO1X39j4mYRtds2",
+      "userName": "ㅎㅎㅎㅎ",
+      "body": "ㅋㅋㅋㅋㅋㅋ",
+      "createdAt": "2023.6.20 16:20"
+    },
+    {
+      "id": "hfldx6DJL",
+      "uid": "FGbyFYTFr9caUHO1X39j4mYRtds2",
+      "userName": "ㅎㅎㅎㅎ",
+      "body": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "createdAt": "2023.6.20 16:35"
     }
   ],
   "gongjuList": [
@@ -488,7 +516,7 @@
     {
       "id": "D",
       "name": "먹방공주",
-      "value": 3
+      "value": 4
     },
     {
       "id": "E",
