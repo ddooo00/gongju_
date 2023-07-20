@@ -16,6 +16,10 @@ export const DetailContainer = styled.div`
 export const BackBtn = styled.button`
   float: left;
   margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 `;
 
 export const DetailTitle = styled.div`
