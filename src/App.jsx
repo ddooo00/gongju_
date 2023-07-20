@@ -1,14 +1,14 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import "./App.css";
 import Router from "./shared/Router";
-import { Reset } from "styled-reset";
+import GlobalStyle from "./GlobalStyle";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Reset />
+      <GlobalStyle />
       <Router />
     </QueryClientProvider>
   );
