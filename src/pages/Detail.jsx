@@ -9,6 +9,7 @@ import {
 } from "../api/api";
 import { useNavigate, useParams } from "react-router-dom";
 import KakaoMap from "../components/KakaoMap";
+import * as S from "../styles/style.detail";
 
 function Detail() {
   const [dataToShow, setDataToShow] = useState([]);
@@ -89,30 +90,39 @@ function Detail() {
   }
 
   return (
-    <div>
-      {dataToShow
-        ?.filter((dataItem) => dataItem.id === id)
-        .map((dataItem) => {
-          return (
-            <ul key={dataItem.id}>
-              <li>{dataItem.title}</li>
-              <li>{dataItem.description}</li>
-              <li>{dataItem.address}</li>
-              <li>{dataItem.website}</li>
-              <li>{dataItem.call}</li>
-              <img src={dataItem.img} style={{ width: "400px" }} />
-              <KakaoMap address={dataItem.address} />
-              <button
-                onClick={() => {
-                  navigate(-1); // 이전 페이지로 이동 (-1은 뒤로가기)
-                }}
-              >
-                뒤로가기
-              </button>
-            </ul>
-          );
-        })}
-    </div>
+    <S.Container>
+      <S.DetailContainer>
+        <S.BackBtn
+          onClick={() => {
+            navigate(-1); // 이전 페이지로 이동 (-1은 뒤로가기)
+          }}
+        >
+          뒤로가기
+        </S.BackBtn>
+        {dataToShow
+          ?.filter((dataItem) => dataItem.id === id)
+          .map((dataItem) => {
+            return (
+              <ul key={dataItem.id}>
+                <S.DetailTitle>{dataItem.title}</S.DetailTitle>
+                <S.Line />
+                <img src={dataItem.img} style={{ width: "800px" }} />
+                <S.Line />
+                <S.DetailDescription>
+                  {dataItem.description}
+                </S.DetailDescription>
+                <S.Line />
+                <KakaoMap address={dataItem.address} />
+                <S.DetailAddress>주소 : {dataItem.address}</S.DetailAddress>
+                <S.DetailAddress>연락처 : {dataItem.call}</S.DetailAddress>
+                <S.DetailHompage>
+                  <S.DetailLink href={dataItem.website}>홈페이지</S.DetailLink>
+                </S.DetailHompage>
+              </ul>
+            );
+          })}
+      </S.DetailContainer>
+    </S.Container>
   );
 }
 
