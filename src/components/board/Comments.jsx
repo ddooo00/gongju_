@@ -224,8 +224,8 @@ const StyledReactPaginate = styled(ReactPaginate)`
   }
 
   li.active a {
-    color: #91cccd;
-    font-weight: 700;
+    color: #f26f18;
+    font-weight: 800;
     min-width: 32px;
   }
 `;

@@ -16,6 +16,7 @@ export const CommentWrapper = styled.div`
 export const button = styled.button`
   width: 60px;
   height: 35px;
+  font-size: 15px;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
@@ -25,18 +26,19 @@ export const button = styled.button`
   &:hover {
     width: 65px;
     height: 40px;
+    font-size: 17px;
   }
 `;
 
-export const buttonContainer = styled.button`
-  border: none;
-  background-color: white;
-  align-items: right;
-`;
+// export const buttonContainer = styled.button`
+//   border: none;
+//   background-color: white;
+//   align-items: right;
+// `;
 export const CommentTextarea = styled.input`
   border: none;
   border-radius: 10px;
-  width: 900px;
+  width: 950px;
   height: 50px;
   margin-right: 30px;
   margin-left: 70px;
@@ -51,9 +53,10 @@ export const CommentBox = styled.div`
   padding: 10px;
   border-radius: 10px;
   background: white;
-  overflow: visible;
-
-  //   max-height: 200px;
+  max-width: 1100px;
+  max-height: 300px;
+  overflow: hidden;
+  white-space: pre-wrap;
 `;
 export const ChartContainer = styled.div`
   margin: 0 auto;

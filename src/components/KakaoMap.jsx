@@ -59,7 +59,12 @@ const KakaoMap = ({ address }) => {
     };
   }, [address]);
 
-  return <div id="map" style={{ width: "500px", height: "400px" }} />;
+  return (
+    <div
+      id="map"
+      style={{ width: "700px", height: "550px", margin: "0 auto" }}
+    />
+  );
 };
 
 export default KakaoMap;

@@ -24,7 +24,7 @@ const Chart = () => {
   return (
     <S.ChartContainer>
       <S.ChartWrapper>
-        <S.ChartTitle>나와 같은 공주들은 얼마나 있을까요?</S.ChartTitle>
+        <S.ChartTitle>나와 같은 공주들은 얼마나 있을까요❓</S.ChartTitle>
         <BarChart
           width={500}
           height={270}
@@ -55,7 +55,7 @@ const Chart = () => {
             />
           </Bar>
         </BarChart>
-        <S.CommentTitle>공주에 대해 이야기를 나눠봅시다!</S.CommentTitle>
+        <S.CommentTitle>공주에 대해 이야기를 나눠봅시다❗</S.CommentTitle>
       </S.ChartWrapper>
     </S.ChartContainer>
   );
