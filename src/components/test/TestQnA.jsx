@@ -7,6 +7,7 @@ import { useNavigate } from "react-router";
 import "../../styles/TestQnA.css";
 import { useMutation, useQueryClient } from "react-query";
 import { getChart, updateChart } from "../../api/api";
+import { styled } from "styled-components";
 
 function TestQnA() {
   const navigate = useNavigate();
