@@ -10,6 +10,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import KakaoMap from "../components/KakaoMap";
 import * as S from "../styles/style.detail";
+import backwhite from "../assets/img/backwhite.png";
 
 function Detail() {
   const [dataToShow, setDataToShow] = useState([]);
@@ -97,7 +98,7 @@ function Detail() {
             navigate(-1); // 이전 페이지로 이동 (-1은 뒤로가기)
           }}
         >
-          뒤로가기
+          <img src={backwhite} style={{ width: "30px" }} />
         </S.BackBtn>
         {dataToShow
           ?.filter((dataItem) => dataItem.id === id)
@@ -114,9 +115,13 @@ function Detail() {
                 <S.Line />
                 <KakaoMap address={dataItem.address} />
                 <S.DetailAddress>주소 : {dataItem.address}</S.DetailAddress>
-                <S.DetailAddress>연락처 : {dataItem.call}</S.DetailAddress>
+                <S.DetailAddress>
+                  {dataItem.call ? "연락처 :" : null} {dataItem.call}
+                </S.DetailAddress>
                 <S.DetailHompage>
-                  <S.DetailLink href={dataItem.website}>홈페이지</S.DetailLink>
+                  <S.DetailLink href={dataItem.website}>
+                    {dataItem.website ? "홈페이지" : null}
+                  </S.DetailLink>
                 </S.DetailHompage>
               </ul>
             );
