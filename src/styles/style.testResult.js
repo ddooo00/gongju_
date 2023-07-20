@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const Page = styled.div`
   background-color: #f4f9dd;
+  height: 100vh;
 `;
 
 export const ButtonContainer = styled.div`
