@@ -489,22 +489,37 @@
     {
       "id": "A",
       "name": "셀럽공주",
-      "value": 11
+
+      "value":
+      "value": 8
+
     },
     {
       "id": "B",
       "name": "근육공주",
+
       "value": 16
+
+      "value": 0
+
     },
     {
       "id": "C",
       "name": "똑똑공주",
+
       "value": 7
+
+      "value": 5
+
     },
     {
       "id": "D",
       "name": "먹방공주",
+
       "value": 13
+
+      "value": 9
+
     },
     {
       "id": "E",
