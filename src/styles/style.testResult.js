@@ -18,7 +18,7 @@ export const Place = styled.div`
 
 export const Description = styled.pre`
   background-color: #e5d3a9;
-  padding: 15px;
+  padding: 30px;
 `;
 
 export const GongjuTypeName = styled.span`
@@ -29,4 +29,5 @@ export const GongjuTypeName = styled.span`
 export const BoxLocation = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;

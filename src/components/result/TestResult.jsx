@@ -126,45 +126,6 @@ function TestResult() {
       });
   };
 
-  // return (
-  //   <div ref={cardRef} id="result-container">
-  //     <S.Button onClick={onDownloadBtn}>저장</S.Button>
-  //     <S.Button onClick={clickShowComments}>전체 결과 보러가기</S.Button>
-  //     {gongjuTypeResult.map((princess) => {
-  //       if (id?.includes(princess.type)) {
-  //         return (
-  //           <div key={princess.type}>
-  //             {princess.text} <br />'{princess.name} 공주' <br />
-  //             <img src={princess.imageURL} alt="사진을 가져오지 못했습니다." />
-  //             <S.Description>{princess.description}</S.Description>
-  //           </div>
-  //         );
-  //       }
-  //       // else {
-  //       //   return <div>결과값이 없습니다..!</div>;
-  //       // }
-  //     })}
-  //     <h1>당신에게 어울리는 공주는 ?</h1>
-  //     <S.Place>
-  //       {dataToShow?.map((dataItem) => {
-  //         return (
-  //           <ul key={dataItem.id}>
-  //             <li>{dataItem.title}</li>
-  //             <img src={dataItem.img} style={{ width: "300px" }} />
-  //             <S.Button
-  //               onClick={() => {
-  //                 navigate(`/detail/${dataItem.id}`);
-  //               }}
-  //             >
-  //               상세보기
-  //             </S.Button>
-  //           </ul>
-  //         );
-  //       })}
-  //     </S.Place>
-  //   </div>
-  // );
-
   return (
     <S.Page ref={cardRef} id="result-container">
       <S.Button onClick={onDownloadBtn}>저장</S.Button>
@@ -181,7 +142,7 @@ function TestResult() {
               </div>
               <div>
                 <S.GongjuTypeName>
-                  {princess.text} <br /> '{princess.name} 공주' <br />
+                  {princess.text} <br /> '{princess.name} 공주'
                 </S.GongjuTypeName>
                 <S.Description>{princess.description}</S.Description>
               </div>
