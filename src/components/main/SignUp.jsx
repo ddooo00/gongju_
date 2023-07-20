@@ -6,6 +6,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import * as S from "../../styles/style.main";
 
 const SignUp = ({ setIsOpenSignUpModal }) => {
   const [email, onChangeEmail, resetEmail] = useInput();
@@ -35,6 +36,7 @@ const SignUp = ({ setIsOpenSignUpModal }) => {
 
   return (
     <div>
+      <div>공주님, 회원가입이 먼저랍니다 ! </div>
       <form>
         <label htmlFor="email">email : </label>
         <input
