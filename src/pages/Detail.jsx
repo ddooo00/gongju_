@@ -114,9 +114,13 @@ function Detail() {
                 <S.Line />
                 <KakaoMap address={dataItem.address} />
                 <S.DetailAddress>주소 : {dataItem.address}</S.DetailAddress>
-                <S.DetailAddress>연락처 : {dataItem.call}</S.DetailAddress>
+                <S.DetailAddress>
+                  {dataItem.call ? "연락처 :" : null} {dataItem.call}
+                </S.DetailAddress>
                 <S.DetailHompage>
-                  <S.DetailLink href={dataItem.website}>홈페이지</S.DetailLink>
+                  <S.DetailLink href={dataItem.website}>
+                    {dataItem.website ? "홈페이지" : null}
+                  </S.DetailLink>
                 </S.DetailHompage>
               </ul>
             );
