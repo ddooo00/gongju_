@@ -65,8 +65,9 @@ export const CommentBox = styled.div`
   max-width: 1100px;
   max-height: 300px;
   overflow: hidden;
-  white-space: pre-wrap;
+  word-wrap: break-word;
 `;
+
 export const ChartContainer = styled.div`
   margin: 0 auto;
   padding: 0 auto;

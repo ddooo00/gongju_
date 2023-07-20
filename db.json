@@ -200,6 +200,20 @@
       "userName": "ㅎㅎㅎㅎ",
       "body": "ddd",
       "createdAt": "2023.6.19 22:16"
+    },
+    {
+      "id": "iztTpcQal",
+      "uid": "tmRZACxrHZeFaFWxxereIJ8j3VI3",
+      "userName": "111",
+      "body": "zz",
+      "createdAt": "2023.6.20 19:14"
+    },
+    {
+      "id": "PL-i3ry3w",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "createdAt": "2023.6.20 20:10"
     }
   ],
   "gongjuList": [
@@ -485,17 +499,23 @@
     {
       "id": "C",
       "name": "똑똑공주",
+
+      "value": 7
+
       "value": 5
+
     },
     {
       "id": "D",
       "name": "먹방공주",
-      "value": 10
+      "value": 9
+
     },
     {
       "id": "E",
       "name": "감성공주",
       "value": 5
+
     }
   ]
 }
