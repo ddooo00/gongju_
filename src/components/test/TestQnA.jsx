@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import TestResult from "../result/TestResult";
 import { useQuery } from "react-query";
 import { getList } from "../../api/testList";
-import Result from "../../pages/Result";
 import { useNavigate } from "react-router";
 import "../../styles/TestQnA.css";
 import { useMutation, useQueryClient } from "react-query";
 import { getChart, updateChart } from "../../api/api";
-import { styled } from "styled-components";
+import * as S from "../../styles/style.testQnA";
 
 function TestQnA() {
   const navigate = useNavigate();
@@ -102,12 +100,10 @@ function TestQnA() {
   };
 
   return (
-    <>
+    <S.BodyColor>
       {page <= questionList.length ? (
-        <div>
-          <div>
-            <div>나는 어떤 공주일까?</div>
-
+        <S.TestLayout>
+          <S.progressBarLayout>
             {/* 진행 상황 바 */}
             <div className="progress-bar-container">
               <div
@@ -118,60 +114,53 @@ function TestQnA() {
               />
             </div>
             {/* ---- */}
-
-            <div>{`${page} / ${questionList.length}`}</div>
-          </div>
+          </S.progressBarLayout>
+          <S.PageContainer>{`${page} / ${questionList.length}`}</S.PageContainer>
           {questionList.map((val, idx) => (
-            <div
-              key={idx}
-              style={{ display: page === idx + 1 ? "flex" : "none" }}
-            >
-              {/* {console.log(gongjuList)} */}
+            <div key={idx} style={{ display: page === idx + 1 ? "" : "none" }}>
               {/* 질문 */}
-              <div>
+              <S.QuestionBox>
                 {val.q.map((qval, qidx) => (
                   <div key={qidx}>{qval}</div>
                 ))}
-              </div>
+              </S.QuestionBox>
 
-              <div>
+              <S.AnswerContainer>
                 {/* 선택지 */}
                 <div>
                   {val.a.map((aval, aidx) => (
-                    <div
+                    <S.AnswerBox
                       key={aidx}
                       onClick={() => handleAnswerCount(aval.type, aidx)}
-                      style={{
-                        cursor: "pointer",
-                        border: "1px solid #ccc", // Add a border to the options
-                        borderRadius: "5px", // Optional: Add rounded corners
-                        padding: "5px",
-                        margin: "5px",
-                      }}
                     >
                       {aval.text}
-                    </div>
+                    </S.AnswerBox>
                   ))}
                 </div>
-              </div>
+              </S.AnswerContainer>
             </div>
           ))}
-        </div>
+        </S.TestLayout>
       ) : (
-        <div>
-          <h1>테스트가 끝났습니다! 결과를 보러 갈까요?</h1>
-          <button
-            onClick={() => {
-              const selectedType = getMostSelectedType();
-              navigate(`/test/${selectedType}`);
-              updateChartHandler(selectedType);
-            }}
-          >
-            결과 보러가기
-          </button>
-        </div>
+        <S.ResultLayout>
+          <S.ResultBox>
+            <S.ResultLabel>
+              테스트가 끝났습니다! 결과를 보러 갈까요?
+            </S.ResultLabel>
+
+            <S.ResultButton
+              onClick={() => {
+                const selectedType = getMostSelectedType();
+                navigate(`/test/${selectedType}`);
+                updateChartHandler(selectedType);
+              }}
+            >
+              결과 보러가기
+            </S.ResultButton>
+          </S.ResultBox>
+        </S.ResultLayout>
       )}
-    </>
+    </S.BodyColor>
   );
 }
 
