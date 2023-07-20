@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
 export const MainWrapper = styled.div`
   max-width: 1200px;
   min-width: 800px;
-  /* height: 800px; */
+  min-height: 100vh;
   margin: 0 auto;
 `;
 
@@ -48,7 +48,7 @@ export const MainDesc = styled.div`
 
 export const MainImg = styled.img`
   width: 100%;
-  height: 500px;
+  height: 400px;
 `;
 
 export const TestBtnBox = styled.div`
@@ -197,15 +197,26 @@ export const SignUpBtn = styled.button`
 
 export const MainFooterBox = styled.div`
   border-top: 1px solid #a6a6a6;
+  /* background-color: #ffffff; */
   padding: 7px 0;
+  box-shadow: 1px 1px 3px #a6a6a6;
 `;
 
 export const FooterTeam = styled.span`
+  color: #404040;
   font-weight: 600;
-  margin: 0 30px;
+  margin: 0 20px 0 30px;
 `;
 
-export const FooterMember = styled.span`
-  color: #a6a6a6;
-  margin-right: 15px;
+export const FooterMember = styled.button`
+  font-size: 14px;
+  color: #757575;
+  background-color: transparent;
+  border: none;
+  margin-right: 7px;
+  cursor: pointer;
+
+  &:hover {
+    color: #404040;
+  }
 `;

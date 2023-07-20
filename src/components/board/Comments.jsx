@@ -3,8 +3,6 @@ import { auth } from "../../service/firebase";
 import useInput from "../../hooks/useInput";
 import useComments from "../../hooks/useComments";
 import shortid from "shortid";
-import ReactPaginate from "react-paginate";
-import { styled } from "styled-components";
 import * as S from "../../styles/style.chartcomment";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
@@ -49,9 +47,8 @@ const Comments = () => {
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % comments.length;
     setItemOffset(newOffset);
-    // console.log("newOffset", newOffset);
     console.log(
-      `User requested page number ${e.selected}, which is offset ${newOffset}`
+      `유저가 요청한 페이지는 ${e.selected}, 댓글 데이터 배열의 새로운 시작 인덱스는 ${newOffset}`
     );
   };
 
@@ -97,16 +94,20 @@ const Comments = () => {
 
   const clickEditMode = (comment) => {
     setIsEdit(comment.id);
-    onChangeEditedBody(comment.editedBody);
+    onChangeEditedBody(comment.body);
   };
 
   // 댓글 수정
   const clickUpdateComment = (comment) => {
+    if (!editedBody) {
+      alert("내용을 입력해 주세요.");
+      return;
+    }
+
     const editedComment = {
       ...comment,
       userName: user.displayName,
       body: editedBody,
-      // createdAt: dateFormat,
     };
 
     updateMutation.mutate(editedComment);
@@ -156,24 +157,18 @@ const Comments = () => {
                 </span>
                 {isEdit === comment.id ? (
                   <>
-                    <p style={{ fontSize: "18px" }}>
-                      <label htmlFor="editedBody"></label>
-                    </p>
                     <textarea
                       value={editedBody}
                       onChange={(e) => onChangeEditedBody(e.target.value)}
                     />
+                    <button onClick={() => clickUpdateComment(comment)}>
+                      저장
+                    </button>
                   </>
                 ) : (
-                  <p>{comment.body}</p>
-                )}
-                {user?.uid === comment.uid && (
                   <>
-                    {isEdit ? (
-                      <button onClick={() => clickUpdateComment(comment)}>
-                        저장
-                      </button>
-                    ) : (
+                    <p>{comment.body}</p>
+                    {user?.uid === comment.uid && (
                       <>
                         <S.button
                           onClick={() => clickDeleteComment(comment.id)}
@@ -190,9 +185,8 @@ const Comments = () => {
               </S.CommentBox>
             );
           })}
-
           {/* 페이지네이트 */}
-          <StyledReactPaginate
+          <S.StyledReactPaginate
             breakLabel="..."
             nextLabel="> "
             previousLabel=" <"
@@ -201,13 +195,6 @@ const Comments = () => {
             pageRangeDisplayed={3}
             marginPagesDisplayed={1}
             renderOnZeroPageCount={null}
-            // containerClassName="pagination justify-content-center"
-            // pageClassName="page-item"
-            // pageLinkClassName="page-link"
-            // previousClassName="page-item"
-            // previousLinkClassName="page-link"
-            // nextClassName="page-item"
-            // nextLinkClassName="page-link"
             activeClassName="active"
           />
         </div>
@@ -217,22 +204,3 @@ const Comments = () => {
 };
 
 export default Comments;
-
-const StyledReactPaginate = styled(ReactPaginate)`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 30px;
-
-  li a {
-    font-size: 20px;
-    padding: 15px;
-    cursor: pointer;
-  }
-
-  li.active a {
-    color: #f5ab16;
-    font-weight: 800;
-    min-width: 32px;
-  }
-`;

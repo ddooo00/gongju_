@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import ReactPaginate from "react-paginate";
 
 export const CommentContainer = styled.div`
   margin: 0 auto;
@@ -56,7 +57,7 @@ export const CommentTextarea = styled.input`
 `;
 export const CommentBox = styled.div`
   border: 3px solid #102e54;
-  borderradius: 10px;
+  border-radius: 10px;
   font-weight: 300;
   margin: 10px;
   padding: 10px;
@@ -97,4 +98,23 @@ export const ChartTitle = styled.div`
 
 export const Board = styled.div`
   background-color: #f4f9dd;
+`;
+
+export const StyledReactPaginate = styled(ReactPaginate)`
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 30px;
+
+  li a {
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  li.active a {
+    color: #f09713;
+    font-weight: 800;
+    min-width: 32px;
+  }
 `;
