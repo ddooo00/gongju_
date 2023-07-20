@@ -48,7 +48,7 @@ export const MainDesc = styled.div`
 
 export const MainImg = styled.img`
   width: 100%;
-  height: 500px;
+  height: 400px;
 `;
 
 export const TestBtnBox = styled.div`

@@ -4,6 +4,8 @@ import useInput from "../../hooks/useInput";
 import useComments from "../../hooks/useComments";
 import shortid from "shortid";
 import * as S from "../../styles/style.chartcomment";
+import Background from "../../styles/style.spinner";
+import Spinner from "../../assets/spinner/spinner.gif";
 
 const Comments = () => {
   const user = auth.currentUser;
@@ -114,11 +116,16 @@ const Comments = () => {
   };
 
   if (isLoading) {
-    return <h1>언제까지 로딩중 ...?</h1>;
+    return (
+      <Background>
+        잠시만 기다려주세요...
+        <img src={Spinner} alt="로딩중" width="5%" />
+      </Background>
+    );
   }
 
   if (isError) {
-    return <h1>오류를 발견했다 오바</h1>;
+    return <Background>댓글 목록을 가져오지 못했습니다😥</Background>;
   }
 
   return (

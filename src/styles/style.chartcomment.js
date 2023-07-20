@@ -31,6 +31,15 @@ export const button = styled.button`
   }
 `;
 
+export const BackBtn = styled.button`
+  float: left;
+  margin-left: 130px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+`;
+
 // export const buttonContainer = styled.button`
 //   border: none;
 //   background-color: white;
@@ -57,8 +66,9 @@ export const CommentBox = styled.div`
   max-width: 1100px;
   max-height: 300px;
   overflow: hidden;
-  white-space: pre-wrap;
+  word-wrap: break-word;
 `;
+
 export const ChartContainer = styled.div`
   margin: 0 auto;
   padding: 0 auto;
