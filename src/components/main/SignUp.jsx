@@ -6,10 +6,12 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import * as S from "../../styles/style.main";
 
 const SignUp = ({ setIsOpenSignUpModal }) => {
   const [email, onChangeEmail, resetEmail] = useInput();
   const [password, onChangePassword, resetPassword] = useInput();
+  const [confirmP, onChangeConfirmP, resetConfirmP] = useInput();
   const [displayName, onChangeDisplayName, resetDisplayName] = useInput();
 
   // 회원가입
@@ -35,27 +37,35 @@ const SignUp = ({ setIsOpenSignUpModal }) => {
 
   return (
     <div>
-      <form>
-        <label htmlFor="email">email : </label>
-        <input
+      <S.SignUpTitle>공주님, 회원가입이 먼저랍니다 ! </S.SignUpTitle>
+      <S.SignUpForm>
+        <S.SignUpInput
           type="text"
           value={email}
           onChange={(e) => onChangeEmail(e.target.value)}
+          placeholder="이메일을 입력해 주세요"
         />
-        <label htmlFor="password">password : </label>
-        <input
+        <S.SignUpInput
           type="password"
           value={password}
           onChange={(e) => onChangePassword(e.target.value)}
+          placeholder="비밀번호를 입력해 주세요"
         />
-        <label htmlFor="displayName">displayName : </label>
-        <input
+        <S.SignUpInput
+          type="confirmP"
+          value={confirmP}
+          onChange={(e) => onChangeConfirmP(e.target.value)}
+          placeholder="비밀번호를 다시 입력해 주세요"
+        />
+        <S.SignUpInput
           type="text"
           value={displayName}
           onChange={(e) => onChangeDisplayName(e.target.value)}
+          placeholder="닉네임을 입력해 주세요"
         />
-        <button onClick={signUp}>회원가입</button>
-      </form>
+        <div></div>
+        <S.SignUpBtn onClick={signUp}>회원가입</S.SignUpBtn>
+      </S.SignUpForm>
     </div>
   );
 };
