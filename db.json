@@ -200,11 +200,27 @@
       "userName": "ㅎㅎㅎㅎ",
       "body": "ddd",
       "createdAt": "2023.6.19 22:16"
+    },
+    {
+      "id": "FnQdqoROH",
+      "uid": "wRccpNn10INrZ1O6kdZNUpb0EcZ2",
+      "userName": "짱혜진",
+      "body": "ddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfsddddfsdfsfs",
+      "createdAt": "2023.6.20 19:32"
+    },
+    {
+      "id": "pwCjPgLAS",
+      "uid": "wRccpNn10INrZ1O6kdZNUpb0EcZ2",
+      "userName": "짱혜진",
+      "body": "ggggggg",
+      "createdAt": "2023.6.20 19:34"
     }
   ],
   "gongjuList": [
     {
-      "q": ["친구 생일 파티에 잘생긴 사람을 봤다."],
+      "q": [
+        "친구 생일 파티에 잘생긴 사람을 봤다."
+      ],
       "a": [
         {
           "type": "C",
@@ -225,7 +241,9 @@
       ]
     },
     {
-      "q": ["산에 올라갔는데 산삼을 찾았다!"],
+      "q": [
+        "산에 올라갔는데 산삼을 찾았다!"
+      ],
       "a": [
         {
           "type": "B",
@@ -246,7 +264,9 @@
       ]
     },
     {
-      "q": ["길을 가다가 곰인형을 발견했다. 곰인형을 앞에서 보면?"],
+      "q": [
+        "길을 가다가 곰인형을 발견했다. 곰인형을 앞에서 보면?"
+      ],
       "a": [
         {
           "type": "A",
@@ -267,7 +287,9 @@
       ]
     },
     {
-      "q": ["씨앗을 심으려고 한다. 어떤 씨앗을 심을 것인가?"],
+      "q": [
+        "씨앗을 심으려고 한다. 어떤 씨앗을 심을 것인가?"
+      ],
       "a": [
         {
           "type": "A,E",
@@ -311,7 +333,9 @@
       ]
     },
     {
-      "q": ["놀이공원 폐장 30분 전이다. 이때 나는?"],
+      "q": [
+        "놀이공원 폐장 30분 전이다. 이때 나는?"
+      ],
       "a": [
         {
           "type": "D",
@@ -355,7 +379,9 @@
       ]
     },
     {
-      "q": ["5분뒤에 시내 한복판에 핵폭탄이 떨어진다고 한다. 당신의 행동은?"],
+      "q": [
+        "5분뒤에 시내 한복판에 핵폭탄이 떨어진다고 한다. 당신의 행동은?"
+      ],
       "a": [
         {
           "type": "A",
@@ -376,7 +402,9 @@
       ]
     },
     {
-      "q": ["갑자기 요정이 나타나서 원하는 것을 들어준다고 한다."],
+      "q": [
+        "갑자기 요정이 나타나서 원하는 것을 들어준다고 한다."
+      ],
       "a": [
         {
           "type": "B,C",
@@ -397,7 +425,9 @@
       ]
     },
     {
-      "q": ["마녀가 나타나서 사과대신 이것을 주었다. 이것이 뭘까?"],
+      "q": [
+        "마녀가 나타나서 사과대신 이것을 주었다. 이것이 뭘까?"
+      ],
       "a": [
         {
           "type": "B",
@@ -459,12 +489,12 @@
     {
       "id": "A",
       "name": "셀럽공주",
-      "value": 7
+      "value": 8
     },
     {
       "id": "B",
       "name": "근육공주",
-      "value": 6
+      "value": 8
     },
     {
       "id": "C",

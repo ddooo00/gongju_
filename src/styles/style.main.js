@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
 export const MainWrapper = styled.div`
   max-width: 1200px;
   min-width: 800px;
-  /* height: 800px; */
+  min-height: 100vh;
   margin: 0 auto;
 `;
 
@@ -206,6 +206,7 @@ export const FooterTeam = styled.span`
 `;
 
 export const FooterMember = styled.span`
+  /* position: fixed; */
   color: #a6a6a6;
   margin-right: 15px;
 `;

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import * as S from "../../styles/style.main";
 import YouTube from "react-youtube";
 import mainImg from "../../assets/img/main.jpg";
+import { Link } from "react-router-dom";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ const Auth = () => {
           {user && <S.LogoutBtn onClick={logOut}>로그아웃</S.LogoutBtn>}
         </S.LogoutBtnBox>
         <S.MainTitle>
-          {user
+          {user && user.displayName !== null
             ? `${user.displayName}은(는) 어떤 공주일까 ?`
             : `나는 어떤 공주일까 ?`}
         </S.MainTitle>
