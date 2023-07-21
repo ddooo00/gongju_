@@ -162,3 +162,7 @@ export const KakaoIcon = styled.img`
   height: 48px;
   border-radius: 24px;
 `;
+
+export const NotFoundMessage = styled.div`
+  background-color: red;
+`;
