@@ -68,9 +68,6 @@ const Comments = () => {
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % comments.length;
     setItemOffset(newOffset);
-    console.log(
-      `유저가 요청한 페이지는 ${e.selected}, 댓글 데이터 배열의 새로운 시작 인덱스는 ${newOffset}`
-    );
   };
 
   //  날짜 포맷팅
@@ -166,7 +163,9 @@ const Comments = () => {
             return (
               <S.CommentBox
                 key={comment.id}
-                showFull={showFullComment || comment.body.length <= 177}
+                showfull={
+                  showFullComment.toString() || comment.body.length <= 177
+                }
               >
                 <S.Nickname>{comment.userName}</S.Nickname>
                 <S.Date>{comment.createdAt}</S.Date>

@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell } from "recharts";
+import { Cell } from "recharts";
 import { useQuery } from "react-query";
 import { getChart } from "../../api/api";
 import { BarChart, Bar, XAxis, YAxis, LabelList } from "recharts";
@@ -27,8 +27,6 @@ const Chart = () => {
   if (isError) {
     return <Background>차트를 가져오지 못했습니다😥</Background>;
   }
-
-  console.log(data);
 
   return (
     <>

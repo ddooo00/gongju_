@@ -10,7 +10,6 @@ import {
   getMountains,
 } from "../../api/api";
 import { useParams } from "react-router-dom";
-import html2canvas from "html2canvas";
 import * as S from "../../styles/style.testResult";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
@@ -22,11 +21,9 @@ import redPin from "../../assets/img/redpin.png";
 
 function TestResult() {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
   const [dataToShow, setDataToShow] = useState([]);
   const params = useParams();
   const { id } = params;
-  // console.log("id타입값???", id);
   const cardRef = useRef(); // useRef를 사용하여 결과지 컨테이너를 참조합니다.
 
   const { isLoading, isError, data } = useQuery("gongjuTypeData", getResult);
@@ -116,7 +113,6 @@ function TestResult() {
   const clickShowComments = () => navigate(`/board`);
 
   //결과 db 조회(가져오기)
-  // console.log("data💛💛", data);
   if (isLoading) {
     return (
       <Background>
@@ -130,25 +126,6 @@ function TestResult() {
   }
 
   const gongjuTypeResult = data;
-
-  // 이미지 캡쳐 및 저장 함수
-  const onDownloadBtn = () => {
-    const card = cardRef.current; // useRef로 참조한 결과지 컨테이너를 가져옵니다.
-    html2canvas(card)
-      .then((canvas) => {
-        // Canvas를 이미지로 변환
-        const dataUrl = canvas.toDataURL("image/jpg");
-        const link = document.createElement("a");
-        link.href = dataUrl;
-        link.download = "card.png"; // 다운로드할 이미지 파일명
-        link.click();
-      })
-
-      .catch((error) => {
-        console.error("이미지 캡쳐 오류:", error);
-      });
-    console.log(card);
-  };
 
   return (
     <S.Page ref={cardRef} id="result-container">

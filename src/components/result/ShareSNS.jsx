@@ -14,7 +14,6 @@ import { useEffect } from "react";
 function ShareSNS() {
   // kakao SDK import하기
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
-  // console.log("kakaoStatus!!!!", status); //최초 렌더링하면 상태가 loading 하다가 ready로 됨
 
   // status가 변경될 때마다 실행되며, status가 ready일 때 초기화 시도
   useEffect(() => {
@@ -46,6 +45,9 @@ function ShareSNS() {
   return (
     <S.SNSShareLayout>
       <S.SNSButtonContainer>
+        <S.KakaoShareButton onClick={handleKakaoButton}>
+          <S.KakaoIcon src={KakaoLogo}></S.KakaoIcon>
+        </S.KakaoShareButton>
         <FacebookShareButton url={currentUrl}>
           <FacebookIcon size={48} round={true} borderRadius={24} />
         </FacebookShareButton>
@@ -60,9 +62,6 @@ function ShareSNS() {
         >
           URL
         </S.URLShareButton>
-        <S.KakaoShareButton onClick={handleKakaoButton}>
-          <S.KakaoIcon src={KakaoLogo}></S.KakaoIcon>
-        </S.KakaoShareButton>
       </S.SNSButtonContainer>
     </S.SNSShareLayout>
   );

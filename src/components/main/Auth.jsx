@@ -4,7 +4,6 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import SignIn from "./SignIn";
 import { useNavigate } from "react-router-dom";
 import * as S from "../../styles/style.main";
-import YouTube from "react-youtube";
 import mainImg from "../../assets/img/main.jpg";
 import { Link } from "react-router-dom";
 
@@ -29,11 +28,9 @@ const Auth = () => {
       if (user) {
         setUser(user);
         setDisplayName(user.displayName);
-        console.log(user);
       } else {
         setUser(null);
         setDisplayName("");
-        console.log(user);
       }
     });
   }, []);
@@ -61,7 +58,7 @@ const Auth = () => {
             ? `${user.displayName}은(는) 어떤 공주일까 ?`
             : `나는 어떤 공주일까 ?`}
         </S.MainTitle>
-        <S.MainDesc>'공주'로 알아보는 나의 성격</S.MainDesc>
+        <S.MainDesc>성격으로 알아보는 나의 '공주'</S.MainDesc>
         {/* <YouTube
             videoId="Vy9RqQPbxi0"
             opts={{ width: "100%", height: "500px" }}
