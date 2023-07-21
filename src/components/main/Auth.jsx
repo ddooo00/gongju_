@@ -4,7 +4,6 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import SignIn from "./SignIn";
 import { useNavigate } from "react-router-dom";
 import * as S from "../../styles/style.main";
-import YouTube from "react-youtube";
 import mainImg from "../../assets/img/main.jpg";
 import { Link } from "react-router-dom";
 
