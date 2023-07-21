@@ -3,6 +3,7 @@ import modalImg from "../assets/img/modal.jpeg";
 
 export const MainContainer = styled.div`
   background-color: #dce6ef;
+  padding-bottom: 60px;
 `;
 
 export const MainWrapper = styled.div`
@@ -43,19 +44,21 @@ export const MainDesc = styled.div`
   font-size: 22px;
   color: #757575;
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 50px 0;
 `;
 
 export const MainImg = styled.img`
   width: 100%;
-  height: 400px;
+  height: 450px;
+  /* border-radius: 20px; */
+  border-bottom: 2px solid #102e54;
 `;
 
 export const TestBtnBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 80px 0;
+  margin: 70px 0;
 `;
 
 export const TestBtn = styled.button`
@@ -92,7 +95,6 @@ export const ModalBox = styled.div`
   background-image: url(${modalImg});
   background-repeat: no-repeat;
   background-size: contain;
-  /* border-radius: 10px; */
 `;
 
 export const ModalXBtn = styled.div`
@@ -227,6 +229,7 @@ export const MainFooterBox = styled.div`
   position: fixed;
   bottom: 0%;
   width: 100%;
+  background-color: #f0f5fa;
   border-top: 1px solid #a6a6a6;
   padding: 7px 0;
   box-shadow: 1px 1px 3px #a6a6a6;
