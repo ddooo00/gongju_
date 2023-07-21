@@ -34,6 +34,8 @@ const SignIn = ({ closeModal }) => {
         setError("이메일을 입력해 주세요.");
       } else if (error.message === "Firebase: Error (auth/missing-password).") {
         setError("비밀번호를 입력해 주세요.");
+      } else if (error.message === "Firebase: Error (auth/wrong-password).") {
+        setError("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
       } else if (error.message === "Firebase: Error (auth/user-not-found).") {
         setError("일치하는 정보가 없습니다. 다시 입력해주세요.");
       }
