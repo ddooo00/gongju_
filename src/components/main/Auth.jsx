@@ -82,7 +82,7 @@ const Auth = () => {
         )}
       </S.MainWrapper>
       <S.MainFooterBox>
-        <S.FooterTeam>공주들</S.FooterTeam>
+        <S.FooterTeam>Team 공주들</S.FooterTeam>
         <Link to="https://github.com/ddooo00">
           <S.FooterMember>이소영</S.FooterMember>
         </Link>
