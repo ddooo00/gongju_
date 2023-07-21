@@ -113,7 +113,7 @@ function Detail() {
                   {dataItem.description}
                 </S.DetailDescription>
                 <S.Line />
-                <KakaoMap address={dataItem.address} />
+                <KakaoMap title={dataItem.title} address={dataItem.address} />
                 <S.DetailAddress>주소 : {dataItem.address}</S.DetailAddress>
                 <S.DetailAddress>
                   {dataItem.call ? "연락처 :" : null} {dataItem.call}
