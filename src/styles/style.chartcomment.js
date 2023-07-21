@@ -179,14 +179,20 @@ export const StyledReactPaginate = styled(ReactPaginate)`
 
 //더보기
 export const ShowMoreButton = styled.button`
-  background-color: transparent;
+  background-color: white;
   border: none;
   cursor: pointer;
   color: #102e54;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
+  width: 150px;
 
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;

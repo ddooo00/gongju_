@@ -40,10 +40,10 @@ const Comments = () => {
     setShowFullComment((prev) => !prev);
   };
 
-  // 댓글을 펼치는지 여부를 나타내는 상태
+  // 댓글을 펼치는지 여부 상태
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // 댓글 펼치/접기 토글 함수
+  // 댓글 펼치/접기
   const toggleExpand = () => {
     setIsExpanded((prev) => !prev);
   };
@@ -156,10 +156,11 @@ const Comments = () => {
             <S.Inputbutton onClick={clickAddComment}>등록</S.Inputbutton>
           </form>
           {currentComments?.map((comment) => {
+            const isContentOverflow = comment.body.length > 177;
             return (
               <S.CommentBox
                 key={comment.id}
-                showFull={showFullComment || comment.body.length <= 80}
+                showFull={showFullComment || comment.body.length <= 177}
               >
                 <S.Nickname>{comment.userName}</S.Nickname>
                 <S.Date>{comment.createdAt}</S.Date>
@@ -175,21 +176,24 @@ const Comments = () => {
                   </>
                 ) : (
                   <>
-                    {isContentOverflow && !isExpanded ? (
-                      <p>
-                        {comment.body.slice(0, 69)}
+                    <S.ContentContainer>
+                      {isContentOverflow && !isExpanded ? (
+                        <>
+                          <p>{comment.body.slice(0, 177)}</p>
+                          <S.ShowMoreButton onClick={toggleExpand}>
+                            더보기
+                          </S.ShowMoreButton>
+                        </>
+                      ) : (
+                        <p>{comment.body}</p>
+                      )}
+
+                      {isExpanded && isContentOverflow && (
                         <S.ShowMoreButton onClick={toggleExpand}>
-                          더 보기
+                          접기
                         </S.ShowMoreButton>
-                      </p>
-                    ) : (
-                      <p>{comment.body}</p>
-                    )}
-                    {isExpanded && isContentOverflow && (
-                      <S.ShowMoreButton onClick={toggleExpand}>
-                        접기
-                      </S.ShowMoreButton>
-                    )}
+                      )}
+                    </S.ContentContainer>
                     {user?.uid === comment.uid && (
                       <>
                         <S.button
