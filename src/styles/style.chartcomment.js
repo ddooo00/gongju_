@@ -30,17 +30,18 @@ export const button = styled.button`
 `;
 
 export const Inputbutton = styled.button`
-  width: 75px;
-  height: 48px;
+  width: 70px;
+  height: 43px;
   font-size: 20px;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  margin-left: -5px;
 
   &:hover {
-    width: 78px;
-    height: 50px;
+    width: 75px;
+    height: 46px;
   }
 `;
 
