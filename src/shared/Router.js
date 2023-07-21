@@ -4,6 +4,7 @@ import Test from "../pages/Test";
 import Detail from "../pages/Detail";
 import Board from "../pages/Board";
 import Result from "../pages/Result";
+import NonPage from "../components/NonPage";
 
 const Router = () => {
   return (
@@ -14,7 +15,7 @@ const Router = () => {
         <Route path="/test/:id" element={<Result />} />
         <Route path="/board" element={<Board />} />
         <Route path="/detail/:id" element={<Detail />} />
-        <Route path="*" element={<h1>없는 페이지 입니다.</h1>} />
+        <Route path="*" element={<NonPage />} />
       </Routes>
     </BrowserRouter>
   );
