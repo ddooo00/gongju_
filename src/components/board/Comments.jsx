@@ -161,9 +161,9 @@ const Comments = () => {
                       value={editedBody}
                       onChange={(e) => onChangeEditedBody(e.target.value)}
                     />
-                    <button onClick={() => clickUpdateComment(comment)}>
+                    <S.button onClick={() => clickUpdateComment(comment)}>
                       저장
-                    </button>
+                    </S.button>
                   </>
                 ) : (
                   <>
