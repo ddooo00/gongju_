@@ -15,13 +15,10 @@ import * as S from "../../styles/style.testResult";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
 import ShareSNS from "./ShareSNS";
-
 import Nonpage from "../../components/NonPage";
-
-import yellowtape from "../../assets/img/yellowtape.png";
-import redpin from "../../assets/img/redpin.png";
-import bluepin from "../../assets/img/bluepin.png";
-
+import yellowTape from "../../assets/img/yellowTape.png";
+import bluePin from "../../assets/img/bluePin.png";
+import redPin from "../../assets/img/redPin.png";
 
 function TestResult() {
   const navigate = useNavigate();
@@ -155,7 +152,6 @@ function TestResult() {
 
   return (
     <S.Page ref={cardRef} id="result-container">
-
       {dataToShow?.length === 0 ? (
         <Nonpage />
       ) : (
@@ -193,43 +189,46 @@ function TestResult() {
           })}
           <S.Place>
             <S.ImageBox>
-          <S.ImageStickerBlue
-            src={bluepin}
-            alt="스티커를 가져오지 못했습니다."
-          ></S.ImageStickerBlue>
-          <S.ImageStickerYellow
-            src={yellowtape}
-            alt="스티커를 가져오지 못했습니다."
-          ></S.ImageStickerYellow>
-          <S.ImageStickerRed
-            src={redpin}
-            alt="스티커를 가져오지 못했습니다."
-          ></S.ImageStickerRed>
-            {dataToShow?.map((dataItem) => {
-              return (
-                <ul key={dataItem.id}>
-                  <S.ImageTitle>{dataItem.title}</S.ImageTitle>
-                  <S.ImageContainer>
-                    <S.Image src={dataItem.img} style={{ width: "300px" }} />
-                  </S.ImageContainer>
+              <S.ImageStickerBlue
+                src={bluePin}
+                alt="스티커를 가져오지 못했습니다."
+              ></S.ImageStickerBlue>
+              <S.ImageStickerYellowT
+                src={yellowTape}
+                alt="스티커를 가져오지 못했습니다."
+              ></S.ImageStickerYellowT>
+              <S.ImageStickerYellowB
+                src={yellowTape}
+                alt="스티커를 가져오지 못했습니다."
+              ></S.ImageStickerYellowB>
+              <S.ImageStickerRed
+                src={redPin}
+                alt="스티커를 가져오지 못했습니다."
+              ></S.ImageStickerRed>
+              {dataToShow?.map((dataItem) => {
+                return (
+                  <ul key={dataItem.id}>
+                    <S.ImageTitle>{dataItem.title}</S.ImageTitle>
+                    <S.ImageContainer>
+                      <S.Image src={dataItem.img} style={{ width: "300px" }} />
+                    </S.ImageContainer>
 
-                  <S.DetailButton
-                    onClick={() => {
-                      navigate(`/detail/${dataItem.id}`);
-                    }}
-                  >
-                    상세보기
-                  </S.DetailButton>
-                </ul>
-              );
-            })}
+                    <S.DetailButton
+                      onClick={() => {
+                        navigate(`/detail/${dataItem.id}`);
+                      }}
+                    >
+                      상세보기
+                    </S.DetailButton>
+                  </ul>
+                );
+              })}
             </S.ImageBox>
           </S.Place>
           <S.FooterTitle> 친구들과 결과를 공유해봐요!</S.FooterTitle>
           <ShareSNS />
         </>
       )}
-
     </S.Page>
   );
 }
