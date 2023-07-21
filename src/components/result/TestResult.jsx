@@ -15,9 +15,13 @@ import * as S from "../../styles/style.testResult";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
 import ShareSNS from "./ShareSNS";
+
+import Nonpage from "../../components/NonPage";
+
 import yellowtape from "../../assets/img/yellowtape.png";
 import redpin from "../../assets/img/redpin.png";
 import bluepin from "../../assets/img/bluepin.png";
+
 
 function TestResult() {
   const navigate = useNavigate();
@@ -60,16 +64,23 @@ function TestResult() {
   } = useQuery("mountains", getMountains);
 
   useEffect(() => {
-    if (id === "A") {
-      setDataToShow(dataFestivals);
-    } else if (id === "B") {
-      setDataToShow(dataCampsites);
-    } else if (id === "C") {
-      setDataToShow(dataHeritages);
-    } else if (id === "D") {
-      setDataToShow(dataRestaurants);
-    } else if (id === "E") {
-      setDataToShow(dataMountains);
+    // id가 A, B, C, D, E 중 하나인지 확인 (대소문자 구분 없이)
+    const upperCaseId = id.toUpperCase();
+    if (["A", "B", "C", "D", "E"].includes(upperCaseId)) {
+      if (upperCaseId === "A") {
+        setDataToShow(dataFestivals);
+      } else if (upperCaseId === "B") {
+        setDataToShow(dataCampsites);
+      } else if (upperCaseId === "C") {
+        setDataToShow(dataHeritages);
+      } else if (upperCaseId === "D") {
+        setDataToShow(dataRestaurants);
+      } else if (upperCaseId === "E") {
+        setDataToShow(dataMountains);
+      }
+    } else {
+      // id가 A, B, C, D, E 중 하나가 아니라면 에러
+      setDataToShow([]);
     }
   }, [
     id,
@@ -144,39 +155,44 @@ function TestResult() {
 
   return (
     <S.Page ref={cardRef} id="result-container">
-      <S.ButtonContainer>
-        <S.Button onClick={() => navigate("/")}>다시하기</S.Button>
-        <S.Button onClick={clickShowComments}>결과 이야기 나누기</S.Button>
-      </S.ButtonContainer>
-      {gongjuTypeResult.map((princess) => {
-        if (id?.includes(princess.type)) {
-          return (
-            <S.BoxLocation key={princess.type}>
-              <div>
-                <S.TypeCharacter
-                  src={princess.imageURL}
-                  alt="사진을 가져오지 못했습니다."
-                />
-              </div>
-              <S.GongjuTypeContainer>
-                <S.GongjuExName>
-                  <S.GomgjuNickname> {princess.text} </S.GomgjuNickname>
 
-                  <S.GongjuTypeLabel>
-                    <label>{princess.name}</label> 공주
-                  </S.GongjuTypeLabel>
-                </S.GongjuExName>
-                <S.Description>{princess.description}</S.Description>
-              </S.GongjuTypeContainer>
-            </S.BoxLocation>
-          );
-        }
-        // else {
-        //   return <div>결과값이 없습니다..!</div>;
-        // }
-      })}
-      <S.Place>
-        <S.ImageBox>
+      {dataToShow?.length === 0 ? (
+        <Nonpage />
+      ) : (
+        <>
+          <S.ButtonContainer>
+            <S.Button onClick={() => navigate("/")}>다시하기</S.Button>
+            <S.Button onClick={clickShowComments}>결과 이야기 나누기</S.Button>
+          </S.ButtonContainer>
+          {gongjuTypeResult.map((princess) => {
+            if (id?.includes(princess.type)) {
+              return (
+                <S.BoxLocation key={princess.type}>
+                  <div>
+                    <S.TypeCharacter
+                      src={princess.imageURL}
+                      alt="사진을 가져오지 못했습니다."
+                    />
+                  </div>
+                  <S.GongjuTypeContainer>
+                    <S.GongjuExName>
+                      <S.GomgjuNickname> {princess.text} </S.GomgjuNickname>
+
+                      <S.GongjuTypeLabel>
+                        <label>{princess.name}</label> 공주
+                      </S.GongjuTypeLabel>
+                    </S.GongjuExName>
+                    <S.Description>{princess.description}</S.Description>
+                  </S.GongjuTypeContainer>
+                </S.BoxLocation>
+              );
+            }
+            // else {
+            //   return <div>결과값이 없습니다..!</div>;
+            // }
+          })}
+          <S.Place>
+            <S.ImageBox>
           <S.ImageStickerBlue
             src={bluepin}
             alt="스티커를 가져오지 못했습니다."
@@ -189,28 +205,31 @@ function TestResult() {
             src={redpin}
             alt="스티커를 가져오지 못했습니다."
           ></S.ImageStickerRed>
-          {dataToShow?.map((dataItem) => {
-            return (
-              <ul key={dataItem.id}>
-                <S.ImageTitle>{dataItem.title}</S.ImageTitle>
-                <S.ImageContainer>
-                  <S.Image src={dataItem.img} style={{ width: "300px" }} />
-                </S.ImageContainer>
-                <S.DetailButton
-                  onClick={() => {
-                    navigate(`/detail/${dataItem.id}`);
-                  }}
-                >
-                  상세보기
-                </S.DetailButton>
-              </ul>
-            );
-          })}{" "}
-        </S.ImageBox>
-      </S.Place>
+            {dataToShow?.map((dataItem) => {
+              return (
+                <ul key={dataItem.id}>
+                  <S.ImageTitle>{dataItem.title}</S.ImageTitle>
+                  <S.ImageContainer>
+                    <S.Image src={dataItem.img} style={{ width: "300px" }} />
+                  </S.ImageContainer>
 
-      <S.FooterTitle> 친구들과 결과를 공유해봐요!</S.FooterTitle>
-      <ShareSNS />
+                  <S.DetailButton
+                    onClick={() => {
+                      navigate(`/detail/${dataItem.id}`);
+                    }}
+                  >
+                    상세보기
+                  </S.DetailButton>
+                </ul>
+              );
+            })}
+            </S.ImageBox>
+          </S.Place>
+          <S.FooterTitle> 친구들과 결과를 공유해봐요!</S.FooterTitle>
+          <ShareSNS />
+        </>
+      )}
+
     </S.Page>
   );
 }
