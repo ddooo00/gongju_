@@ -32,6 +32,8 @@ export const DetailButton = styled.button`
   border-radius: 10px;
   margin-left: 125px;
   margin-top: 5px;
+  width: 65px;
+  height: 30px;
 
   padding: 7px;
   border: none;
@@ -89,6 +91,7 @@ export const BoxLocation = styled.div`
 
 export const ImageTitle = styled.li`
   margin-left: 9px;
+  text-align: center;
 `;
 
 export const ImageContainer = styled.div`

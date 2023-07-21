@@ -146,7 +146,7 @@ const Comments = () => {
               value={body}
               onChange={(e) => onChangeBody(e.target.value)}
             />
-            <S.button onClick={clickAddComment}>등록</S.button>
+            <S.Inputbutton onClick={clickAddComment}>등록</S.Inputbutton>
           </form>
           {currentComments?.map((comment) => {
             return (
