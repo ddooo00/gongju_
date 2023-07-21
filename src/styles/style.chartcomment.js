@@ -54,11 +54,6 @@ export const BackBtn = styled.button`
   margin-top: 10px;
 `;
 
-// export const buttonContainer = styled.button`
-//   border: none;
-//   background-color: white;
-//   align-items: right;
-// `;
 export const CommentTextarea = styled.input`
   border: none;
   border-radius: 10px;
@@ -107,7 +102,8 @@ export const ChartTitle = styled.div`
   font-size: 25px;
   font-weight: 600;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 8px;
+  margin-bottom: 10px;
 `;
 
 export const Board = styled.div`
