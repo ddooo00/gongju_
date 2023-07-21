@@ -43,9 +43,9 @@ export const DetailButton = styled.button`
 `;
 
 export const TypeCharacter = styled.img`
-  width: 250px;
+  width: 300px;
   height: auto;
-  margin-top: 115px;
+  margin: 115px 15px 0 0;
 `;
 
 // 장소 추천
