@@ -6,6 +6,7 @@ export const CommentContainer = styled.div`
   padding: 0 auto;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 `;
 
@@ -15,32 +16,57 @@ export const CommentWrapper = styled.div`
   min-height: 100vh;
 `;
 
+export const Inner = styled.div`
+  width: 1150px;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  background: #e5d3a9;
+  border-radius: 20px;
+`;
+export const CommentTextarea = styled.input`
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  height: 50px;
+  margin: 20px 30px 20px 70px;
+`;
+
+export const CommentBox = styled.div`
+  border: 3px solid #102e54;
+  border-radius: 10px;
+  font-weight: 300;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  max-width: 1100px;
+  height: auto;
+  overflow: hidden;
+  word-wrap: break-word;
+  line-height: 23px;
+`;
+
+export const Nickname = styled.div`
+  margin-right: 10px;
+  font-weight: 700;
+`;
+export const Date = styled.div`
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: gray;
+`;
+
 export const button = styled.button`
   width: 50px;
-  height: 35px;
+  height: 32px;
   font-size: 15px;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
   margin-right: 15px;
+  margin-top: 5px;
   cursor: pointer;
-
-  &:hover {
-    background-color: black;
-  }
-`;
-
-export const Savebutton = styled.div`
-  width: 50px;
-  height: 35px;
-  font-size: 15px;
-  background-color: #102e54;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   &:hover {
     background-color: black;
@@ -48,7 +74,7 @@ export const Savebutton = styled.div`
 `;
 
 export const Inputbutton = styled.button`
-  width: 70px;
+  width: 6%;
   height: 43px;
   font-size: 20px;
   background-color: #102e54;
@@ -63,6 +89,34 @@ export const Inputbutton = styled.button`
   }
 `;
 
+export const Savebutton = styled.div`
+  width: 50px;
+  height: 32px;
+  font-size: 15px;
+  background-color: #102e54;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+
+  &:hover {
+    background-color: black;
+  }
+`;
+
+export const EditTextarea = styled.textarea`
+  display: flex;
+  width: 99%;
+  height: 60px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #102e54;
+  border-radius: 10px;
+`;
+
 export const BackBtn = styled.button`
   float: left;
   margin-left: 130px;
@@ -70,30 +124,6 @@ export const BackBtn = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 10px;
-`;
-
-export const CommentTextarea = styled.input`
-  border: none;
-  border-radius: 10px;
-  width: 950px;
-  height: 50px;
-  margin-right: 30px;
-  margin-left: 70px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-`;
-export const CommentBox = styled.div`
-  border: 3px solid #102e54;
-  border-radius: 10px;
-  font-weight: 300;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  background: white;
-  max-width: 1100px;
-  max-height: 300px;
-  overflow: hidden;
-  word-wrap: break-word;
 `;
 
 export const ChartContainer = styled.div`

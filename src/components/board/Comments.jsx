@@ -129,14 +129,7 @@ const Comments = () => {
   return (
     <S.CommentContainer>
       <S.CommentWrapper>
-        <div
-          style={{
-            margin: "10px",
-            padding: "20px",
-            background: "#E5D3A9",
-            borderRadius: "20px",
-          }}
-        >
+        <S.Inner>
           <form>
             <label htmlFor="comments"> </label>
             <S.CommentTextarea
@@ -149,13 +142,11 @@ const Comments = () => {
           {currentComments?.map((comment) => {
             return (
               <S.CommentBox key={comment.id}>
-                <span style={{ marginRight: "10px" }}>{comment.userName}</span>
-                <span style={{ paddingBottom: "20px" }}>
-                  {comment.createdAt}
-                </span>
+                <S.Nickname>{comment.userName}</S.Nickname>
+                <S.Date>{comment.createdAt}</S.Date>
                 {isEdit === comment.id ? (
                   <>
-                    <textarea
+                    <S.EditTextarea
                       value={editedBody}
                       onChange={(e) => onChangeEditedBody(e.target.value)}
                     />
@@ -195,7 +186,7 @@ const Comments = () => {
             renderOnZeroPageCount={null}
             activeClassName="active"
           />
-        </div>
+        </S.Inner>
       </S.CommentWrapper>
     </S.CommentContainer>
   );
