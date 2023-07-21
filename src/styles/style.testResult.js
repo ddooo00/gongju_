@@ -116,20 +116,30 @@ export const Image = styled.img`
 
 export const ImageStickerBlue = styled.img`
   position: absolute;
-  top: -2;
-  left: -3%;
+  top: 3%;
+  left: -1%;
+  width: 60px;
 `;
 
-export const ImageStickerYellow = styled.img`
+export const ImageStickerYellowT = styled.img`
   position: absolute;
-  /* left: 0%; */
-  /* bottom: 0%; */
+  width: 70px;
+  left: 33%;
+  top: 6%;
+`;
+
+export const ImageStickerYellowB = styled.img`
+  position: absolute;
+  width: 70px;
+  left: 60%;
+  bottom: 10%;
 `;
 
 export const ImageStickerRed = styled.img`
   position: absolute;
-  top: -1%;
-  right: -2%;
+  width: 60px;
+  top: 11%;
+  right: 2%;
 `;
 
 export const FooterTitle = styled.div`
