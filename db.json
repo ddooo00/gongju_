@@ -209,13 +209,6 @@
       "createdAt": "2023.6.20 19:14"
     },
     {
-      "id": "PL-i3ry3w",
-      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
-      "userName": "또앵",
-      "body": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
-      "createdAt": "2023.6.20 20:10"
-    },
-    {
       "id": "dISsL5PE_",
       "uid": "wRccpNn10INrZ1O6kdZNUpb0EcZ2",
       "userName": "짱혜진",
@@ -242,6 +235,27 @@
       "userName": "Wj lee",
       "body": "dddd",
       "createdAt": "2023.6.21 9:46"
+    },
+    {
+      "id": "erT7TZ1UB",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ",
+      "createdAt": "2023.6.21 9:59"
+    },
+    {
+      "id": "aVHaKgpsV",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ",
+      "createdAt": "2023.6.21 10:0"
+    },
+    {
+      "id": "3OpClA87p",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "ㄴㄴㄴ",
+      "createdAt": "2023.6.21 10:3"
     }
   ],
   "gongjuList": [
@@ -517,7 +531,7 @@
     {
       "id": "A",
       "name": "셀럽공주",
-      "value": 11
+      "value": 13
     },
     {
       "id": "B",
