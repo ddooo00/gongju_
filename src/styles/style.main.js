@@ -3,12 +3,13 @@ import modalImg from "../assets/img/modal.jpeg";
 
 export const MainContainer = styled.div`
   background-color: #dce6ef;
+  padding-bottom: 60px;
 `;
 
 export const MainWrapper = styled.div`
   max-width: 1200px;
   min-width: 800px;
-  /* height: 800px; */
+  min-height: 100vh;
   margin: 0 auto;
 `;
 
@@ -43,19 +44,21 @@ export const MainDesc = styled.div`
   font-size: 22px;
   color: #757575;
   text-align: center;
-  margin: 30px 0 40px 0;
+  margin: 20px 0 50px 0;
 `;
 
 export const MainImg = styled.img`
   width: 100%;
-  height: 500px;
+  height: 450px;
+  /* border-radius: 20px; */
+  border-bottom: 2px solid #102e54;
 `;
 
 export const TestBtnBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  margin: 70px 0;
 `;
 
 export const TestBtn = styled.button`
@@ -92,7 +95,6 @@ export const ModalBox = styled.div`
   background-image: url(${modalImg});
   background-repeat: no-repeat;
   background-size: contain;
-  /* border-radius: 10px; */
 `;
 
 export const ModalXBtn = styled.div`
@@ -105,7 +107,7 @@ export const ModalXBtn = styled.div`
 export const SignInTitle = styled.div`
   font-size: 24px;
   text-align: center;
-  margin: 50px 0 30px 0;
+  margin: 45px 0 25px 0;
 `;
 
 export const SignInForm = styled.form`
@@ -120,12 +122,12 @@ export const SignInInput = styled.input`
   border: 2px solid #102e54;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 export const SignInBtn = styled.button`
   width: 150px;
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
   background-color: #102e54;
   border: none;
@@ -139,10 +141,16 @@ export const SignInBtn = styled.button`
   }
 `;
 
+export const SignInErrMessage = styled.div`
+  font-size: 14px;
+  color: #b82006;
+  margin: 5px 0 12px 0;
+`;
+
 export const SignInSocialDesc = styled.div`
   color: #757575;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 12px;
 `;
 
 export const SignInSocialBox = styled.div`
@@ -152,8 +160,8 @@ export const SignInSocialBox = styled.div`
 `;
 
 export const SignInSocialLogo = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   padding: 15px;
   cursor: pointer;
 `;
@@ -161,7 +169,7 @@ export const SignInSocialLogo = styled.img`
 export const SignUpTitle = styled.div`
   font-size: 24px;
   text-align: center;
-  margin: 50px 0 30px 0;
+  margin: 45px 0 25px 0;
 `;
 
 export const SignUpForm = styled.form`
@@ -171,12 +179,34 @@ export const SignUpForm = styled.form`
   flex-direction: column;
 `;
 
+export const SignUpInputBox = styled.div`
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+  margin-bottom: 12px;
+`;
+
+export const SignUpLabel = styled.label`
+  font-size: 16px;
+  margin-bottom: 5px;
+`;
+
 export const SignUpInput = styled.input`
-  width: 250px;
+  width: 230px;
   border: 2px solid #102e54;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 7px;
+`;
+
+export const SignUpPwInfo = styled.span`
+  font-size: 12px;
+  margin-left: 5px;
+`;
+
+export const SignUpErrMessage = styled.div`
+  font-size: 14px;
+  color: #b82006;
 `;
 
 export const SignUpBtn = styled.button`
@@ -187,7 +217,7 @@ export const SignUpBtn = styled.button`
   border: none;
   border-radius: 15px;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
 
   &:hover {
@@ -196,16 +226,30 @@ export const SignUpBtn = styled.button`
 `;
 
 export const MainFooterBox = styled.div`
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: #f0f5fa;
   border-top: 1px solid #a6a6a6;
   padding: 7px 0;
+  box-shadow: 1px 1px 3px #a6a6a6;
 `;
 
 export const FooterTeam = styled.span`
+  color: #404040;
   font-weight: 600;
-  margin: 0 30px;
+  margin: 0 20px 0 30px;
 `;
 
-export const FooterMember = styled.span`
-  color: #a6a6a6;
-  margin-right: 15px;
+export const FooterMember = styled.button`
+  font-size: 14px;
+  color: #757575;
+  background-color: transparent;
+  border: none;
+  margin-right: 7px;
+  cursor: pointer;
+
+  &:hover {
+    color: #404040;
+  }
 `;

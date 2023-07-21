@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../../service/firebase";
 import useInput from "../../hooks/useInput";
 import useComments from "../../hooks/useComments";
-import shortid from "shortid";
-import ReactPaginate from "react-paginate";
-import { styled } from "styled-components";
 import * as S from "../../styles/style.chartcomment";
+import Background from "../../styles/style.spinner";
+import Spinner from "../../assets/spinner/spinner.gif";
 
 const Comments = () => {
   const user = auth.currentUser;
@@ -47,9 +46,8 @@ const Comments = () => {
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % comments.length;
     setItemOffset(newOffset);
-    // console.log("newOffset", newOffset);
     console.log(
-      `User requested page number ${e.selected}, which is offset ${newOffset}`
+      `유저가 요청한 페이지는 ${e.selected}, 댓글 데이터 배열의 새로운 시작 인덱스는 ${newOffset}`
     );
   };
 
@@ -73,7 +71,6 @@ const Comments = () => {
     }
 
     const newComment = {
-      id: shortid.generate(),
       uid: user.uid,
       userName: user.displayName,
       body,
@@ -95,16 +92,20 @@ const Comments = () => {
 
   const clickEditMode = (comment) => {
     setIsEdit(comment.id);
-    onChangeEditedBody(comment.editedBody);
+    onChangeEditedBody(comment.body);
   };
 
   // 댓글 수정
   const clickUpdateComment = (comment) => {
+    if (!editedBody) {
+      alert("내용을 입력해 주세요.");
+      return;
+    }
+
     const editedComment = {
       ...comment,
       userName: user.displayName,
       body: editedBody,
-      // createdAt: dateFormat,
     };
 
     updateMutation.mutate(editedComment);
@@ -113,24 +114,22 @@ const Comments = () => {
   };
 
   if (isLoading) {
-    return <h1>언제까지 로딩중 ...?</h1>;
+    return (
+      <Background>
+        잠시만 기다려주세요...
+        <img src={Spinner} alt="로딩중" width="5%" />
+      </Background>
+    );
   }
 
   if (isError) {
-    return <h1>오류를 발견했다 오바</h1>;
+    return <Background>댓글 목록을 가져오지 못했습니다😥</Background>;
   }
 
   return (
     <S.CommentContainer>
       <S.CommentWrapper>
-        <div
-          style={{
-            margin: "10px",
-            padding: "20px",
-            background: "#E5D3A9",
-            borderRadius: "20px",
-          }}
-        >
+        <S.Inner>
           <form>
             <label htmlFor="comments"> </label>
             <S.CommentTextarea
@@ -138,35 +137,27 @@ const Comments = () => {
               value={body}
               onChange={(e) => onChangeBody(e.target.value)}
             />
-            <S.button onClick={clickAddComment}>등록</S.button>
+            <S.Inputbutton onClick={clickAddComment}>등록</S.Inputbutton>
           </form>
           {currentComments?.map((comment) => {
             return (
               <S.CommentBox key={comment.id}>
-                <span style={{ marginRight: "10px" }}>{comment.userName}</span>
-                <span style={{ paddingBottom: "20px" }}>
-                  {comment.createdAt}
-                </span>
+                <S.Nickname>{comment.userName}</S.Nickname>
+                <S.Date>{comment.createdAt}</S.Date>
                 {isEdit === comment.id ? (
                   <>
-                    <p style={{ fontSize: "18px" }}>
-                      <label htmlFor="editedBody"></label>
-                    </p>
-                    <textarea
+                    <S.EditTextarea
                       value={editedBody}
                       onChange={(e) => onChangeEditedBody(e.target.value)}
                     />
+                    <S.Savebutton onClick={() => clickUpdateComment(comment)}>
+                      저장
+                    </S.Savebutton>
                   </>
                 ) : (
-                  <p>{comment.body}</p>
-                )}
-                {user?.uid === comment.uid && (
                   <>
-                    {isEdit ? (
-                      <button onClick={() => clickUpdateComment(comment)}>
-                        저장
-                      </button>
-                    ) : (
+                    <p>{comment.body}</p>
+                    {user?.uid === comment.uid && (
                       <>
                         <S.button
                           onClick={() => clickDeleteComment(comment.id)}
@@ -183,9 +174,8 @@ const Comments = () => {
               </S.CommentBox>
             );
           })}
-
           {/* 페이지네이트 */}
-          <StyledReactPaginate
+          <S.StyledReactPaginate
             breakLabel="..."
             nextLabel="> "
             previousLabel=" <"
@@ -194,38 +184,12 @@ const Comments = () => {
             pageRangeDisplayed={3}
             marginPagesDisplayed={1}
             renderOnZeroPageCount={null}
-            // containerClassName="pagination justify-content-center"
-            // pageClassName="page-item"
-            // pageLinkClassName="page-link"
-            // previousClassName="page-item"
-            // previousLinkClassName="page-link"
-            // nextClassName="page-item"
-            // nextLinkClassName="page-link"
             activeClassName="active"
           />
-        </div>
+        </S.Inner>
       </S.CommentWrapper>
     </S.CommentContainer>
   );
 };
 
 export default Comments;
-
-const StyledReactPaginate = styled(ReactPaginate)`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 30px;
-
-  li a {
-    font-size: 20px;
-    padding: 15px;
-    cursor: pointer;
-  }
-
-  li.active a {
-    color: #f5ab16;
-    font-weight: 800;
-    min-width: 32px;
-  }
-`;

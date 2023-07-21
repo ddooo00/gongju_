@@ -2,41 +2,57 @@ import { styled } from "styled-components";
 
 export const Page = styled.div`
   background-color: #f4f9dd;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export const ButtonContainer = styled.div`
   float: right;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 15px;
+  margin-right: 20px;
 `;
 
 export const Button = styled.button`
   background-color: #102e54;
   color: white;
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 18px;
+  padding: 13px;
   margin-right: 5px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #09192e;
+  }
 `;
 
 export const DetailButton = styled.button`
+  cursor: pointer;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
   margin-left: 125px;
+  margin-top: 5px;
+  width: 65px;
+  height: 30px;
+
+  padding: 7px;
+  border: none;
+  &:hover {
+    background-color: #09192e;
+  }
 `;
 
 export const TypeCharacter = styled.img`
   width: 250px;
   height: auto;
-  margin-right: 30px;
+  margin-top: 115px;
 `;
 
 // 장소 추천
 export const Place = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 35px;
 `;
 
 export const Description = styled.pre`
@@ -46,6 +62,11 @@ export const Description = styled.pre`
   line-height: 22px;
   margin-bottom: 10px;
   line-height: 30px;
+  border-radius: 7px;
+`;
+
+export const GongjuTypeContainer = styled.div`
+  margin-top: 64px;
 `;
 
 export const GongjuExName = styled.div`
@@ -63,12 +84,14 @@ export const GongjuTypeLabel = styled.div`
 
 export const BoxLocation = styled.div`
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  margin-left: 200px;
 `;
 
 export const ImageTitle = styled.li`
   margin-left: 9px;
+  text-align: center;
 `;
 
 export const ImageContainer = styled.div`
@@ -97,4 +120,45 @@ export const FooterTitle = styled.div`
 
 export const GomgjuNickname = styled.div`
   font-size: 20px;
+`;
+
+export const SNSShareLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const SNSButtonContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 48px);
+  grid-column-gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+export const URLShareButton = styled.button`
+  width: 48px;
+  height: 48px;
+  color: white;
+  border-radius: 24px;
+  border: 0px;
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #7362ff;
+  &:hover {
+    background-color: #a99fee;
+  }
+`;
+
+export const KakaoShareButton = styled.a`
+  cursor: pointer;
+`;
+
+export const KakaoIcon = styled.img`
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
 `;

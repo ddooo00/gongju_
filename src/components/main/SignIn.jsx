@@ -16,6 +16,7 @@ const SignIn = ({ closeModal }) => {
   const [email, onChangeEmail, resetEmail] = useInput();
   const [password, onChangePassword, resetPassword] = useInput();
   const [isOpenSignUpModal, setIsOpenSignUpModal] = useState(false);
+  const [error, setError] = useState("");
 
   // 로그인
   const signIn = async (event) => {
@@ -28,7 +29,16 @@ const SignIn = ({ closeModal }) => {
       );
       closeModal();
     } catch (error) {
-      console.error(error);
+      console.log(error.message);
+      if (error.message === "Firebase: Error (auth/invalid-email).") {
+        setError("이메일을 입력해 주세요.");
+      } else if (error.message === "Firebase: Error (auth/missing-password).") {
+        setError("비밀번호를 입력해 주세요.");
+      } else if (error.message === "Firebase: Error (auth/wrong-password).") {
+        setError("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+      } else if (error.message === "Firebase: Error (auth/user-not-found).") {
+        setError("일치하는 정보가 없습니다. 다시 입력해주세요.");
+      }
     }
   };
 
@@ -81,6 +91,7 @@ const SignIn = ({ closeModal }) => {
               onChange={(e) => onChangePassword(e.target.value)}
               placeholder="비밀번호를 입력해 주세요"
             />
+            <S.SignInErrMessage>{error}</S.SignInErrMessage>
             <S.SignInBtn onClick={signIn}>로그인</S.SignInBtn>
             <S.SignInBtn onClick={clickChangeModal}>회원가입</S.SignInBtn>
             <S.SignInSocialDesc>
