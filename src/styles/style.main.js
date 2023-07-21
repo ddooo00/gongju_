@@ -55,7 +55,7 @@ export const TestBtnBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  margin: 80px 0;
 `;
 
 export const TestBtn = styled.button`
@@ -224,9 +224,11 @@ export const SignUpBtn = styled.button`
 `;
 
 export const MainFooterBox = styled.div`
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
   border-top: 1px solid #a6a6a6;
   padding: 7px 0;
-  margin-top: 50px;
   box-shadow: 1px 1px 3px #a6a6a6;
 `;
 

@@ -12,6 +12,7 @@ export const CommentContainer = styled.div`
 export const CommentWrapper = styled.div`
   max-width: 1200px;
   min-width: 800px;
+  min-height: 100vh;
 `;
 
 export const button = styled.button`
