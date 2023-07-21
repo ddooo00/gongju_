@@ -36,16 +36,22 @@ const Comments = () => {
   const [showFullComment, setShowFullComment] = useState(false);
 
   // 더 보기 기능 함수
-  const toggleShowFullComment = () => {
-    setShowFullComment((prev) => !prev);
+  const toggleShowFullComment = (commentId) => {
+    setShowFullComment((prev) => ({
+      ...prev,
+      [commentId]: !prev[commentId],
+    }));
   };
 
   // 댓글을 펼치는지 여부 상태
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState({});
 
-  // 댓글 펼치/접기
-  const toggleExpand = () => {
-    setIsExpanded((prev) => !prev);
+  // 댓글 펼치기/접기
+  const toggleExpand = (commentId) => {
+    setIsExpanded((prev) => ({
+      ...prev,
+      [commentId]: !prev[commentId],
+    }));
   };
 
   useEffect(() => {
@@ -177,21 +183,21 @@ const Comments = () => {
                 ) : (
                   <>
                     <S.ContentContainer>
-                      {isContentOverflow && !isExpanded ? (
+                      {isContentOverflow ? (
                         <>
-                          <p>{comment.body.slice(0, 177)}</p>
-                          <S.ShowMoreButton onClick={toggleExpand}>
-                            더보기
+                          {isExpanded[comment.id] ? (
+                            <p>{comment.body}</p>
+                          ) : (
+                            <p>{comment.body.slice(0, 177)}</p>
+                          )}
+                          <S.ShowMoreButton
+                            onClick={() => toggleExpand(comment.id)}
+                          >
+                            {isExpanded[comment.id] ? "접기" : "더보기"}
                           </S.ShowMoreButton>
                         </>
                       ) : (
                         <p>{comment.body}</p>
-                      )}
-
-                      {isExpanded && isContentOverflow && (
-                        <S.ShowMoreButton onClick={toggleExpand}>
-                          접기
-                        </S.ShowMoreButton>
                       )}
                     </S.ContentContainer>
                     {user?.uid === comment.uid && (
