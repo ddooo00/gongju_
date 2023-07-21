@@ -32,6 +32,22 @@ const Comments = () => {
   // 한 페이지에 표시될 항목 수
   const itemsPerPage = 5;
 
+  // 더 보기 기능을 위한 상태
+  const [showFullComment, setShowFullComment] = useState(false);
+
+  // 더 보기 기능 함수
+  const toggleShowFullComment = () => {
+    setShowFullComment((prev) => !prev);
+  };
+
+  // 댓글을 펼치는지 여부를 나타내는 상태
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // 댓글 펼치/접기 토글 함수
+  const toggleExpand = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
   useEffect(() => {
     // 한 페이지 내 댓글 배열의 마지막 인덱스
     const endOffset = itemOffset + itemsPerPage;
@@ -141,7 +157,10 @@ const Comments = () => {
           </form>
           {currentComments?.map((comment) => {
             return (
-              <S.CommentBox key={comment.id}>
+              <S.CommentBox
+                key={comment.id}
+                showFull={showFullComment || comment.body.length <= 80}
+              >
                 <S.Nickname>{comment.userName}</S.Nickname>
                 <S.Date>{comment.createdAt}</S.Date>
                 {isEdit === comment.id ? (
@@ -156,7 +175,21 @@ const Comments = () => {
                   </>
                 ) : (
                   <>
-                    <p>{comment.body}</p>
+                    {isContentOverflow && !isExpanded ? (
+                      <p>
+                        {comment.body.slice(0, 69)}
+                        <S.ShowMoreButton onClick={toggleExpand}>
+                          더 보기
+                        </S.ShowMoreButton>
+                      </p>
+                    ) : (
+                      <p>{comment.body}</p>
+                    )}
+                    {isExpanded && isContentOverflow && (
+                      <S.ShowMoreButton onClick={toggleExpand}>
+                        접기
+                      </S.ShowMoreButton>
+                    )}
                     {user?.uid === comment.uid && (
                       <>
                         <S.button
