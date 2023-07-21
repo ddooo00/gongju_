@@ -48,23 +48,6 @@ export const CommentBox = styled.div`
   word-wrap: break-word;
   line-height: 23px;
 `;
-export const Savebutton = styled.div`
-  width: 20%;
-  height: 32px;
-  font-size: 15px;
-  background-color: #102e54;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5px;
-
-  &:hover {
-    background-color: black;
-  }
-`;
 
 export const button = styled.button`
   width: 50px;
@@ -83,7 +66,7 @@ export const button = styled.button`
 `;
 
 export const Inputbutton = styled.button`
-  width: 70px;
+  width: 6%;
   height: 43px;
   font-size: 20px;
   background-color: #102e54;
@@ -95,6 +78,24 @@ export const Inputbutton = styled.button`
   &:hover {
     width: 75px;
     height: 46px;
+  }
+`;
+
+export const Savebutton = styled.div`
+  width: 50px;
+  height: 32px;
+  font-size: 15px;
+  background-color: #102e54;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+
+  &:hover {
+    background-color: black;
   }
 `;
 
