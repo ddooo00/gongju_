@@ -133,6 +133,8 @@ const Comments = () => {
       <S.CommentWrapper>
         <div
           style={{
+            width: "1200px",
+            height: "600px",
             margin: "10px",
             padding: "20px",
             background: "#E5D3A9",
