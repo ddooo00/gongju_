@@ -32,15 +32,26 @@ const Comments = () => {
   // 한 페이지에 표시될 항목 수
   const itemsPerPage = 5;
 
-  // 더 보기 기능을 위한 상태(확인해보기)
-  const showFullComment = false;
+  // 더 보기 기능을 위한 상태
+  const [showFullComment, setShowFullComment] = useState(false);
+
+  // 더 보기 기능 함수
+  const toggleShowFullComment = (commentId) => {
+    setShowFullComment((prev) => ({
+      ...prev,
+      [commentId]: !prev[commentId],
+    }));
+  };
 
   // 댓글을 펼치는지 여부 상태
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState({});
 
-  // 댓글 펼치/접기
-  const toggleExpand = (comment) => {
-    setIsExpanded((prev) => !prev);
+  // 댓글 펼치기/접기
+  const toggleExpand = (commentId) => {
+    setIsExpanded((prev) => ({
+      ...prev,
+      [commentId]: !prev[commentId],
+    }));
   };
 
   useEffect(() => {
@@ -171,23 +182,21 @@ const Comments = () => {
                 ) : (
                   <>
                     <S.ContentContainer>
-                      {isContentOverflow && !isExpanded ? (
+                      {isContentOverflow ? (
                         <>
-                          <p>{comment.body.slice(0, 177)}</p>
+                          {isExpanded[comment.id] ? (
+                            <p>{comment.body}</p>
+                          ) : (
+                            <p>{comment.body.slice(0, 177)}</p>
+                          )}
                           <S.ShowMoreButton
-                            onClick={() => toggleExpand(comment)}
+                            onClick={() => toggleExpand(comment.id)}
                           >
-                            더보기
+                            {isExpanded[comment.id] ? "접기" : "더보기"}
                           </S.ShowMoreButton>
                         </>
                       ) : (
                         <p>{comment.body}</p>
-                      )}
-
-                      {isExpanded && isContentOverflow && (
-                        <S.ShowMoreButton onClick={() => toggleExpand(comment)}>
-                          접기
-                        </S.ShowMoreButton>
                       )}
                     </S.ContentContainer>
                     {user?.uid === comment.uid && (
