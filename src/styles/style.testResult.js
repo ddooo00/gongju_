@@ -132,7 +132,7 @@ export const SNSShareLayout = styled.div`
 export const SNSButtonContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 48px);
-  grid-column-gap: 8px;
+  grid-column-gap: 14px;
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;

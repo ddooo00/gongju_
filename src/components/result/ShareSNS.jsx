@@ -12,8 +12,11 @@ function ShareSNS() {
   //현재 URL 가져오기
   const currentUrl = window.location.href;
 
+  //URL 복사 공유
   const handleURLCopy = () => {
-    window.Clipboard.setData(currentUrl);
+    window.navigator.clipboard.writeText(currentUrl).then(() => {
+      alert("복사 완료!");
+    });
   };
 
   return (
