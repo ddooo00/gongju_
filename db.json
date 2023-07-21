@@ -228,6 +228,13 @@
       "userName": "짱혜진",
       "body": "gggggggg",
       "createdAt": "2023.6.20 22:34"
+    },
+    {
+      "id": "ELK3kfZfR",
+      "uid": "RPvuh1UB4BgQdUTu1wPwfYMfLcm1",
+      "userName": "Wj lee",
+      "body": "ㅇㅇㅇㅇ",
+      "createdAt": "2023.6.21 9:21"
     }
   ],
   "gongjuList": [
@@ -513,7 +520,7 @@
     {
       "id": "C",
       "name": "똑똑공주",
-      "value": 7
+      "value": 8
     },
     {
       "id": "D",
@@ -523,7 +530,7 @@
     {
       "id": "E",
       "name": "감성공주",
-      "value": 6
+      "value": 7
     }
   ]
 }
