@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../../service/firebase";
 import useInput from "../../hooks/useInput";
 import useComments from "../../hooks/useComments";
-import shortid from "shortid";
 import * as S from "../../styles/style.chartcomment";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
@@ -72,7 +71,6 @@ const Comments = () => {
     }
 
     const newComment = {
-      id: shortid.generate(),
       uid: user.uid,
       userName: user.displayName,
       body,
