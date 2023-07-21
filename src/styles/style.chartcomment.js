@@ -195,4 +195,5 @@ export const ShowMoreButton = styled.button`
 export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-top: -17px;
 `;
