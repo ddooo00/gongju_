@@ -240,22 +240,8 @@
       "id": "aVHaKgpsV",
       "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
       "userName": "또앵",
-      "body": "ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ",
+      "body": "안녕하세요 반가워요/안녕하세요 반가워요/안녕하세요1!!",
       "createdAt": "2023.6.21 10:0"
-    },
-    {
-      "id": "AfXGcBZJK",
-      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
-      "userName": "또앵",
-      "body": "ㄴㄴㄴ",
-      "createdAt": "2023.6.21 10:3"
-    },
-    {
-      "id": "EKwLpPfL3",
-      "uid": "74Khd3QEe5a5caQl0Fq7qp4HS822",
-      "userName": "쏭주",
-      "body": "ㅇㅇ",
-      "createdAt": "2023.6.21 10:17"
     }
   ],
   "gongjuList": [
@@ -517,12 +503,12 @@
     {
       "id": "A",
       "name": "셀럽공주",
-      "value": 14
+      "value": 15
     },
     {
       "id": "B",
       "name": "근육공주",
-      "value": 21
+      "value": 22
     },
     {
       "id": "C",
@@ -532,7 +518,7 @@
     {
       "id": "D",
       "name": "먹방공주",
-      "value": 13
+      "value": 15
     },
     {
       "id": "E",
