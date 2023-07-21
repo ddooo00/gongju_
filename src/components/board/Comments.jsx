@@ -131,16 +131,7 @@ const Comments = () => {
   return (
     <S.CommentContainer>
       <S.CommentWrapper>
-        <div
-          style={{
-            width: "1200px",
-            height: "600px",
-            margin: "10px",
-            padding: "20px",
-            background: "#E5D3A9",
-            borderRadius: "20px",
-          }}
-        >
+        <S.Inner>
           <form>
             <label htmlFor="comments"> </label>
             <S.CommentTextarea
@@ -212,7 +203,7 @@ const Comments = () => {
             renderOnZeroPageCount={null}
             activeClassName="active"
           />
-        </div>
+        </S.Inner>
       </S.CommentWrapper>
     </S.CommentContainer>
   );

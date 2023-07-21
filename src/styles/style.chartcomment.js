@@ -15,6 +15,14 @@ export const CommentWrapper = styled.div`
   min-height: 100vh;
 `;
 
+export const Inner = styled.div`
+  width: 1200px;
+  height: 600px;
+  margin: 10px;
+  padding: 20px;
+  background: #e5d3a9;
+  border-radius: 20px;
+`;
 export const CommentTextarea = styled.input`
   border: none;
   border-radius: 10px;
