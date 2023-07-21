@@ -29,18 +29,36 @@ export const button = styled.button`
   }
 `;
 
+export const Savebutton = styled.div`
+  width: 50px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #102e54;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: black;
+  }
+`;
+
 export const Inputbutton = styled.button`
-  width: 75px;
-  height: 48px;
+  width: 70px;
+  height: 43px;
   font-size: 20px;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  margin-left: -5px;
 
   &:hover {
-    width: 78px;
-    height: 50px;
+    width: 75px;
+    height: 46px;
   }
 `;
 
@@ -53,11 +71,6 @@ export const BackBtn = styled.button`
   margin-top: 10px;
 `;
 
-// export const buttonContainer = styled.button`
-//   border: none;
-//   background-color: white;
-//   align-items: right;
-// `;
 export const CommentTextarea = styled.input`
   border: none;
   border-radius: 10px;
@@ -106,7 +119,8 @@ export const ChartTitle = styled.div`
   font-size: 25px;
   font-weight: 600;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 8px;
+  margin-bottom: 10px;
 `;
 
 export const Board = styled.div`

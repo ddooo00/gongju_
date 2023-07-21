@@ -143,7 +143,7 @@ function TestResult() {
   return (
     <S.Page ref={cardRef} id="result-container">
       <S.ButtonContainer>
-        <S.Button onClick={onDownloadBtn}>저장</S.Button>
+        <S.Button onClick={() => navigate("/")}>다시하기</S.Button>
         <S.Button onClick={clickShowComments}>결과 이야기 나누기</S.Button>
       </S.ButtonContainer>
       {gongjuTypeResult.map((princess) => {
