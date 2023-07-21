@@ -14,6 +14,7 @@ import html2canvas from "html2canvas";
 import * as S from "../../styles/style.testResult";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
+import ShareSNS from "./ShareSNS";
 
 function TestResult() {
   const navigate = useNavigate();
@@ -193,7 +194,7 @@ function TestResult() {
         })}
       </S.Place>
       <S.FooterTitle> 친구들과 결과를 공유해봐요!</S.FooterTitle>
-      <div>{/* 결과 공유 sns 아이콘 */}</div>
+      <ShareSNS />
     </S.Page>
   );
 }
