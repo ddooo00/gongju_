@@ -96,7 +96,7 @@ export const CommentBox = styled.div`
   max-height: 300px;
   overflow: hidden;
   word-wrap: break-word;
-  line-height: 22px;
+  line-height: 23px;
 `;
 
 export const ChartContainer = styled.div`
