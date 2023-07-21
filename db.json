@@ -209,13 +209,6 @@
       "createdAt": "2023.6.20 19:14"
     },
     {
-      "id": "PL-i3ry3w",
-      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
-      "userName": "또앵",
-      "body": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
-      "createdAt": "2023.6.20 20:10"
-    },
-    {
       "id": "dISsL5PE_",
       "uid": "wRccpNn10INrZ1O6kdZNUpb0EcZ2",
       "userName": "짱혜진",
@@ -242,11 +235,34 @@
       "userName": "Wj lee",
       "body": "dddd",
       "createdAt": "2023.6.21 9:46"
+    },
+    {
+      "id": "erT7TZ1UB",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ",
+      "createdAt": "2023.6.21 9:59"
+    },
+    {
+      "id": "aVHaKgpsV",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ",
+      "createdAt": "2023.6.21 10:0"
+    },
+    {
+      "id": "3OpClA87p",
+      "uid": "X2QZ7C818QXFosfkBSbqPc5ibWm2",
+      "userName": "또앵",
+      "body": "ㄴㄴㄴ",
+      "createdAt": "2023.6.21 10:3"
     }
   ],
   "gongjuList": [
     {
-      "q": ["친구 생일 파티에 잘생긴 사람을 봤다."],
+      "q": [
+        "친구 생일 파티에 잘생긴 사람을 봤다."
+      ],
       "a": [
         {
           "type": "C",
@@ -267,7 +283,9 @@
       ]
     },
     {
-      "q": ["산에 올라갔는데 산삼을 찾았다!"],
+      "q": [
+        "산에 올라갔는데 산삼을 찾았다!"
+      ],
       "a": [
         {
           "type": "B",
@@ -288,7 +306,9 @@
       ]
     },
     {
-      "q": ["길을 가다가 곰인형을 발견했다. 곰인형을 앞에서 보면?"],
+      "q": [
+        "길을 가다가 곰인형을 발견했다. 곰인형을 앞에서 보면?"
+      ],
       "a": [
         {
           "type": "A",
@@ -309,7 +329,9 @@
       ]
     },
     {
-      "q": ["씨앗을 심으려고 한다. 어떤 씨앗을 심을 것인가?"],
+      "q": [
+        "씨앗을 심으려고 한다. 어떤 씨앗을 심을 것인가?"
+      ],
       "a": [
         {
           "type": "A,E",
@@ -353,7 +375,9 @@
       ]
     },
     {
-      "q": ["놀이공원 폐장 30분 전이다. 이때 나는?"],
+      "q": [
+        "놀이공원 폐장 30분 전이다. 이때 나는?"
+      ],
       "a": [
         {
           "type": "D",
@@ -397,7 +421,9 @@
       ]
     },
     {
-      "q": ["5분뒤에 시내 한복판에 핵폭탄이 떨어진다고 한다. 당신의 행동은?"],
+      "q": [
+        "5분뒤에 시내 한복판에 핵폭탄이 떨어진다고 한다. 당신의 행동은?"
+      ],
       "a": [
         {
           "type": "A",
@@ -418,7 +444,9 @@
       ]
     },
     {
-      "q": ["갑자기 요정이 나타나서 원하는 것을 들어준다고 한다."],
+      "q": [
+        "갑자기 요정이 나타나서 원하는 것을 들어준다고 한다."
+      ],
       "a": [
         {
           "type": "B,C",
@@ -439,7 +467,9 @@
       ]
     },
     {
-      "q": ["마녀가 나타나서 사과대신 이것을 주었다. 이것이 뭘까?"],
+      "q": [
+        "마녀가 나타나서 사과대신 이것을 주었다. 이것이 뭘까?"
+      ],
       "a": [
         {
           "type": "B",
@@ -501,7 +531,7 @@
     {
       "id": "A",
       "name": "셀럽공주",
-      "value": 11
+      "value": 13
     },
     {
       "id": "B",
