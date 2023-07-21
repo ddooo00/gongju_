@@ -121,3 +121,19 @@ export const FooterTitle = styled.div`
 export const GomgjuNickname = styled.div`
   font-size: 20px;
 `;
+
+export const SNSShareLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const SNSButtonContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 48px);
+  grid-column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+`;
