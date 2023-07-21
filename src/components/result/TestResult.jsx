@@ -16,9 +16,9 @@ import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
 import ShareSNS from "./ShareSNS";
 import Nonpage from "../../components/NonPage";
-import yellowTape from "../../assets/img/yellowTape.png";
-import bluePin from "../../assets/img/bluePin.png";
-import redPin from "../../assets/img/redPin.png";
+import yellowTape from "../../assets/img/yellowtape.png";
+import bluePin from "../../assets/img/bluepin.png";
+import redPin from "../../assets/img/redpin.png";
 
 function TestResult() {
   const navigate = useNavigate();
