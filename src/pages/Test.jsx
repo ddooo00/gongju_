@@ -1,7 +1,12 @@
 import React from "react";
+import TestQnA from "../components/test/TestQnA";
 
 function Test() {
-  return <div>Test</div>;
+  return (
+    <>
+      <TestQnA />
+    </>
+  );
 }
 
 export default Test;
