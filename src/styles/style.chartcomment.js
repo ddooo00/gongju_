@@ -17,12 +17,13 @@ export const CommentWrapper = styled.div`
 
 export const button = styled.button`
   width: 50px;
-  height: 35px;
+  height: 32px;
   font-size: 15px;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
   margin-right: 15px;
+  margin-top: 5px;
   cursor: pointer;
 
   &:hover {
@@ -32,7 +33,7 @@ export const button = styled.button`
 
 export const Savebutton = styled.div`
   width: 50px;
-  height: 35px;
+  height: 32px;
   font-size: 15px;
   background-color: #102e54;
   color: white;
@@ -41,6 +42,7 @@ export const Savebutton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5px;
 
   &:hover {
     background-color: black;
@@ -94,6 +96,7 @@ export const CommentBox = styled.div`
   max-height: 300px;
   overflow: hidden;
   word-wrap: break-word;
+  line-height: 22px;
 `;
 
 export const ChartContainer = styled.div`
@@ -145,4 +148,12 @@ export const StyledReactPaginate = styled(ReactPaginate)`
     font-weight: 800;
     min-width: 32px;
   }
+`;
+
+export const EditTextarea = styled.input`
+  display: flex;
+  width: 50%;
+  height: 30px;
+  border: 1px solid #102e54;
+  border-radius: 10px;
 `;

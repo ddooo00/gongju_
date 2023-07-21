@@ -151,13 +151,26 @@ const Comments = () => {
           {currentComments?.map((comment) => {
             return (
               <S.CommentBox key={comment.id}>
-                <span style={{ marginRight: "10px" }}>{comment.userName}</span>
-                <span style={{ paddingBottom: "20px" }}>
+                <span
+                  style={{
+                    marginRight: "10px",
+                    fontWeight: "700",
+                  }}
+                >
+                  {comment.userName}
+                </span>
+                <span
+                  style={{
+                    paddingBottom: "20px",
+                    fontSize: "14px",
+                    color: "gray",
+                  }}
+                >
                   {comment.createdAt}
                 </span>
                 {isEdit === comment.id ? (
                   <>
-                    <textarea
+                    <S.EditTextarea
                       value={editedBody}
                       onChange={(e) => onChangeEditedBody(e.target.value)}
                     />
