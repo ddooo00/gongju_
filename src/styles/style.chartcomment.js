@@ -29,6 +29,23 @@ export const button = styled.button`
   }
 `;
 
+export const Savebutton = styled.div`
+  width: 50px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #102e54;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: black;
+  }
+`;
+
 export const Inputbutton = styled.button`
   width: 70px;
   height: 43px;
