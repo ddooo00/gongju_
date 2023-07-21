@@ -6,6 +6,7 @@ export const CommentContainer = styled.div`
   padding: 0 auto;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 `;
 
@@ -16,8 +17,8 @@ export const CommentWrapper = styled.div`
 `;
 
 export const Inner = styled.div`
-  width: 1200px;
-  height: 600px;
+  width: 1150px;
+  height: auto;
   margin: 10px;
   padding: 20px;
   background: #e5d3a9;
@@ -28,10 +29,7 @@ export const CommentTextarea = styled.input`
   border-radius: 10px;
   width: 80%;
   height: 50px;
-  margin-right: 30px;
-  margin-left: 70px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 30px 20px 70px;
 `;
 
 export const CommentBox = styled.div`
@@ -43,10 +41,20 @@ export const CommentBox = styled.div`
   border-radius: 10px;
   background: white;
   max-width: 1100px;
-  max-height: 300px;
+  height: auto;
   overflow: hidden;
   word-wrap: break-word;
   line-height: 23px;
+`;
+
+export const Nickname = styled.div`
+  margin-right: 10px;
+  font-weight: 700;
+`;
+export const Date = styled.div`
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: gray;
 `;
 
 export const button = styled.button`
@@ -97,6 +105,16 @@ export const Savebutton = styled.div`
   &:hover {
     background-color: black;
   }
+`;
+
+export const EditTextarea = styled.textarea`
+  display: flex;
+  width: 99%;
+  height: 60px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #102e54;
+  border-radius: 10px;
 `;
 
 export const BackBtn = styled.button`
@@ -157,12 +175,4 @@ export const StyledReactPaginate = styled(ReactPaginate)`
     font-weight: 800;
     min-width: 32px;
   }
-`;
-
-export const EditTextarea = styled.input`
-  display: flex;
-  width: 50%;
-  height: 30px;
-  border: 1px solid #102e54;
-  border-radius: 10px;
 `;
