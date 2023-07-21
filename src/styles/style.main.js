@@ -105,6 +105,14 @@ export const ModalXBtn = styled.div`
 `;
 
 export const SignInTitle = styled.div`
+  @font-face {
+    font-family: "EF_Firenze";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_Firenze.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  font-family: "EF_Firenze";
   font-size: 24px;
   text-align: center;
   margin: 45px 0 25px 0;
@@ -167,6 +175,14 @@ export const SignInSocialLogo = styled.img`
 `;
 
 export const SignUpTitle = styled.div`
+  @font-face {
+    font-family: "EF_Firenze";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_Firenze.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  font-family: "EF_Firenze";
   font-size: 24px;
   text-align: center;
   margin: 45px 0 25px 0;
