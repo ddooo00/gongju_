@@ -176,3 +176,23 @@ export const StyledReactPaginate = styled(ReactPaginate)`
     min-width: 32px;
   }
 `;
+
+//더보기
+export const ShowMoreButton = styled.button`
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  color: #102e54;
+  font-size: 16px;
+  font-weight: 700;
+  width: 150px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
