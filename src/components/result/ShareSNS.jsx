@@ -39,7 +39,7 @@ function ShareSNS() {
   const handleKakaoButton = () => {
     window.Kakao.Link.sendScrap({
       requestUrl: currentUrl,
-      templateArgs: { name: "kakao" },
+      templateId: 96333,
     });
   };
 
