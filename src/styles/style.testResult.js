@@ -94,17 +94,42 @@ export const ImageTitle = styled.li`
   text-align: center;
 `;
 
+export const ImageBox = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const ImageContainer = styled.div`
   object-fit: cover;
   width: 300px;
   height: 200px;
-  margin: 10px;
+  margin: 15px;
 `;
 
 export const Image = styled.img`
   width: 100%;
   height: 100%;
   margin-top: 5px;
+`;
+
+export const ImageStickerBlue = styled.img`
+  position: absolute;
+  top: -2;
+  left: -3%;
+`;
+
+export const ImageStickerYellow = styled.img`
+  position: absolute;
+  /* left: 0%; */
+  /* bottom: 0%; */
+`;
+
+export const ImageStickerRed = styled.img`
+  position: absolute;
+  top: -1%;
+  right: -2%;
 `;
 
 export const FooterTitle = styled.div`
