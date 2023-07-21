@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Map, Marker } from "react-kakao-maps";
 
-const KakaoMap = ({ address }) => {
+const KakaoMap = ({ title, address }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
@@ -38,6 +38,19 @@ const KakaoMap = ({ address }) => {
 
           // 지도에 마커 추가
           marker.setMap(map);
+
+          // 인포윈도우 생성 및 내용 설정
+
+          const iwContent = `<div style="color: black; padding: 10px; height: 50px; width: 200px ">
+          <p style="margin-bottom: 3px; font-weight: bold;">${title}</p>
+          <p style="color: gray;">${address}</p>
+          </div>`;
+          const infowindow = new window.kakao.maps.InfoWindow({
+            content: iwContent,
+          });
+
+          // 인포윈도우 바로 열기
+          infowindow.open(map, marker);
 
           // 지도에 컨트롤추가
           const mapTypeControl = new window.kakao.maps.MapTypeControl();
