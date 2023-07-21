@@ -29,11 +29,9 @@ const Auth = () => {
       if (user) {
         setUser(user);
         setDisplayName(user.displayName);
-        console.log(user);
       } else {
         setUser(null);
         setDisplayName("");
-        console.log(user);
       }
     });
   }, []);

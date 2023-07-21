@@ -29,7 +29,6 @@ const SignIn = ({ closeModal }) => {
       );
       closeModal();
     } catch (error) {
-      console.log(error.message);
       if (error.message === "Firebase: Error (auth/invalid-email).") {
         setError("이메일을 입력해 주세요.");
       } else if (error.message === "Firebase: Error (auth/missing-password).") {
@@ -60,7 +59,7 @@ const SignIn = ({ closeModal }) => {
       const userCredential = await signInWithPopup(auth, provider);
       closeModal();
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   };
 

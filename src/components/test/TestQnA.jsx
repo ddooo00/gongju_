@@ -38,7 +38,6 @@ function TestQnA() {
   //유형 테스트 QnA
   //테스트 리스트 db 조회(가져오기)
   const { isLoading, isError, data } = useQuery("gongjuList", getList);
-  // console.log("data💙💙💙", data);
   if (isLoading) {
     return (
       <Background>
@@ -67,10 +66,6 @@ function TestQnA() {
 
     setGongjuList(ls);
     setPage(page + 1);
-
-    if (idx + 1 === questionList.length) {
-      console.log("결과보기");
-    }
   };
 
   // 가장 많이 선택된 유형 찾기
@@ -102,8 +97,6 @@ function TestQnA() {
       value: originalValue + 1,
     };
     updateMutation.mutate({ id, updatedChart });
-
-    console.log(originalValue);
   };
 
   return (

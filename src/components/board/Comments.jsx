@@ -32,19 +32,14 @@ const Comments = () => {
   // 한 페이지에 표시될 항목 수
   const itemsPerPage = 5;
 
-  // 더 보기 기능을 위한 상태
-  const [showFullComment, setShowFullComment] = useState(false);
-
-  // 더 보기 기능 함수
-  const toggleShowFullComment = () => {
-    setShowFullComment((prev) => !prev);
-  };
+  // 더 보기 기능을 위한 상태(확인해보기)
+  const showFullComment = false;
 
   // 댓글을 펼치는지 여부 상태
   const [isExpanded, setIsExpanded] = useState(false);
 
   // 댓글 펼치/접기
-  const toggleExpand = () => {
+  const toggleExpand = (comment) => {
     setIsExpanded((prev) => !prev);
   };
 
@@ -62,9 +57,6 @@ const Comments = () => {
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % comments.length;
     setItemOffset(newOffset);
-    console.log(
-      `유저가 요청한 페이지는 ${e.selected}, 댓글 데이터 배열의 새로운 시작 인덱스는 ${newOffset}`
-    );
   };
 
   //  날짜 포맷팅
@@ -160,7 +152,9 @@ const Comments = () => {
             return (
               <S.CommentBox
                 key={comment.id}
-                showFull={showFullComment || comment.body.length <= 177}
+                showfull={
+                  showFullComment.toString() || comment.body.length <= 177
+                }
               >
                 <S.Nickname>{comment.userName}</S.Nickname>
                 <S.Date>{comment.createdAt}</S.Date>
@@ -180,7 +174,9 @@ const Comments = () => {
                       {isContentOverflow && !isExpanded ? (
                         <>
                           <p>{comment.body.slice(0, 177)}</p>
-                          <S.ShowMoreButton onClick={toggleExpand}>
+                          <S.ShowMoreButton
+                            onClick={() => toggleExpand(comment)}
+                          >
                             더보기
                           </S.ShowMoreButton>
                         </>
@@ -189,7 +185,7 @@ const Comments = () => {
                       )}
 
                       {isExpanded && isContentOverflow && (
-                        <S.ShowMoreButton onClick={toggleExpand}>
+                        <S.ShowMoreButton onClick={() => toggleExpand(comment)}>
                           접기
                         </S.ShowMoreButton>
                       )}
