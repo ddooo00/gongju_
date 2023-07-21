@@ -10,7 +10,6 @@ import {
   getMountains,
 } from "../../api/api";
 import { useParams } from "react-router-dom";
-import html2canvas from "html2canvas";
 import * as S from "../../styles/style.testResult";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";

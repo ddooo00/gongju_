@@ -13,8 +13,8 @@ import googleLogo from "../../assets/img/google.png";
 import githubLogo from "../../assets/img/github.png";
 
 const SignIn = ({ closeModal }) => {
-  const [email, onChangeEmail, resetEmail] = useInput();
-  const [password, onChangePassword, resetPassword] = useInput();
+  const [email, onChangeEmail] = useInput();
+  const [password, onChangePassword] = useInput();
   const [isOpenSignUpModal, setIsOpenSignUpModal] = useState(false);
   const [error, setError] = useState("");
 
@@ -22,11 +22,7 @@ const SignIn = ({ closeModal }) => {
   const signIn = async (event) => {
     event.preventDefault();
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      await signInWithEmailAndPassword(auth, email, password);
       closeModal();
     } catch (error) {
       if (error.message === "Firebase: Error (auth/invalid-email).") {

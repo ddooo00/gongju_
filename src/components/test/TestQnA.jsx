@@ -38,7 +38,7 @@ function TestQnA() {
   //유형 테스트 QnA
   //테스트 리스트 db 조회(가져오기)
   const { isLoading, isError, data } = useQuery("gongjuList", getList);
-  if (isLoading) {
+  if (isLoading || chartIsLoading) {
     return (
       <Background>
         잠시만 기다려주세요...
@@ -46,7 +46,7 @@ function TestQnA() {
       </Background>
     );
   }
-  if (isError) {
+  if (isError || chartIsError) {
     return <Background>테스트 목록을 가져오지 못했습니다😥</Background>;
   }
 
