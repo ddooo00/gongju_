@@ -137,3 +137,18 @@ export const SNSButtonContainer = styled.div`
   align-items: center;
   margin-bottom: 16px;
 `;
+
+export const URLShareButton = styled.button`
+  width: 48px;
+  height: 48px;
+  color: white;
+  border-radius: 24px;
+  border: 0px;
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #7362ff;
+  &:hover {
+    background-color: #a99fee;
+  }
+`;
