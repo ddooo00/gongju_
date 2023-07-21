@@ -15,19 +15,32 @@ export const CommentWrapper = styled.div`
 `;
 
 export const button = styled.button`
-  width: 60px;
+  width: 50px;
   height: 35px;
   font-size: 15px;
   background-color: #102e54;
   color: white;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 15px;
   cursor: pointer;
 
   &:hover {
-    width: 65px;
-    height: 40px;
-    font-size: 17px;
+    background-color: black;
+  }
+`;
+
+export const Inputbutton = styled.button`
+  width: 75px;
+  height: 48px;
+  font-size: 20px;
+  background-color: #102e54;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    width: 78px;
+    height: 50px;
   }
 `;
 
