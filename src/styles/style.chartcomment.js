@@ -63,6 +63,7 @@ export const button = styled.button`
   font-size: 15px;
   background-color: #102e54;
   color: white;
+  border: none;
   border-radius: 10px;
   margin-right: 15px;
   margin-top: 5px;
@@ -77,6 +78,7 @@ export const Inputbutton = styled.button`
   width: 6%;
   height: 43px;
   font-size: 20px;
+  border: none;
   background-color: #102e54;
   color: white;
   border-radius: 10px;

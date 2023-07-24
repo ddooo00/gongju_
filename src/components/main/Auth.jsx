@@ -13,8 +13,6 @@ const Auth = () => {
   const [user, setUser] = useState(null);
   const [displayName, setDisplayName] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [isOpenPage, setIsOpenPage] = useState(false);
 
   // 로그아웃
   const logOut = async (event) => {
@@ -37,10 +35,8 @@ const Auth = () => {
 
   const clickOpenHandler = (user) => {
     if (user) {
-      setIsOpenPage(true);
       navigate(`/test`);
     } else {
-      setIsOpenModal(true);
       setIsOpen(true);
     }
   };
@@ -59,10 +55,6 @@ const Auth = () => {
             : `나는 어떤 공주일까 ?`}
         </S.MainTitle>
         <S.MainDesc>성격으로 알아보는 나의 '공주'</S.MainDesc>
-        {/* <YouTube
-            videoId="Vy9RqQPbxi0"
-            opts={{ width: "100%", height: "500px" }}
-          /> */}
         <S.MainImg src={mainImg} alt="main image" />
         <S.TestBtnBox>
           <S.TestBtn onClick={() => clickOpenHandler(user)}>
