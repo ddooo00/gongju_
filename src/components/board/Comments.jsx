@@ -5,9 +5,20 @@ import useComments from "../../hooks/useComments";
 import * as S from "../../styles/style.chartcomment";
 import Background from "../../styles/style.spinner";
 import Spinner from "../../assets/spinner/spinner.gif";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Comments = () => {
-  const user = auth.currentUser;
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
 
   const {
     isLoading,
@@ -83,6 +94,10 @@ const Comments = () => {
   // 댓글 추가
   const clickAddComment = (e) => {
     e.preventDefault();
+
+    if (!user) {
+      return alert("로그인이 필요합니다.");
+    }
 
     if (!body) {
       alert("내용을 입력해 주세요.");
