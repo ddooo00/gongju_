@@ -52,10 +52,10 @@ const SignIn = ({ closeModal }) => {
       } else if (name === "github") {
         provider = new GithubAuthProvider();
       }
-      const userCredential = await signInWithPopup(auth, provider);
+      await signInWithPopup(auth, provider);
       closeModal();
     } catch (error) {
-      // console.error(error);
+      setError("소셜 로그인 오류입니다. 잠시후에 이용해 주세요.");
     }
   };
 
